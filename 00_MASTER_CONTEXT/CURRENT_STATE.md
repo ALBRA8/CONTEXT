@@ -1,70 +1,90 @@
 # Estado actual de ALBRA-CONTEXT
 
-- Estado del documento: PROPOSED / WAVE 3
+- Estado del documento: CLOSURE / READY FOR OPERATIONAL USE
 - Última actualización: 2026-10-12
 - Repositorio: `ALBRA8/CONTEXT`
-- Wave de recuperación: Wave 3 — recuperación dirigida de huecos.
+- Base de cierre Wave 4: `fe4ca05faf2775cbd456b2814cf9f1299ce9650d`
 
 ## 1. Estado de la migración
 
-Wave 1 fue integrada y PR #1 quedó fusionado. Wave 2 fue integrada y PR #2 quedó fusionado. Wave 3 continúa sobre ese estado y no recrea ni sobrescribe las ondas anteriores.
+Wave 1, Wave 2 y Wave 3 están integradas y sus PRs están fusionados. Wave 4 es la fase de cierre y validación; no inicia otra migración masiva.
 
-Wave 3 redujo huecos mediante inspección directa de repositorios y recuperación de fuentes históricas del Library.
+Objetivo de cierre: que una IA nueva pueda entrar por `ALBRA_BOOTSTRAP.md`, localizar el contexto pertinente, distinguir evidencia de propuesta y continuar el trabajo sin depender de esta conversación.
 
-## 2. Agentes profundizados
+## 2. Estado de agentes
 
-- AGENTE-GENERAL: evolución histórica y certificación final recuperadas.
-- AGENTE-KREA: V2.1 y matriz VERIFIED/INFERRED/ESTIMATED/NOT_VERIFIED recuperadas.
-- AGENTE-LEADS: README V2 actual + auditoría Hermes histórica recuperados.
-- AGENTE-CHISMOSO: arquitectura, providers, intelligence y DoD recuperados.
-- YOUTUBE-AUTOMATION: estado actual + HANDS partial connected recuperado.
-- PURO-PODER-CONOCIMIENTO: corpus y versión recuperados.
-- Extension-CAZADOR: README y distinción respecto a Flow Script Processor recuperados.
-- NEX-SCOPE: clasificado con evidencia directa como SYSTEM / SAAS PLATFORM.
+Las fichas existentes en `01_AGENTS/` conservan la evidencia recuperada durante Waves 1–3. Wave 4 añade una matriz final de repositorios en `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
 
-## 3. Proyectos profundizados
+Puntos actuales importantes:
 
-CRM ALBRA y Despacho Jurídico tienen evidencia directa adicional desde sus README actuales. YOUTUBE-AUTOMATION/HANDS también tiene estado más preciso. EEC y Audiobook rights research siguen siendo principalmente conversación/planificación en esta Wave.
+- AGENTE-GENERAL: el Seed congelado histórico fue `8437f2a` con certificación `00a353c`, pero el repositorio tiene un HEAD posterior `43563c81c7a77bb9a762921037fd7f91414cb212` que integra memoria en el reasoning loop. Ese HEAD declara NOT_READY_TO_FREEZE pendiente de CI/auditoría. Por tanto, el Seed congelado y el HEAD actual son estados históricos distintos.
+- AGENTE-KREA: último commit recuperado `460605e5b4966e5e9243c1ec3fcb4852c6758e1b`; V2.1 documentada como condicionalmente aprobada, 241 tests; proveedores externos NOT_VERIFIED.
+- AGENTE-LEADS: último commit recuperado `e73d15beeb0b5573d3728f08b8afc52cd00a5afc`; cierre de producción documentado con 219 tests y E2E 9/9; auditoría independiente actual NOT_VERIFIED.
+- AGENTE-CHISMOSO: último commit recuperado `731f76b3d72432f268ecd795bd2c97713f5a874f`; clean-room histórico PASS con 276 unit tests y una desviación documentada por SDK interno; auditoría independiente actual NOT_VERIFIED.
+- YOUTUBE-AUTOMATION: último commit recuperado `f23ce558b1dffe5570199db48a9bda7909e4d956`; hardening de seguridad/data integrity documentado; HANDS/Execution Contract siguen diferenciados de E2E físico real.
+- PURO-PODER-CONOCIMIENTO: último commit visible `9f1704b9ce8b3c992e48d0cb044b105d2e3e8904`; estado de corpus documentado a alto nivel.
+- Extension-CAZADOR: último commit `b55f58f92b132f0be213cd2cf03123dcb5d891ad`; extractor con 130 tests y build/typecheck documentados.
+- NEX-SCOPE: último commit `09f0cb18d259fc1ef6be007be61338b4350807ee`; clasificación documental vigente: SYSTEM / SAAS PLATFORM.
 
-## 4. Prompts / fuentes exactas recuperadas
+## 3. Proyectos
 
-Se localizaron en Library los originales completos de:
+- YOUTUBE-AUTOMATION/HANDS: implementación y hardening documentados; conexión parcial de la capa de ejecución; E2E físico Flow/Desktop NOT_VERIFIED.
+- CRM ALBRA: sistema CRM con evidencia documental directa; auditoría independiente actual NOT_VERIFIED.
+- Despacho Jurídico: organismo legal base y corpus piloto documentado; último commit recuperado `1801d6947c816a0cd9fb9b8dce87736212963ea1`; auditoría independiente actual NOT_VERIFIED.
+- EEC/Mission Control: concepto/diseño con arquitectura visual/control-plane; implementación de repositorio NOT_VERIFIED.
+- Audiobook/Rights Research: IDEA/PROPOSAL; KREA queda del lado creativo y la clearance legal se separa hacia el Despacho Jurídico/pool legal propuesto. No existe una determinación de derechos concreta verificada en este contexto.
 
-- `PROMPT BASE — YOUTUBE AUTOMATION CREATIVE ENGINE.txt` — 668 líneas.
-- `PROMPT%20PARA%20INGENIERIA%20INVERSA%20V1.2(1).txt` — 2001 líneas.
-- `PROMPT MAESTRO FRUTINOVELAS V2.0 — SISTEMA OPERATIVO.txt` — 1683 líneas.
-- `prompts y manual maestro.txt` — 754 líneas.
+## 4. Prompts y fuentes originales
 
-El source manifest `05_PROMPTS/WAVE3_RECOVERED_SOURCES.md` registra identidad y estado. Los cuerpos completos todavía no están duplicados dentro de CONTEXT en esta Wave.
+Wave 4 verificó cuatro fuentes originales completas en Library:
 
-## 5. Artefactos
+1. Creative Engine V1.0 — `PROMPT BASE — YOUTUBE AUTOMATION CREATIVE ENGINE(5).txt` — 14,923 bytes / 667 líneas recuperadas.
+2. Reverse Engineering Engine V1.2 — `PROMPT%20PARA%20INGENIERIA%20INVERSA%20V1.2.txt` — 65,888 bytes / 2,000 líneas recuperadas.
+3. Frutinovelas V2.0 — `PROMPT MAESTRO FRUTINOVELAS V2.0 — SISTEMA OPERATIVO.txt` — 46,846 bytes / 1,682 líneas recuperadas.
+4. `prompts y manual maestro.txt` — 60,266 bytes / 754 líneas.
 
-Los dos nombres binarios exactos solicitados por la migración siguen `MISSING_BINARY`:
+Los cuerpos exactos siguen disponibles en Library y están catalogados en `05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md`. La copia íntegra dentro de GitHub CONTEXT no se realizó porque la interfaz de escritura disponible no admite transferir directamente un archivo montado; no se fabricó ni truncó ningún original.
+
+## 5. Auditorías
+
+No se afirma una auditoría independiente actual para todos los repositorios. La matriz `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md` separa evidencia documental histórica de auditoría actual.
+
+Estados frecuentes:
+
+- VERIFIED: verificación directa en la operación actual.
+- VERIFIED DOCUMENTATION: el repositorio registra una verificación, pero no se repitió independientemente aquí.
+- PARTIAL: evidencia útil pero incompleta para auditoría actual.
+- NOT_VERIFIED: falta una auditoría independiente actual.
+- MISSING: no se recuperó evidencia suficiente.
+
+## 6. Artefactos
+
+Los dos binarios timestamped solicitados históricamente siguen MISSING_BINARY:
 
 - `ElevenLabs + n8n-20261011T063410Z-1-001.zip`
 - `12. OpenCode-20261011T063710Z-1-001(1).zip`
 
-Existen variantes anteriores importadas y accesibles; están registradas en `99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md`.
+No se inventan ni se sustituyen por variantes anteriores.
 
-## 6. Restricciones activas
+## 7. Regla de vigencia
 
-- Solo `ALBRA8/CONTEXT` puede modificarse durante la migración.
-- Repositorios externos son fuentes de consulta.
-- No migrar secretos ni credenciales.
-- No convertir propuestas en hechos implementados.
-- Mantener VERIFIED / VERIFIED DOCUMENTATION / PARTIAL / INFERRED / ESTIMATED / NOT_VERIFIED / MISSING_BINARY.
+Los documentos históricos conservan evolución. `CURRENT_STATE.md` representa únicamente el estado conocido al cierre. Si una versión posterior contradice una anterior, la anterior permanece como HISTORICAL y la posterior se considera vigente solo si existe evidencia suficiente.
 
-## 7. Pendientes después de Wave 3
+## 8. Estado de cierre
 
-1. Independiente auditoría actual de AGENTE-GENERAL/KREA/LEADS/CHISMOSO/YOUTUBE/CRM y otros repositorios.
-2. Duplicar dentro de CONTEXT los cuerpos completos de los 4 prompt originals recuperados, si se decide que deben ser parte del snapshot portable.
-3. Recuperar exactamente los dos ZIPs timestamped solicitados o mantenerlos como MISSING_BINARY.
-4. Profundizar EEC/Mission Control y Audiobook rights research.
-5. Recuperar evidencia completa de sesiones históricas y auditorías adicionales.
+**CONTEXT READY FOR OPERATIONAL USE**
 
-## Historial
+Esto significa completo en función de la información recuperable y trazable. No significa que toda fuente histórica, binario o auditoría externa imposible de repetir haya sido recuperada.
 
-- Wave 3 — recuperación dirigida de múltiples huecos, preservando Wave 1/2 y reduciendo MISSING/NOT_VERIFIED.
-- 0.3.0 — Wave 2.
-- 0.2.0 — primera ampliación real del contexto.
-- 0.1.0 — primera fotografía.
+## 9. Entrada para la siguiente IA
+
+Leer en este orden:
+
+1. `ALBRA_BOOTSTRAP.md`
+2. `00_MASTER_CONTEXT/CURRENT_STATE.md`
+3. `00_MASTER_CONTEXT/ALBRA_DNA.md`
+4. `00_MASTER_CONTEXT/ALBRA_ARCHITECTURE.md`
+5. `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md`
+6. cargar únicamente las fichas/agentes/proyectos pertinentes
+7. verificar cualquier afirmación técnica actual en el repositorio fuente
+8. respetar que solo `ALBRA8/CONTEXT` es escribible durante este flujo
