@@ -1,8 +1,6 @@
 # WAVE 3 — PR TRACE
 
-This file is the traceability anchor for the PR-based closure of Wave 3.
-
-The substantive Wave 3 recovery records were already written sequentially to `main` during the recovery session. This PR trace does not duplicate or replace those records; it records that the migration flow is being closed through a reviewable PR step.
+Wave 3 substantive recovery records are already present in the base state of this branch. This PR is the review/traceability closure for the directed recovery pass.
 
 Substantive Wave 3 sources:
 
@@ -13,4 +11,4 @@ Substantive Wave 3 sources:
 - `99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md`
 - `00_MASTER_CONTEXT/MIGRATION_MISSING_INFORMATION.md`
 
-Wave 3 remains open after this trace; this is not a completion certificate.
+Wave 3 remains open after this trace; this PR is not a completion certificate.
