@@ -1,37 +1,44 @@
 # Índice de conocimiento
 
 - Estado: PROPOSED
-- Versión: 0.2.0
+- Versión: 0.3.0
 
-Este índice permite encontrar fuentes canónicas sin cargar todo el repositorio. La autoridad y el estado de cada documento deben comprobarse en el propio archivo y en el historial Git.
+## Fuentes canónicas internas
 
-| Tema | Fuente | Estado | Nota |
-|---|---|---|---|
-| Entrada universal | [ALBRA_BOOTSTRAP.md](../ALBRA_BOOTSTRAP.md) | PROPOSED | Leer primero |
-| Seguridad | [SECURITY.md](../SECURITY.md) | PROPOSED | Reglas preventivas; no es auditoría |
-| Cambios | [CHANGELOG.md](../CHANGELOG.md) | Activo | Registro documental |
-| ADN | [ALBRA_DNA.md](ALBRA_DNA.md) | PROPOSED | Línea base pendiente de aprobación |
-| Arquitectura maestra | [ALBRA_ARCHITECTURE.md](ALBRA_ARCHITECTURE.md) | PROPOSED | Relación entre Seed, agentes, capacidades y contexto |
-| Protocolo de contexto | [CONTEXT_PROTOCOL.md](CONTEXT_PROTOCOL.md) | PROPOSED | Incorporación y mantenimiento |
-| Estado operativo | [CURRENT_STATE.md](CURRENT_STATE.md) | PROPOSED | Fotografía viva del ecosistema |
-| Glosario | [GLOSSARY.md](GLOSSARY.md) | PROPOSED | Definiciones de trabajo |
-| Registro de agentes | [../01_AGENTS/AGENT_REGISTRY.md](../01_AGENTS/AGENT_REGISTRY.md) | PROPOSED | Repositorios y roles observados |
-| Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | PROPOSED | Decisiones y propuestas |
-| Auditorías | [../03_AUDITS/README.md](../03_AUDITS/README.md) | PROPOSED | Política y futuros informes |
-| Proyectos | [../04_PROJECTS/README.md](../04_PROJECTS/README.md) | PROPOSED | Fichas de proyectos |
-| Prompts | [../05_PROMPTS/README.md](../05_PROMPTS/README.md) | PROPOSED | Marcos reutilizables |
-| Sesiones | [../06_SESSIONS/README.md](../06_SESSIONS/README.md) | PROPOSED | Conocimiento histórico reutilizable |
-| Archivo | [../99_ARCHIVE/README.md](../99_ARCHIVE/README.md) | PROPOSED | Material sustituido/histórico |
+| Tema | Fuente | Estado |
+|---|---|---|
+| Entrada universal | [ALBRA_BOOTSTRAP.md](../ALBRA_BOOTSTRAP.md) | PROPOSED |
+| Seguridad | [SECURITY.md](../SECURITY.md) | PROPOSED |
+| ADN | [ALBRA_DNA.md](ALBRA_DNA.md) | PROPOSED |
+| Arquitectura | [ALBRA_ARCHITECTURE.md](ALBRA_ARCHITECTURE.md) | PROPOSED |
+| Protocolo | [CONTEXT_PROTOCOL.md](CONTEXT_PROTOCOL.md) | PROPOSED |
+| Estado vivo | [CURRENT_STATE.md](CURRENT_STATE.md) | PROPOSED |
+| Relaciones | [RELATIONSHIP_MAP_WAVE2.md](RELATIONSHIP_MAP_WAVE2.md) | PROPOSED |
+| Gaps de migración | [MIGRATION_MISSING_INFORMATION.md](MIGRATION_MISSING_INFORMATION.md) | PROPOSED |
+| Registro de agentes | [../01_AGENTS/AGENT_REGISTRY.md](../01_AGENTS/AGENT_REGISTRY.md) | PROPOSED |
+| Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | PROPOSED |
+| Auditorías | [../03_AUDITS/WAVE2_AUDIT_HISTORY.md](../03_AUDITS/WAVE2_AUDIT_HISTORY.md) | PROPOSED |
+| Proyectos | [../04_PROJECTS/WAVE2_PROJECTS.md](../04_PROJECTS/WAVE2_PROJECTS.md) | PROPOSED |
+| Prompts/frameworks | [../05_PROMPTS/WAVE2_FRAMEWORKS.md](../05_PROMPTS/WAVE2_FRAMEWORKS.md) | PROPOSED |
+| Sesiones | [../06_SESSIONS/WAVE2_SESSION_INDEX.md](../06_SESSIONS/WAVE2_SESSION_INDEX.md) | PROPOSED |
+| Artefactos | [../99_ARCHIVE/WAVE2_ARTIFACT_INVENTORY.md](../99_ARCHIVE/WAVE2_ARTIFACT_INVENTORY.md) | PROPOSED |
 
 ## Fuentes externas prioritarias
 
-| Sistema | Fuente | Uso |
-|---|---|---|
-| Agente General | `ALBRA8/AGENTE-GENERAL` | Seed técnico universal; solo lectura |
-| Krea | `ALBRA8/AGENTE-KREA` | Capacidades de Product Factory y creación de productos |
-| Leads | `ALBRA8/AGENTE-LEADS` | Inteligencia de leads, investigación y evidencia |
-| Chismoso | `ALBRA8/AGENTE-CHISMOSO` | Investigación; pendiente de ficha canónica |
-| YouTube Automation | `ALBRA8/YOUTUBE-AUTOMATION` | Automatización audiovisual; pendiente de ficha completa |
+| Sistema | Uso |
+|---|---|
+| `ALBRA8/AGENTE-GENERAL` | Seed técnico universal; solo lectura |
+| `ALBRA8/AGENTE-KREA` | Product Factory / productos digitales |
+| `ALBRA8/AGENTE-LEADS` | Lead intelligence / research / evidence |
+| `ALBRA8/AGENTE-CHISMOSO` | Research / intelligence |
+| `ALBRA8/YOUTUBE-AUTOMATION` | Audiovisual orchestration + HANDS |
+| `ALBRA8/AGENTE-TRADING` | Trading SMC / MT5 |
+| `ALBRA8/DESPACHO-JURIDICO` | Legal organism base |
+| `ALBRA8/CRM-ALBRA` | CRM / commercial operations |
+| `ALBRA8/NEX-SCOPE` | YouTube niche discovery |
+| `ALBRA8/RADAR-SECOP2` | SECOP II opportunity intelligence |
+| `ALBRA8/Extension-CAZADOR` | Browser/capture utility |
+| `ALBRA8/PURO-PODER-CONOCIMIENTO` | Knowledge system |
 
 ## Reglas
 
@@ -39,9 +46,11 @@ Este índice permite encontrar fuentes canónicas sin cargar todo el repositorio
 2. Evitar duplicar contenido: resumir y enlazar.
 3. Marcar estados explícitamente.
 4. No usar el índice para convertir una afirmación en evidencia.
-5. Revisar enlaces cuando se renombre, sustituya o archive un documento.
+5. No presentar capacidades inferidas como verificadas.
+6. Registrar gaps cuando el contenido original no esté disponible.
 
 ## Historial
 
-- 0.2.0 — Añadidas arquitectura, protocolo, registro de agentes, decisiones y políticas documentales.
+- 0.3.0 — Wave 2 añadió fuentes de agentes, proyectos, prompts, auditorías, sesiones, artefactos, relaciones y gaps.
+- 0.2.0 — Arquitectura, protocolo, registro, decisiones y políticas.
 - 0.1.0 — Primer índice.

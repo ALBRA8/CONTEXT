@@ -1,58 +1,97 @@
 # Registro de decisiones ALBRA
 
 - Estado: PROPOSED
-- Versión: 0.1.0
+- Versión: 0.2.0
 
-Este archivo resume decisiones arquitectónicas que deben poder rastrearse. Una entrada solo se considera aprobada cuando el propietario la haya confirmado explícitamente.
+Una entrada solo se considera aprobada cuando el propietario la haya confirmado explícitamente. Las decisiones históricas se preservan aunque posteriormente cambien.
 
 ## D-0001 — CONTEXT como memoria externa
 
 - Estado: APPROVED BY REPOSITORY CREATION / pendiente de formalización explícita en este log
 - Fecha: 2026-10-12
 - Decisión: usar `ALBRA8/CONTEXT` como fuente externa, versionada y portable de continuidad documental de ALBRA.
-- Motivo: evitar dependencia exclusiva de una cuenta, conversación o memoria interna de una IA.
-- Alcance: contexto documental transversal.
 
 ## D-0002 — Escritura exclusiva en CONTEXT durante este trabajo
 
 - Estado: DOCUMENTED IN BOOTSTRAP
 - Fecha: 2026-10-12
-- Decisión: las IAs que trabajen bajo este contexto pueden modificar únicamente `ALBRA8/CONTEXT`; otros repositorios son de lectura.
-- Motivo: proteger agentes y proyectos frente a modificaciones accidentales durante la construcción del contexto.
+- Decisión: durante la migración, solo `ALBRA8/CONTEXT` puede modificarse; los demás repositorios son fuentes de consulta.
 
 ## D-0003 — Agente General no equivale a orquestador
 
 - Estado: PROPOSED / pendiente de confirmación formal
-- Fecha: 2026-10-12
-- Decisión conceptual: el Agente General es el organismo base universal, una casa cognitiva/técnica preparada para incorporar capacidades; la orquestación es una responsabilidad separable.
-- Motivo: evitar convertir el Seed en un superagente y preservar la especialización.
+- Decisión conceptual: Agente General es organismo base universal; la orquestación puede ser responsabilidad separable.
 
 ## D-0004 — ADN separado de capacidades
 
 - Estado: PROPOSED / pendiente de confirmación formal
-- Fecha: 2026-10-12
-- Decisión conceptual: el ADN contiene identidad, invariantes, seguridad, contratos y gobernanza; las capacidades pueden incorporarse, sustituirse o evolucionar sin alterar silenciosamente el ADN.
+- Decisión conceptual: el ADN contiene identidad, invariantes, seguridad, contratos y gobernanza; las capacidades de dominio se incorporan por especialización.
 
 ## D-0005 — No saturación de especialistas
 
 - Estado: PROPOSED / pendiente de confirmación formal
-- Decisión conceptual: una nueva necesidad no se asignará automáticamente a un agente existente. Primero se determinará si es transversal, de dominio, de integración o candidata a un nuevo especialista.
+- Decisión conceptual: una nueva necesidad no se asignará automáticamente a un agente existente; primero se clasifica como transversal, dominio, integración o nuevo especialista.
 
-## Plantilla para nuevas decisiones
+## D-0006 — YOUTUBE-AUTOMATION sigue como orquestador audiovisual
+
+- Estado: EXPLICIT USER DECISION
+- Decisión: no crear un Video Editor Agent todavía. Primero se prueban las HANDS; después se decide si hace falta otro agente.
+
+## D-0007 — HANDS antes que Video Editor Agent
+
+- Estado: EXPLICIT USER DECISION
+- Decisión: construir/preparar la capa HANDS, probar producción real y decidir después sobre un editor independiente.
+
+## D-0008 — EEC como control plane, no superagente
+
+- Estado: PROPOSED / ACTIVE DESIGN DIRECTION
+- Decisión conceptual: EEC/Mission Control debe servir como plano de control visual global y no convertirse automáticamente en un agente superorquestador.
+
+## D-0009 — Pool jurídico especializado
+
+- Estado: EXPLICIT USER DIRECTION / ARCHITECTURE PROPOSAL
+- Decisión: si la carga jurídica no encaja en agentes existentes, crear un despacho/pool de abogados con especialistas por área, en vez de saturar Krea, Chismoso o Leads.
+
+## D-0010 — Audiobooks: separar creación de rights research
+
+- Estado: PROPOSED
+- Decisión conceptual: Krea puede encargarse de crear el producto/audiolibro, mientras la investigación de dominio público/derechos debe tener una responsabilidad especializada si se vuelve recurrente o sensible.
+
+## D-0011 — Creative Engine vs audiovisual execution
+
+- Estado: EXPLICIT ARCHITECTURAL PRINCIPLE
+- Decisión: Creative Engine decide WHAT crear; YOUTUBE-AUTOMATION decide HOW ejecutar la producción.
+
+## D-0012 — Reverse Engineering no copia contenido
+
+- Estado: EXPLICIT FRAMEWORK RULE
+- Decisión: Reverse Engineering Engine reconstruye gramática/estructura; los contenidos generados deben ser originales y no copiar personajes, diálogo, secuencia o giro del referente.
+
+## D-0013 — Seed freeze before cloning
+
+- Estado: EXPLICIT WORKFLOW RULE
+- Decisión: no clonar AGENTE-GENERAL para crear especializados hasta cerrar la auditoría/freeze del Seed.
+
+## D-0014 — CONTEXT migration is incremental
+
+- Estado: EXPLICIT USER DECISION
+- Decisión: las ondas posteriores continúan desde el estado integrado; no recrean ni sobrescriben la migración anterior.
+
+## Plantilla
 
 ### D-XXXX — Título
-
 - Estado: PROPOSED / APPROVED / SUPERSEDED / DEPRECATED
 - Fecha:
 - Decisor / autoridad:
 - Decisión:
 - Motivo:
-- Alternativas consideradas:
+- Alternativas:
 - Alcance:
 - Impacto:
-- Fuentes / evidencia:
+- Fuentes/evidencia:
 - Sustituye a:
 
 ## Historial
 
+- 0.2.0 — Wave 2 añadió decisiones históricas explícitas y reglas de evolución sin borrar el log previo.
 - 0.1.0 — Registro inicial.
