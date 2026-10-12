@@ -1,63 +1,60 @@
 # MIGRATION — INFORMATION STILL MISSING
 
-This is a live gap register. It is not a failure declaration; it prevents missing context from being mistaken for completed migration.
+This is the live gap register. It prevents missing context from being mistaken for completed migration.
 
-## Wave 3 resolution status
+## Wave 4 closure status
 
-### Agent gaps
+### RESOLVED / DOCUMENTATION-RESOLVED
 
-- **AGENTE-GENERAL — PARTIALLY_RESOLVED:** current certified code/certification and security closure are recovered; historical evolution is recorded. A new independent audit from CONTEXT is still not performed.
-- **AGENTE-KREA — RESOLVED AT DOCUMENTATION LEVEL:** V2.1 verification report `bb83dd2` recovered with capability evidence and VERIFIED / INFERRED / ESTIMATED / NOT_VERIFIED separation.
-- **AGENTE-LEADS — PARTIALLY_RESOLVED:** current V2 README and historical Hermes audit recovered. A new independent audit of current HEAD remains NOT_VERIFIED.
-- **AGENTE-CHISMOSO — PARTIALLY_RESOLVED:** architecture, providers, intelligence engines, MCP documentation and 2026-10-05 DoD verification recovered. A new current-HEAD audit remains NOT_VERIFIED.
-- **YOUTUBE-AUTOMATION — PARTIALLY_RESOLVED:** current README plus current HANDS contract state recovered. Real physical Flow/Desktop execution remains NOT_VERIFIED.
-- **PURO-PODER-CONOCIMIENTO — RESOLVED AT HIGH-LEVEL:** direct README evidence recovered for five-course knowledge corpus and version history. Full repository audit remains NOT_VERIFIED.
-- **Extension-CAZADOR — PARTIALLY_RESOLVED:** direct README evidence recovered and system capabilities documented. Independent audit remains NOT_VERIFIED.
-- **NEX-SCOPE — RESOLVED CLASSIFICATION:** direct README evidence supports SYSTEM / SAAS PLATFORM, not autonomous AGENT. Future agent wrapper remains NOT_VERIFIED.
+- **Original prompt source availability:** Creative Engine V1.0, Reverse Engineering Engine V1.2, Frutinovelas V2.0 and `prompts y manual maestro.txt` were located in Library and inspected as exact source files. See `05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md`.
+- **NEX-SCOPE classification:** direct repository evidence supports SYSTEM / SAAS PLATFORM.
+- **Extension-CAZADOR distinction:** documented separately from the Flow Script Processor extension path.
+- **Repository status snapshot:** final closure matrix created in `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
+- **EEC/Mission Control documentation:** concept/design boundaries are now explicit in `04_PROJECTS/EEC_MISSION_CONTROL.md`.
+- **Audiobook/Rights Research boundaries:** idea/proposal vs implementation/clearance are explicit in `04_PROJECTS/AUDIOBOOK_RIGHTS_RESEARCH.md`.
 
-## Project gaps
+### PARTIALLY_RESOLVED
 
-- **EEC / Mission Control — NOT_VERIFIED:** still primarily conversation/design evidence; no repository implementation artifact recovered in Wave 3.
-- **CRM ALBRA — PARTIALLY_RESOLVED:** current README directly verifies multi-tenant SaaS architecture, modules, durable automations, WhatsApp daemon, AI agent tools and security model. Independent current-HEAD audit remains NOT_VERIFIED.
-- **Legal Office — PARTIALLY_RESOLVED:** current README directly verifies Agent Base V1.0 architecture with no legal knowledge or specialist subagents loaded yet. The proposed legal specialist pool remains planning, not implemented evidence.
-- **Audiobook rights research — NOT_VERIFIED / IDEA:** no completed implementation or rights-clearance result recovered; planning remains separate from KREA creation.
-- **HANDS — PARTIALLY_RESOLVED:** current `docs/HANDS.md` gives a more precise state: PARTIAL CONNECTED at Execution Contract V1.0 contract layer; real Flow/physical execution remains NOT_VERIFIED.
+- **AGENTE-GENERAL:** historical frozen Seed state is documented, but the current repository HEAD is now `43563c81c7a77bb9a762921037fd7f91414cb212`, which adds memory integration and is explicitly NOT_READY_TO_FREEZE in its own commit message pending CI/audit. The frozen `8437f2a`/`00a353c` pair is historical, not current.
+- **AGENTE-KREA:** V2.1 verification evidence is strong and direct, but a fresh independent audit of the current HEAD was not performed in Wave 4.
+- **AGENTE-LEADS:** production closure evidence is direct; fresh independent audit of current HEAD remains NOT_VERIFIED.
+- **AGENTE-CHISMOSO:** clean-room report is direct historical evidence with one internal-SDK caveat; fresh independent current audit remains NOT_VERIFIED.
+- **YOUTUBE-AUTOMATION/HANDS:** current hardening evidence is direct; real physical Flow/Desktop E2E remains NOT_VERIFIED.
+- **CRM-ALBRA:** current hardening/CI evidence exists in repository history; fresh independent audit remains NOT_VERIFIED.
+- **DESPACHO-JURIDICO:** real-source corpus pilot is directly documented; fresh independent audit remains NOT_VERIFIED.
+- **PURO-PODER-CONOCIMIENTO, TRADING, RADAR-SECOP2, NEX-SCOPE, Extension-CAZADOR:** latest commits are recoverable, but no fresh independent full audit was performed here.
 
-## Prompt gaps
+### NOT_VERIFIED
 
-- **Creative Engine V1.0 — RESOLVED SOURCE AVAILABILITY:** exact 668-line Library original recovered.
-- **Reverse Engineering Engine V1.2 — RESOLVED SOURCE AVAILABILITY:** exact 2001-line Library original recovered.
-- **Frutinovelas V2.0 — RESOLVED SOURCE AVAILABILITY:** exact 1683-line Library original recovered.
-- **Prompt/manual corpus — RESOLVED SOURCE AVAILABILITY:** exact 754-line `prompts y manual maestro.txt` recovered.
-- **Full duplication of those four source bodies into CONTEXT — NOT_YET_MIGRATED:** originals remain available as Library source artifacts; Wave 3 created a source manifest instead of fabricating or silently rewriting them.
-- Historical constructor/audit prompts not represented by recovered Library originals remain MISSING unless their exact text is present in conversation history or files.
+- Complete current independent audit of every ALBRA repository.
+- Live cross-host A2A verification for AGENTE-GENERAL.
+- External provider integration for AGENTE-GENERAL.
+- Real physical Google Flow/Desktop execution in YOUTUBE-AUTOMATION.
+- Current production verification of EEC/Mission Control implementation.
+- Completed rights-clearance determination for any audiobook title.
 
-## Audit gaps
+### MISSING_BINARY
 
-- Complete independent audit reports for every repository remain NOT_VERIFIED.
-- AGENTE-GENERAL final certification is verified from repository documentation, but no new independent re-audit is performed by Wave 3.
-- KREA/LEADS/CHISMOSO/CRM/YOUTUBE current-HEAD independent audits remain NOT_VERIFIED.
-- Historical audit evidence is preserved where direct repository reports were recovered.
+- `ElevenLabs + n8n-20261011T063410Z-1-001.zip`
+- `12. OpenCode-20261011T063710Z-1-001(1).zip`
 
-## File gaps
+These exact binaries were not recoverable. Earlier variants remain documented separately and are not substituted silently.
 
-### Exact requested binaries still missing
+### NOT_YET_MIGRATED
 
-- `MISSING_BINARY`: `ElevenLabs + n8n-20261011T063410Z-1-001.zip`.
-- `MISSING_BINARY`: `12. OpenCode-20261011T063710Z-1-001(1).zip`.
+- Full literal duplication of the four original Library prompt bodies into GitHub CONTEXT. The originals remain available in Library by exact file_id and are catalogued. The GitHub write interface available to this operation cannot accept a mounted Library file directly; therefore no truncated or reconstructed copy was committed.
+- Full historical text of every constructor/audit prompt used during the entire conversation when no exact source file or recoverable message body is available.
 
-### Related binaries available
+## Historical evidence boundary
 
-Earlier imported variants are present in the conversation file surface; see `99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md` for exact names and sizes.
+`VERIFIED DOCUMENTATION` means the repository itself contains a report or certification. It does not mean Wave 4 reran the audit.
 
-### Other historical attachments
+`NOT_VERIFIED` is intentionally retained when fresh evidence is absent.
 
-Additional ZIPs and prompt text sources remain accessible in the Library/conversation surface. Their internal content should be inspected only when needed and without importing secrets.
+`MISSING_BINARY` means the exact requested binary was not recovered.
 
-## Rule
+`NOT_YET_MIGRATED` means the source exists but could not be portably duplicated into CONTEXT through the available write path.
 
-Missing information must remain explicitly marked `NOT_VERIFIED`, `NOT_YET_MIGRATED` or `MISSING_BINARY`. Never reconstruct missing source text as if it were the original.
+## Closure rule
 
-## History
-
-- Wave 3 — resolved/reduced multiple agent, project, prompt and artifact gaps while preserving unresolved evidence boundaries.
+No gap is silently deleted. A resolved item records how it was resolved. A historical limitation remains visible even after CONTEXT becomes operationally ready.
