@@ -1,45 +1,62 @@
 # Estado actual de ALBRA-CONTEXT
 
 - Estado del documento: PROPOSED
+- Versión: 0.2.0
 - Última actualización: 2026-10-12
-- Repositorio: https://github.com/ALBRA8/CONTEXT
-- Rama de trabajo observada: `main`
+- Repositorio: `ALBRA8/CONTEXT`
+- Rama observada: `main`
 
-## 1. Estado del repositorio
+## 1. Estado del contexto
 
-La base documental inicial está publicada:
-- [ALBRA_BOOTSTRAP.md](../ALBRA_BOOTSTRAP.md) — punto de entrada y protocolo de incorporación.
-- [README.md](../README.md) — propósito y navegación.
-- [SECURITY.md](../SECURITY.md) — reglas preventivas de seguridad.
-- [CHANGELOG.md](../CHANGELOG.md) — historial documental.
+La base documental ya contiene Bootstrap, seguridad, changelog, ADN propuesto, arquitectura maestra, protocolo, índice de conocimiento, glosario, registro de agentes, decisiones y políticas para auditorías, proyectos, prompts, sesiones y archivo.
 
-Los documentos del contexto maestro se están incorporando progresivamente. Su presencia no equivale a aprobación formal.
+La presencia de un documento no implica aprobación formal de su contenido.
 
-## 2. AGENTE-GENERAL: referencia protegida
+## 2. Arquitectura registrada
 
-El Seed declarado como congelado es el commit `8437f2aa425a58fa76920ecc5c97ec99c85c0036` de [ALBRA8/AGENTE-GENERAL](https://github.com/ALBRA8/AGENTE-GENERAL/commit/8437f2aa425a58fa76920ecc5c97ec99c85c0036).
+El Agente General se documenta como organismo base universal / casa cognitiva universal, no como orquestador obligatorio. Los agentes especializados heredan el ADN y añaden misión y capacidades de dominio.
 
-La certificación documental se referencia en el commit `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9e` y en [docs/CERTIFICATION.md](https://github.com/ALBRA8/AGENTE-GENERAL/blob/00a353cee9602fe8929ed3d6f6b6055f0ae8cd9e/docs/CERTIFICATION.md).
+`CONTEXT` es memoria externa y fuente de continuidad documental; los repositorios de implementación siguen siendo las fuentes técnicas de su propio código.
 
-La ejecución de GitHub Actions identificada como Clean-Room Verification terminó con conclusión `success` para el SHA del Seed. Las métricas de tests y auditorías consignadas en el documento de certificación son afirmaciones documentadas; no se deben describir como reproducidas independientemente en esta sesión.
+## 3. AGENTE-GENERAL: referencia protegida
 
-## 3. Restricciones activas
+Seed congelado: `8437f2aa425a58fa76920ecc5c97ec99c85c0036`.
 
-- No modificar el Seed congelado desde este trabajo.
+Certificación documental: `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9e`.
+
+Estas referencias son de solo lectura desde `CONTEXT`. Las cifras de tests/auditorías se tratan como declaraciones documentadas salvo reproducción independiente.
+
+## 4. Agentes observados
+
+Repositorios actualmente accesibles al contexto incluyen `AGENTE-GENERAL`, `AGENTE-LEADS`, `AGENTE-KREA`, `AGENTE-CHISMOSO`, `YOUTUBE-AUTOMATION`, `AGENTE-TRADING`, `DESPACHO-JURIDICO`, `CRM-ALBRA`, `NEX-SCOPE`, `RADAR-SECOP2`, `Extension-CAZADOR` y `PURO-PODER-CONOCIMIENTO`.
+
+Las fichas completas de cada agente se crearán progresivamente a partir de evidencia directa. No se inventarán capacidades por nombre de repositorio.
+
+## 5. Evidencias ya contrastadas
+
+- AGENTE-GENERAL: README y arquitectura del Seed consultados directamente.
+- KREA: `KREA_FINAL_VERIFICATION.md` consultado directamente; KREA V2.1 se describe como Product Factory / Commercial Product Engine con Book Factory, QA, readiness y launch package. El informe distingue VERIFIED, INFERRED, ESTIMATED y NOT_VERIFIED.
+- AGENTE-LEADS: README consultado directamente; describe pipeline determinístico de discovery → research → validation → evidence → dedup → scoring → intelligence → storage → report → CRM, con evidencia por campo y outreach opcional.
+
+## 6. Restricciones activas
+
+- No modificar repositorios externos a `ALBRA8/CONTEXT`.
 - No publicar secretos ni datos sensibles.
 - No presentar documentos propuestos como normas aprobadas.
 - Registrar evidencia y limitaciones al afirmar verificaciones.
-- Añadir estructura únicamente cuando exista contenido real que la justifique.
+- Mantener separadas memoria documental y fuentes técnicas de implementación.
 
-## 4. Pendientes
+## 7. Pendientes prioritarios
 
-1. Revisar y aprobar o corregir la línea base propuesta de ADN.
-2. Contrastar el ADN con cualquier fuente canónica anterior de ALBRA que el propietario aporte o identifique.
-3. Revisar el índice de conocimiento y el glosario.
-4. Crear registros de decisiones arquitectónicas con estados explícitos.
-5. Definir qué verificaciones se pueden reproducir y documentar sus resultados.
-6. Actualizar este archivo cuando cambie el estado, indicando la evidencia que sustenta el cambio.
+1. Revisar y aprobar/corregir la línea base de ADN.
+2. Completar fichas canónicas de agentes restantes.
+3. Completar fichas de proyectos importantes.
+4. Extraer decisiones reales de las conversaciones históricas y formalizarlas cuando el propietario las confirme.
+5. Documentar auditorías existentes con alcance y evidencia.
+6. Incorporar los frameworks/prompts importantes como fuentes versionadas.
+7. Mantener este archivo actualizado como fotografía viva.
 
 ## Historial
 
-- 0.1.0 — Primera fotografía del estado documental. Pendiente de revisión.
+- 0.2.0 — Actualizado tras la primera ampliación real del contexto y la inspección directa de varios repositorios.
+- 0.1.0 — Primera fotografía del estado documental.
