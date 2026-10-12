@@ -1,63 +1,70 @@
 # Estado actual de ALBRA-CONTEXT
 
-- Estado del documento: PROPOSED
-- Versión: 0.3.0
+- Estado del documento: PROPOSED / WAVE 3
 - Última actualización: 2026-10-12
 - Repositorio: `ALBRA8/CONTEXT`
-- Rama de trabajo Wave 2: `migration/2026-10-12-albra-context-wave2`
+- Wave de recuperación: Wave 3 — recuperación dirigida de huecos.
 
 ## 1. Estado de la migración
 
-Wave 1 fue integrada y PR #1 quedó fusionado. Wave 2 continúa sobre ese estado; no recrea ni sobrescribe la primera onda.
+Wave 1 fue integrada y PR #1 quedó fusionado. Wave 2 fue integrada y PR #2 quedó fusionado. Wave 3 continúa sobre ese estado y no recrea ni sobrescribe las ondas anteriores.
 
-Wave 2 ya incorporó:
-- perfiles adicionales de agentes;
-- proyectos relevantes;
-- prompts/frameworks recuperables;
-- historial de auditorías;
-- sesiones históricas;
-- inventario de artefactos;
-- mapa de relaciones;
-- registro de información faltante;
-- actualización de índices.
+Wave 3 redujo huecos mediante inspección directa de repositorios y recuperación de fuentes históricas del Library.
 
-## 2. Referencia AGENTE-GENERAL
+## 2. Agentes profundizados
 
-Seed congelado reportado:
-- Código: `8437f2aa425a58fa76920ecc5c97ec99c85c0036`
-- Certificación: `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9e`
+- AGENTE-GENERAL: evolución histórica y certificación final recuperadas.
+- AGENTE-KREA: V2.1 y matriz VERIFIED/INFERRED/ESTIMATED/NOT_VERIFIED recuperadas.
+- AGENTE-LEADS: README V2 actual + auditoría Hermes histórica recuperados.
+- AGENTE-CHISMOSO: arquitectura, providers, intelligence y DoD recuperados.
+- YOUTUBE-AUTOMATION: estado actual + HANDS partial connected recuperado.
+- PURO-PODER-CONOCIMIENTO: corpus y versión recuperados.
+- Extension-CAZADOR: README y distinción respecto a Flow Script Processor recuperados.
+- NEX-SCOPE: clasificado con evidencia directa como SYSTEM / SAAS PLATFORM.
 
-Estas referencias se conservan como estado histórico/documental y no implican una nueva auditoría ejecutada desde CONTEXT.
+## 3. Proyectos profundizados
 
-## 3. Agentes documentados en Wave 2
+CRM ALBRA y Despacho Jurídico tienen evidencia directa adicional desde sus README actuales. YOUTUBE-AUTOMATION/HANDS también tiene estado más preciso. EEC y Audiobook rights research siguen siendo principalmente conversación/planificación en esta Wave.
 
-Chismoso, YouTube Automation, Trading, Despacho Jurídico, CRM ALBRA, NEX-SCOPE, RADAR-SECOP2, Extension-CAZADOR y PURO-PODER-CONOCIMIENTO.
+## 4. Prompts / fuentes exactas recuperadas
 
-Krea, Leads y General ya tenían evidencia migrada en Wave 1.
+Se localizaron en Library los originales completos de:
 
-## 4. Proyectos recuperados
+- `PROMPT BASE — YOUTUBE AUTOMATION CREATIVE ENGINE.txt` — 668 líneas.
+- `PROMPT%20PARA%20INGENIERIA%20INVERSA%20V1.2(1).txt` — 2001 líneas.
+- `PROMPT MAESTRO FRUTINOVELAS V2.0 — SISTEMA OPERATIVO.txt` — 1683 líneas.
+- `prompts y manual maestro.txt` — 754 líneas.
 
-Seed/AGENTE-GENERAL, YOUTUBE-AUTOMATION, HANDS, EEC/Mission Control, Despacho Jurídico, CRM, NEX-SCOPE, RADAR-SECOP2, audiobook/rights research y CONTEXT.
+El source manifest `05_PROMPTS/WAVE3_RECOVERED_SOURCES.md` registra identidad y estado. Los cuerpos completos todavía no están duplicados dentro de CONTEXT en esta Wave.
 
-## 5. Restricciones activas
+## 5. Artefactos
+
+Los dos nombres binarios exactos solicitados por la migración siguen `MISSING_BINARY`:
+
+- `ElevenLabs + n8n-20261011T063410Z-1-001.zip`
+- `12. OpenCode-20261011T063710Z-1-001(1).zip`
+
+Existen variantes anteriores importadas y accesibles; están registradas en `99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md`.
+
+## 6. Restricciones activas
 
 - Solo `ALBRA8/CONTEXT` puede modificarse durante la migración.
 - Repositorios externos son fuentes de consulta.
 - No migrar secretos ni credenciales.
 - No convertir propuestas en hechos implementados.
-- Mantener VERIFIED / VERIFIED DOCUMENTATION / PARTIAL / INFERRED / ESTIMATED / NOT_VERIFIED.
+- Mantener VERIFIED / VERIFIED DOCUMENTATION / PARTIAL / INFERRED / ESTIMATED / NOT_VERIFIED / MISSING_BINARY.
 
-## 6. Pendientes
+## 7. Pendientes después de Wave 3
 
-1. Recuperar cuerpos completos de prompts cuando estén disponibles.
-2. Materializar y revisar los ZIP/artefactos históricos cuando vuelvan a estar disponibles.
-3. Completar fichas canónicas de agentes con auditoría directa.
-4. Completar auditorías históricas de CRM, YOUTUBE, Chismoso, Legal y otros sistemas.
-5. Formalizar decisiones con estado explícito.
-6. Continuar Wave 2 con los elementos restantes; la migración NO está terminada.
+1. Independiente auditoría actual de AGENTE-GENERAL/KREA/LEADS/CHISMOSO/YOUTUBE/CRM y otros repositorios.
+2. Duplicar dentro de CONTEXT los cuerpos completos de los 4 prompt originals recuperados, si se decide que deben ser parte del snapshot portable.
+3. Recuperar exactamente los dos ZIPs timestamped solicitados o mantenerlos como MISSING_BINARY.
+4. Profundizar EEC/Mission Control y Audiobook rights research.
+5. Recuperar evidencia completa de sesiones históricas y auditorías adicionales.
 
 ## Historial
 
-- 0.3.0 — Wave 2 continúa después de PR #1 y añade agentes/proyectos/prompts/auditorías/sesiones/artefactos/relaciones/gaps.
-- 0.2.0 — Primera ampliación real del contexto.
-- 0.1.0 — Primera fotografía.
+- Wave 3 — recuperación dirigida de múltiples huecos, preservando Wave 1/2 y reduciendo MISSING/NOT_VERIFIED.
+- 0.3.0 — Wave 2.
+- 0.2.0 — primera ampliación real del contexto.
+- 0.1.0 — primera fotografía.
