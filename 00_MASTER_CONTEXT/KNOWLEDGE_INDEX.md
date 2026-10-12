@@ -1,57 +1,60 @@
 # Índice de conocimiento
 
-- Estado: UPDATED WAVE 3
-- Versión: 0.4.0
+- Estado: CLOSURE / WAVE 4
+- Versión: 0.5.0
+- Base: `fe4ca05faf2775cbd456b2814cf9f1299ce9650d`
 
 ## Fuentes canónicas internas
 
 | Tema | Fuente | Estado |
 |---|---|---|
-| Entrada universal | [ALBRA_BOOTSTRAP.md](../ALBRA_BOOTSTRAP.md) | PROPOSED |
+| Entrada universal | [ALBRA_BOOTSTRAP.md](../ALBRA_BOOTSTRAP.md) | CLOSURE |
 | Seguridad | [SECURITY.md](../SECURITY.md) | PROPOSED |
 | ADN | [ALBRA_DNA.md](ALBRA_DNA.md) | PROPOSED |
 | Arquitectura | [ALBRA_ARCHITECTURE.md](ALBRA_ARCHITECTURE.md) | PROPOSED |
 | Protocolo | [CONTEXT_PROTOCOL.md](CONTEXT_PROTOCOL.md) | PROPOSED |
-| Estado vivo | [CURRENT_STATE.md](CURRENT_STATE.md) | UPDATED WAVE 3 |
-| Relaciones | [RELATIONSHIP_MAP_WAVE2.md](RELATIONSHIP_MAP_WAVE2.md) | WAVE 2 |
-| Gaps de migración | [MIGRATION_MISSING_INFORMATION.md](MIGRATION_MISSING_INFORMATION.md) | UPDATED WAVE 3 |
-| Registro de agentes | [../01_AGENTS/AGENT_REGISTRY.md](../01_AGENTS/AGENT_REGISTRY.md) | UPDATED WAVE 3 |
-| Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | WAVE 2 |
-| Auditorías | [../03_AUDITS/WAVE2_AUDIT_HISTORY.md](../03_AUDITS/WAVE2_AUDIT_HISTORY.md) | WAVE 2 + Wave 3 source evidence |
-| Proyectos | [../04_PROJECTS/WAVE2_PROJECTS.md](../04_PROJECTS/WAVE2_PROJECTS.md) + [WAVE3_PROJECT_RECOVERY.md](../04_PROJECTS/WAVE3_PROJECT_RECOVERY.md) | UPDATED WAVE 3 |
-| Prompts/frameworks | [../05_PROMPTS/WAVE2_FRAMEWORKS.md](../05_PROMPTS/WAVE2_FRAMEWORKS.md) + [WAVE3_RECOVERED_SOURCES.md](../05_PROMPTS/WAVE3_RECOVERED_SOURCES.md) | UPDATED WAVE 3 |
-| Sesiones | [../06_SESSIONS/WAVE2_SESSION_INDEX.md](../06_SESSIONS/WAVE2_SESSION_INDEX.md) | WAVE 2 |
-| Artefactos | [../99_ARCHIVE/WAVE2_ARTIFACT_INVENTORY.md](../99_ARCHIVE/WAVE2_ARTIFACT_INVENTORY.md) + [WAVE3_ARTIFACT_RECOVERY.md](../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md) | UPDATED WAVE 3 |
+| Estado vivo | [CURRENT_STATE.md](CURRENT_STATE.md) | CLOSURE |
+| Gaps de migración | [MIGRATION_MISSING_INFORMATION.md](MIGRATION_MISSING_INFORMATION.md) | CLOSURE |
+| Registro de agentes | [../01_AGENTS/AGENT_REGISTRY.md](../01_AGENTS/AGENT_REGISTRY.md) | Wave 3 evidence |
+| Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | Historical + Wave 2 |
+| Auditorías | [../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) | CLOSURE |
+| Historial de auditorías | [../03_AUDITS/WAVE2_AUDIT_HISTORY.md](../03_AUDITS/WAVE2_AUDIT_HISTORY.md) | Historical |
+| Proyectos | [../04_PROJECTS/README.md](../04_PROJECTS/README.md) + project closure docs | CLOSURE |
+| Prompts/frameworks | [../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md](../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md) | SOURCE-PRESERVED |
+| Sesiones | [../06_SESSIONS/2026-10-12_MIGRACION_WAVE4.md](../06_SESSIONS/2026-10-12_MIGRACION_WAVE4.md) | CLOSURE |
+| Artefactos | [../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md](../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md) | CLOSURE / GAPS RETAINED |
 
-## Fuentes externas prioritarias
+## Agentes
 
-| Sistema | Uso | Estado Wave 3 |
-|---|---|---|
-| `ALBRA8/AGENTE-GENERAL` | Seed técnico universal | Certificación final recuperada |
-| `ALBRA8/AGENTE-KREA` | Product Factory / productos digitales | V2.1 verification recuperada |
-| `ALBRA8/AGENTE-LEADS` | Lead intelligence / research / evidence | README V2 + auditoría histórica recuperados |
-| `ALBRA8/AGENTE-CHISMOSO` | Research / intelligence | Architecture + DoD recuperados |
-| `ALBRA8/YOUTUBE-AUTOMATION` | Audiovisual orchestration + HANDS | README + HANDS current state recuperados |
-| `ALBRA8/AGENTE-TRADING` | Trading SMC / MT5 | WAVE 2 |
-| `ALBRA8/DESPACHO-JURIDICO` | Legal organism base | README actual recuperado |
-| `ALBRA8/CRM-ALBRA` | CRM / commercial operations | README actual recuperado |
-| `ALBRA8/NEX-SCOPE` | YouTube niche discovery | Clasificación SYSTEM/SAAS verificada |
-| `ALBRA8/RADAR-SECOP2` | SECOP II opportunity intelligence | WAVE 2 |
-| `ALBRA8/Extension-CAZADOR` | Browser/capture utility | README actual recuperado |
-| `ALBRA8/PURO-PODER-CONOCIMIENTO` | Knowledge corpus | README actual recuperado |
+Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y su nivel de evidencia está en `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
 
-## Reglas
+## Proyectos
 
-1. Añadir una entrada cuando se cree una fuente canónica relevante.
-2. Evitar duplicar contenido: resumir y enlazar.
-3. Marcar estados explícitamente.
-4. No usar el índice para convertir una afirmación en evidencia.
-5. No presentar capacidades inferidas como verificadas.
-6. Registrar gaps cuando el contenido original no esté disponible.
+- `04_PROJECTS/YOUTUBE_AUTOMATION_CLOSURE.md`
+- `04_PROJECTS/EEC_MISSION_CONTROL.md`
+- `04_PROJECTS/AUDIOBOOK_RIGHTS_RESEARCH.md`
+- `04_PROJECTS/WAVE2_PROJECTS.md`
+- `04_PROJECTS/WAVE3_PROJECT_RECOVERY.md`
+
+## Prompts originales
+
+Los cuatro originales principales están identificados por Library file_id en `05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md`. Sus cuerpos no fueron reconstruidos ni truncados.
+
+## Sesiones
+
+`06_SESSIONS/` conserva la evolución de la migración. Wave 4 agrega la prueba de continuidad y los límites del cierre.
+
+## Reglas de lectura
+
+1. Leer Bootstrap y CURRENT_STATE antes de actuar.
+2. Usar el índice para localizar fuentes, no para convertir afirmaciones en hechos.
+3. Verificar afirmaciones técnicas actuales en el repositorio fuente.
+4. Mantener la distinción entre histórico, vigente, verificado, inferido y no verificado.
+5. Solo `ALBRA8/CONTEXT` es escribible durante este flujo.
+6. No introducir secretos.
 
 ## Historial
 
-- 0.4.0 — Wave 3 añadió evidencia directa de agentes, proyectos, prompts y artefactos.
-- 0.3.0 — Wave 2 añadió fuentes de agentes, proyectos, prompts, auditorías, sesiones, artefactos, relaciones y gaps.
-- 0.2.0 — Arquitectura, protocolo, registro, decisiones y políticas.
-- 0.1.0 — Primer índice.
+- 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
+- 0.4.0 — Wave 3: evidencia directa adicional.
+- 0.3.0 — Wave 2: ampliación estructural.
