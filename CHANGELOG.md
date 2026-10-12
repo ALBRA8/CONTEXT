@@ -2,6 +2,15 @@
 
 Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico inverso. Este archivo resume cambios documentales; el historial Git conserva los commits completos.
 
+## [0.2.0] - 2026-10-12
+
+### Changed
+- `ALBRA_BOOTSTRAP.md`: explicitó que solo `ALBRA8/CONTEXT` puede recibir cambios; los demás repositorios son de solo lectura. Actualizó el mapa de archivos base existentes y el orden de incorporación.
+
+### Notes
+- El Bootstrap y el ADN siguen siendo documentos de trabajo pendientes de aprobación formal.
+- No se modificó ningún repositorio distinto de `ALBRA8/CONTEXT`.
+
 ## [0.1.0] - 2026-10-12
 
 ### Added
