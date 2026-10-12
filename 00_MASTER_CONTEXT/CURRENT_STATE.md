@@ -1,62 +1,63 @@
 # Estado actual de ALBRA-CONTEXT
 
 - Estado del documento: PROPOSED
-- Versión: 0.2.0
+- Versión: 0.3.0
 - Última actualización: 2026-10-12
 - Repositorio: `ALBRA8/CONTEXT`
-- Rama observada: `main`
+- Rama de trabajo Wave 2: `migration/2026-10-12-albra-context-wave2`
 
-## 1. Estado del contexto
+## 1. Estado de la migración
 
-La base documental ya contiene Bootstrap, seguridad, changelog, ADN propuesto, arquitectura maestra, protocolo, índice de conocimiento, glosario, registro de agentes, decisiones y políticas para auditorías, proyectos, prompts, sesiones y archivo.
+Wave 1 fue integrada y PR #1 quedó fusionado. Wave 2 continúa sobre ese estado; no recrea ni sobrescribe la primera onda.
 
-La presencia de un documento no implica aprobación formal de su contenido.
+Wave 2 ya incorporó:
+- perfiles adicionales de agentes;
+- proyectos relevantes;
+- prompts/frameworks recuperables;
+- historial de auditorías;
+- sesiones históricas;
+- inventario de artefactos;
+- mapa de relaciones;
+- registro de información faltante;
+- actualización de índices.
 
-## 2. Arquitectura registrada
+## 2. Referencia AGENTE-GENERAL
 
-El Agente General se documenta como organismo base universal / casa cognitiva universal, no como orquestador obligatorio. Los agentes especializados heredan el ADN y añaden misión y capacidades de dominio.
+Seed congelado reportado:
+- Código: `8437f2aa425a58fa76920ecc5c97ec99c85c0036`
+- Certificación: `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9e`
 
-`CONTEXT` es memoria externa y fuente de continuidad documental; los repositorios de implementación siguen siendo las fuentes técnicas de su propio código.
+Estas referencias se conservan como estado histórico/documental y no implican una nueva auditoría ejecutada desde CONTEXT.
 
-## 3. AGENTE-GENERAL: referencia protegida
+## 3. Agentes documentados en Wave 2
 
-Seed congelado: `8437f2aa425a58fa76920ecc5c97ec99c85c0036`.
+Chismoso, YouTube Automation, Trading, Despacho Jurídico, CRM ALBRA, NEX-SCOPE, RADAR-SECOP2, Extension-CAZADOR y PURO-PODER-CONOCIMIENTO.
 
-Certificación documental: `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9e`.
+Krea, Leads y General ya tenían evidencia migrada en Wave 1.
 
-Estas referencias son de solo lectura desde `CONTEXT`. Las cifras de tests/auditorías se tratan como declaraciones documentadas salvo reproducción independiente.
+## 4. Proyectos recuperados
 
-## 4. Agentes observados
+Seed/AGENTE-GENERAL, YOUTUBE-AUTOMATION, HANDS, EEC/Mission Control, Despacho Jurídico, CRM, NEX-SCOPE, RADAR-SECOP2, audiobook/rights research y CONTEXT.
 
-Repositorios actualmente accesibles al contexto incluyen `AGENTE-GENERAL`, `AGENTE-LEADS`, `AGENTE-KREA`, `AGENTE-CHISMOSO`, `YOUTUBE-AUTOMATION`, `AGENTE-TRADING`, `DESPACHO-JURIDICO`, `CRM-ALBRA`, `NEX-SCOPE`, `RADAR-SECOP2`, `Extension-CAZADOR` y `PURO-PODER-CONOCIMIENTO`.
+## 5. Restricciones activas
 
-Las fichas completas de cada agente se crearán progresivamente a partir de evidencia directa. No se inventarán capacidades por nombre de repositorio.
+- Solo `ALBRA8/CONTEXT` puede modificarse durante la migración.
+- Repositorios externos son fuentes de consulta.
+- No migrar secretos ni credenciales.
+- No convertir propuestas en hechos implementados.
+- Mantener VERIFIED / VERIFIED DOCUMENTATION / PARTIAL / INFERRED / ESTIMATED / NOT_VERIFIED.
 
-## 5. Evidencias ya contrastadas
+## 6. Pendientes
 
-- AGENTE-GENERAL: README y arquitectura del Seed consultados directamente.
-- KREA: `KREA_FINAL_VERIFICATION.md` consultado directamente; KREA V2.1 se describe como Product Factory / Commercial Product Engine con Book Factory, QA, readiness y launch package. El informe distingue VERIFIED, INFERRED, ESTIMATED y NOT_VERIFIED.
-- AGENTE-LEADS: README consultado directamente; describe pipeline determinístico de discovery → research → validation → evidence → dedup → scoring → intelligence → storage → report → CRM, con evidencia por campo y outreach opcional.
-
-## 6. Restricciones activas
-
-- No modificar repositorios externos a `ALBRA8/CONTEXT`.
-- No publicar secretos ni datos sensibles.
-- No presentar documentos propuestos como normas aprobadas.
-- Registrar evidencia y limitaciones al afirmar verificaciones.
-- Mantener separadas memoria documental y fuentes técnicas de implementación.
-
-## 7. Pendientes prioritarios
-
-1. Revisar y aprobar/corregir la línea base de ADN.
-2. Completar fichas canónicas de agentes restantes.
-3. Completar fichas de proyectos importantes.
-4. Extraer decisiones reales de las conversaciones históricas y formalizarlas cuando el propietario las confirme.
-5. Documentar auditorías existentes con alcance y evidencia.
-6. Incorporar los frameworks/prompts importantes como fuentes versionadas.
-7. Mantener este archivo actualizado como fotografía viva.
+1. Recuperar cuerpos completos de prompts cuando estén disponibles.
+2. Materializar y revisar los ZIP/artefactos históricos cuando vuelvan a estar disponibles.
+3. Completar fichas canónicas de agentes con auditoría directa.
+4. Completar auditorías históricas de CRM, YOUTUBE, Chismoso, Legal y otros sistemas.
+5. Formalizar decisiones con estado explícito.
+6. Continuar Wave 2 con los elementos restantes; la migración NO está terminada.
 
 ## Historial
 
-- 0.2.0 — Actualizado tras la primera ampliación real del contexto y la inspección directa de varios repositorios.
-- 0.1.0 — Primera fotografía del estado documental.
+- 0.3.0 — Wave 2 continúa después de PR #1 y añade agentes/proyectos/prompts/auditorías/sesiones/artefactos/relaciones/gaps.
+- 0.2.0 — Primera ampliación real del contexto.
+- 0.1.0 — Primera fotografía.
