@@ -1,8 +1,8 @@
 # Índice de conocimiento
 
-- Estado: CLOSURE / WAVE 4
-- Versión: 0.5.0
-- Base: `fe4ca05faf2775cbd456b2814cf9f1299ce9650d`
+- Estado: CLOSURE / WAVE 5
+- Versión: 0.6.0
+- Base: `71b8ae55ae8dd4bd4b04cc00b12197043c940910`
 
 ## Fuentes canónicas internas
 
@@ -19,8 +19,8 @@
 | Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | Historical + Wave 2 |
 | Auditorías | [../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) | CLOSURE |
 | Historial de auditorías | [../03_AUDITS/WAVE2_AUDIT_HISTORY.md](../03_AUDITS/WAVE2_AUDIT_HISTORY.md) | Historical |
-| Proyectos | [../04_PROJECTS/README.md](../04_PROJECTS/README.md) + project closure docs | CLOSURE |
-| Prompts/frameworks | [../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md](../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md) | SOURCE-PRESERVED |
+| Proyectos | [../04_PROJECTS/README.md](../04_PROJECTS/README.md) + project closure docs | CLOSURE / WAVE 5 |
+| Prompts/frameworks | [../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md](../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md) + operational framework references | SOURCE-PRESERVED / WAVE 5 |
 | Sesiones | [../06_SESSIONS/2026-10-12_MIGRACION_WAVE4.md](../06_SESSIONS/2026-10-12_MIGRACION_WAVE4.md) | CLOSURE |
 | Artefactos | [../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md](../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md) | CLOSURE / GAPS RETAINED |
 
@@ -31,8 +31,11 @@ Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y
 ## Proyectos
 
 - `04_PROJECTS/YOUTUBE_AUTOMATION_CLOSURE.md`
+- `04_PROJECTS/HANDS_V1_ARCHITECTURE_REFERENCE.md`
 - `04_PROJECTS/EEC_MISSION_CONTROL.md`
 - `04_PROJECTS/AUDIOBOOK_RIGHTS_RESEARCH.md`
+- `04_PROJECTS/REVERSE_ENGINEERING_TEST_B_TRANSFER.md`
+- `04_PROJECTS/FRUTINOVELAS_TO_HUMAN_AVATAR_AI.md`
 - `04_PROJECTS/WAVE2_PROJECTS.md`
 - `04_PROJECTS/WAVE3_PROJECT_RECOVERY.md`
 
@@ -40,9 +43,28 @@ Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y
 
 Los cuatro originales principales están identificados por Library file_id en `05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md`. Sus cuerpos no fueron reconstruidos ni truncados.
 
+### Operational framework references — Wave 5
+
+- `05_PROMPTS/CREATIVE_ENGINE_V1_OPERATIONAL_CONTRACT.md`
+- `04_PROJECTS/REVERSE_ENGINEERING_TEST_B_TRANSFER.md`
+- `04_PROJECTS/FRUTINOVELAS_TO_HUMAN_AVATAR_AI.md`
+
+Estos documentos son referencias operativas/arquitectónicas y no sustituyen los cuerpos originales de los prompts.
+
+## Wave 5 — corrección quirúrgica
+
+Wave 5 preserva cuatro piezas que el cierre anterior identificaba como incompletas:
+
+1. Reverse Engineering V1.2 — TEST B / Transfer.
+2. Frutinovelas V2.0 → NOVELAS — HUMAN AVATAR AI.
+3. HANDS V1.0 — arquitectura de referencia.
+4. Creative Engine V1.0 — contrato operativo.
+
+La onda no cambia la autoridad de los repositorios fuente, no aprueba automáticamente documentos `PROPOSED` y no convierte diseños en implementaciones verificadas.
+
 ## Sesiones
 
-`06_SESSIONS/` conserva la evolución de la migración. Wave 4 agrega la prueba de continuidad y los límites del cierre.
+`06_SESSIONS/` conserva la evolución de la migración. Wave 4 documenta el cierre previo; Wave 5 añade referencias quirúrgicas sin reabrir la migración masiva.
 
 ## Reglas de lectura
 
@@ -52,9 +74,11 @@ Los cuatro originales principales están identificados por Library file_id en `0
 4. Mantener la distinción entre histórico, vigente, verificado, inferido y no verificado.
 5. Solo `ALBRA8/CONTEXT` es escribible durante este flujo.
 6. No introducir secretos.
+7. Las referencias operativas no sustituyen los originales ni la fuente técnica de implementación.
 
 ## Historial
 
+- 0.6.0 — Wave 5: corrección quirúrgica y actualización del índice de conocimiento.
 - 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
 - 0.4.0 — Wave 3: evidencia directa adicional.
 - 0.3.0 — Wave 2: ampliación estructural.
