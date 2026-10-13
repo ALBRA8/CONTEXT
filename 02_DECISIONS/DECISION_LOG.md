@@ -77,6 +77,17 @@ Una entrada solo se considera aprobada cuando el propietario la haya confirmado 
 - Estado: EXPLICIT USER DECISION
 - Decisión: las ondas posteriores continúan desde el estado integrado; no recrean ni sobrescriben la migración anterior.
 
+## D-0015 — Autorización de modificación de AGENTE-LEADS para Radar de Clientes
+
+- Estado: EXPLICIT USER DECISION
+- Fecha: 2026-10-13
+- Decisor / autoridad: Propietario (ALBRA8)
+- Decisión: autorizar expresamente la modificación de `ALBRA8/AGENTE-LEADS` para ejecutar el plan de corrección y evolución "Radar de Clientes" (`04_PROJECTS/RADAR_DE_CLIENTES_PLAN.md`), con condiciones: (1) primero P0 de seguridad e integridad; (2) después discovery, inteligencia comercial y experiencia, según prioridades de la auditoría; (3) agentes especializados en paralelo con contratos compartidos; (4) Constructor como único responsable de integración; (5) registro de autorización/hallazgos/plan en CONTEXT sin modificar decisiones anteriores; (6) sin despliegues a producción, envíos comerciales reales, migraciones destructivas ni operaciones de pago no autorizadas; (7) sin credenciales reales en informes/logs; (8) trazabilidad completa de cambios y commits reales; (9) ningún frente declarado terminado sin evidencia verificable.
+- Motivo: cerrar P0 confirmados por auditoría (seed-demo, score constante, contacto truncado, errores TS ocultos, SSRF dashboard) y evolucionar el producto.
+- Alcance: exclusivamente `ALBRA8/AGENTE-LEADS` (rama dedicada). No sustituye a D-0002 para otros repos. La autorización de modificación NO autoriza despliegue a producción.
+- Fuentes/evidencia: mensaje de autorización del propietario 2026-10-13; auditoría `03_AUDITS/AGENTE_LEADS_RADAR_AUDIT_2026-10-13.md`.
+- Sustituye a: nada (acota D-0002 para AGENTE-LEADS durante este trabajo).
+
 ## Plantilla
 
 ### D-XXXX — Título

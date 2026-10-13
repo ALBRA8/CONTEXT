@@ -34,6 +34,13 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 - No se modificó ningún repositorio distinto de `ALBRA8/CONTEXT`.
 - La migración continuaba abierta en ese momento.
 
+## [0.3.0] - 2026-10-13
+
+### Added
+- `03_AUDITS/AGENTE_LEADS_RADAR_AUDIT_2026-10-13.md`: auditoría de solo lectura de `ALBRA8/AGENTE-LEADS` @ `e73d15b` con hallazgos P0/P1/P2-P3 y verificación reproducible.
+- `04_PROJECTS/RADAR_DE_CLIENTES_PLAN.md`: plan autorizado P0→P3 con contratos compartidos y restricciones de ejecución.
+- `02_DECISIONS/DECISION_LOG.md`: D-0015 (EXPLICIT USER DECISION) — autorización del propietario para modificar AGENTE-LEADS con condiciones.
+
 ## [0.2.0] - 2026-10-12
 
 ### Changed
