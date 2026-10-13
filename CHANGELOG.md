@@ -2,6 +2,21 @@
 
 Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico inverso. Este archivo resume cambios documentales; el historial Git conserva los commits completos.
 
+## [0.6.0] - 2026-10-14 — Radar de Clientes: P2 cerrado (D-0015)
+
+### Added / Updated
+- **P2 CERRADO Y VALIDADO** (commit 5ec3cc0, rama `radar-clientes/p0-security`):
+  - PageSpeed Insights v5 (contrato 5): módulo `pagespeed.ts` con estados explícitos OK/UNREACHABLE/TIMEOUT/INVALID_URL, `parseScores`/`normalizeTargetUrl` puras, timeout 25s inyectable, key opcional (`Integration.pageSpeedApiKey`, cuota anónima gratuita sin key), `redactSecret` anti-fuga de key en errores, resultados persistidos con url evaluada + auditedAt + keyUsed. Integrado en el pipeline para calificados TIER_A/B con website (batches de 2, tope 10 por job).
+  - Determinización de pain/tier ANTES del LLM: núcleo puro `qualification-deterministic.ts` con 13 reglas auditables (`basis`), descalificaciones (sin presencia digital, CLOSED_PERMANENTLY, franquicia), nicheFit por keyword match documentado, tier mapping determinista; el LLM queda reducido a NARRATIVA (nunca modifica tier/pain/nicheFit); fallback determinista sin IA.
+  - Taxonomía FACT/INFERENCE/HYPOTHESIS/RECOMMENDATION en intelligence: normalización estricta de kinds (sinónimos es/en, irreconocibles descartados), builder determinista de items (nunca genera HYPOTHESIS), cap 10 + dedupe, persistida en `Prospect.intelligenceItems`.
+  - Migración aditiva `20261013211916_p2_pagespeed_intelligence` (3 ADD COLUMN, sin DROP/DELETE, verificada columna a columna).
+  - UI: PageSpeed con scores por umbral + estados ES (error crudo nunca renderizado) + chips de taxonomía en ficha.
+- Evidencia: tsc 0 errores, 377/377 tests (14 archivos, +103), lint 0 errores, build OK, push remoto verificado (5ec3cc0).
+
+### Notes
+- Pendiente autorizado en plan: P3 (experiencia Radar de Clientes — CSV real, ficha imprimible/PDF, borradores de primer contacto, Radar de Nichos, GET /api/prospects/[id], glosario ES).
+- Sin despliegues, sin envíos reales, sin migraciones destructivas; PSI es gratuita (cuota anónima o key propia del usuario).
+
 ## [0.5.0] - 2026-10-14 — Radar de Clientes: P0 cerrado + P1 cerrado (D-0015)
 
 ### Added / Updated
