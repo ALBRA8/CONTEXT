@@ -2,6 +2,17 @@
 
 Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico inverso. Este archivo resume cambios documentales; el historial Git conserva los commits completos.
 
+## [0.5.0] - 2026-10-14 — Radar de Clientes: P0 cerrado + P1 cerrado (D-0015)
+
+### Added / Updated
+- Ejecución autorizada por propietario (D-0015) sobre `ALBRA8/AGENTE-LEADS`, rama `radar-clientes/p0-security`.
+- **P0 CERRADO Y VALIDADO** (commits 7125bb7 + e956263): seed-demo gated sin exposición de credenciales, signup role:user, scoring comercial real con breakdown persistido, extracción completa de teléfono/email, 22 errores TS corregidos + `ignoreBuildErrors` eliminado, módulo SSRF para fetchers server-side, vitest+eslint operativos. Evidencia: tsc 0 errores, 182/182 tests, lint 0 errores, build OK.
+- **P1 CERRADO Y VALIDADO** (commit 94372d9): envelope de proveedores con taxonomía AUTH/UNAVAILABLE/RATE_LIMIT/TIMEOUT/EMPTY/INVALID_INPUT/UNKNOWN (contrato 7), cadena de fallback `searchWithFallback`, Google Places completo — place_id/coords/rating/ratingCount/businessStatus/paginación nextPageToken (máx 3 páginas)/keywords en textQuery/timeout 15s/clasificación de errores (contrato 1), dedup multi-señal EXACT/STRONG/PROBABLE, tabla `Evidence` por campo con confianza y fuente (contrato 2), clasificación de presencia digital en 4 estados (contrato 3), marcado estructural DEMO (`isMock`, sourceUrl null, bloqueo de propuestas 403 sobre mocks — contratos 10), trazabilidad de coste/llamadas por proveedor y SearchJob con estado real completed|partial|failed + fuentes fallidas (contrato 6), migración aditiva `20261013203215_p1_places_evidence_digital_presence` (sin DROP/DELETE, verificada), UI con badges DEMO/presencia digital/rating/businessStatus.
+- Evidencia P1: tsc 0 errores, 274/274 tests (10 archivos), lint 0 errores, build producción OK, push remoto verificado (94372d9).
+
+### Notes
+- Pendientes autorizados en plan: P2 (inteligencia comercial — PageSpeed v5, taxonomía FACT/INFERENCE/HYPOTHESIS/RECOMMENDATION) y P3 (experiencia — CSV/PDF/borradores/Radar de Nichos).
+- Sin despliegues a producción, sin envíos reales, sin migraciones destructivas, sin costes de API no autorizados.
 ## [0.4.0] - 2026-10-12 — Wave 4 / Closure
 
 ### Added / Updated
