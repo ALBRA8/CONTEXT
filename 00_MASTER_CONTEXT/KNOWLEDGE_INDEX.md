@@ -82,3 +82,8 @@ La onda no cambia la autoridad de los repositorios fuente, no aprueba automátic
 - 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
 - 0.4.0 — Wave 3: evidencia directa adicional.
 - 0.3.0 — Wave 2: ampliación estructural.
+
+
+## AGENTE-GENERAL — cierre de seguridad
+
+Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md`. Usar como checklist de implementación para autenticación, secretos/cifrado, dashboard, provider egress/SSRF, toolkit/planner, HITL, runtime y staging. El documento distingue requisitos pendientes de evidencia realmente verificada; no es certificación de producción.
