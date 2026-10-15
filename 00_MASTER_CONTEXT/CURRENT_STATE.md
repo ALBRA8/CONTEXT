@@ -88,3 +88,12 @@ Leer en este orden:
 6. cargar únicamente las fichas/agentes/proyectos pertinentes
 7. verificar cualquier afirmación técnica actual en el repositorio fuente
 8. respetar que solo `ALBRA8/CONTEXT` es escribible durante este flujo
+
+
+## 10. AGENTE-GENERAL — plan de implementación de seguridad (2026-10-14)
+
+Se añadió `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md` como contrato canónico de controles y aceptación para el cierre de seguridad. Cubre autenticación de API, dashboard/browser boundary, ciclo de vida de claves y cifrado, SSRF/proveedor, validación y límites de toolkit/planificador, HITL/recuperación, dependencias, despliegue y evidencias de staging.
+
+**Estado del agente: NOT READY FOR FINAL FREEZE / PRODUCTION NOT VERIFIED.** La CI documentada de 648 tests corresponde a `4c838850161f9c876dbdf084833a02dca6ed5806`; no certifica PRs abiertos ni despliegue real. El plan es un requisito de implementación y aceptación, no evidencia de que esos controles estén implementados o aprobados.
+
+Por la regla de alcance de este flujo, AGENTE-GENERAL continúa como fuente de solo lectura. No se modificó su código ni se fusionó ningún PR. La implementación en el repositorio del agente requiere un flujo de trabajo autorizado para escribir allí.
