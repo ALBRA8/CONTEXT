@@ -76,3 +76,13 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 
 ### Added
 - `ALBRA_BOOTSTRAP.md`, `README.md`, `SECURITY.md` y `CHANGELOG.md` iniciales.
+
+
+## [0.6.1] - 2026-10-14
+
+### Added
+- `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md`: contrato de controles de seguridad y puertas de aceptación para AGENTE-GENERAL; identifica requisitos, evidencia requerida, orden de integración y bloqueos para freeze.
+
+### Security / Status
+- `CURRENT_STATE.md` registra AGENTE-GENERAL como NOT READY FOR FINAL FREEZE / PRODUCTION NOT VERIFIED. La certificación CI de 648 tests pertenece al commit documentado y no acredita PRs abiertos ni despliegue real.
+- No se modificó AGENTE-GENERAL. El plan es especificación y checklist, no afirmación de implementación ni certificación dinámica.
