@@ -1,7 +1,7 @@
 # Registro de decisiones ALBRA
 
 - Estado: PROPOSED
-- Versión: 0.2.0
+- Versión: 0.3.0
 
 Una entrada solo se considera aprobada cuando el propietario la haya confirmado explícitamente. Las decisiones históricas se preservan aunque posteriormente cambien.
 
@@ -88,6 +88,24 @@ Una entrada solo se considera aprobada cuando el propietario la haya confirmado 
 - Fuentes/evidencia: mensaje de autorización del propietario 2026-10-13; auditoría `03_AUDITS/AGENTE_LEADS_RADAR_AUDIT_2026-10-13.md`.
 - Sustituye a: nada (acota D-0002 para AGENTE-LEADS durante este trabajo).
 
+## D-0016 — ALBRA Browser Factory como herramienta independiente
+
+- Estado: EXPLICIT USER DECISION / APPROVED FOR PROJECT DESIGN
+- Fecha: 2026-10-16
+- Decisor / autoridad: Propietario (ALBRA8)
+- Decisión: crear una herramienta independiente de ALBRA, inspirada en la funcionalidad de Dolphin Anty y destinada a ser mejorada/adaptada a las necesidades de ALBRA. No se crea como agente.
+- Propósito: organizar y escalar la gestión de múltiples cuentas/canales de publicación, especialmente YouTube y TikTok, evitando la gestión manual de ventanas y sesiones cuando el volumen crezca a decenas o cientos de cuentas.
+- Arquitectura: la herramienta funcionará como una Browser Factory / capa de gestión y despliegue de perfiles, cuentas y sesiones. YOUTUBE-AUTOMATION será su consumidor principal para la operación audiovisual y publicación.
+- Regla crítica de routing: el contenido debe estar asociado explícitamente a un destino; si el destino es TikTok 1, el vídeo solo puede ser enviado al perfil/cuenta TikTok 1; si es TikTok 5, debe ir únicamente a TikTok 5. La herramienta debe resolver el perfil/sesión correspondiente sin ambigüedad.
+- Relación con EEC: será una herramienta separada, pero podrá ser visible, administrable y monitorizable desde el EEC/Mission Control. No se acopla estructuralmente al EEC ni se convierte en un módulo agente.
+- Relación con YOUTUBE-AUTOMATION: YOUTUBE-AUTOMATION conserva el rol de fábrica/orquestador audiovisual. La Browser Factory aporta organización, aislamiento, selección de cuenta/perfil, sesiones y despliegue/publicación por destino.
+- Relación con AGENTE-GENERAL: no sustituye al Seed ni se convierte en agente. Debe respetar el perímetro de seguridad, contratos y gobernanza universal de ALBRA cuando se integre.
+- Relación con HANDS: puede utilizar la capa HANDS cuando sea necesaria interacción física/desktop, pero la herramienta no se redefine como HANDS ni como agente.
+- Principio de escalabilidad: el diseño debe contemplar desde pocas cuentas hasta volúmenes del orden de 100–200 cuentas sin depender de abrir y operar manualmente cada ventana.
+- Alcance inicial: ingeniería inversa funcional de Dolphin Anty, extracción de capacidades útiles, diseño de arquitectura propia, identificación de mejoras y construcción de una herramienta ALBRA propia. No implica copiar literalmente código propietario ni convertir Dolphin en dependencia de ejecución.
+- Estado: decisión aprobada; diseño/ingeniería en curso. No declarar implementación ni integración terminadas sin evidencia verificable.
+- Sustituye a: nada.
+
 ## Plantilla
 
 ### D-XXXX — Título
@@ -104,5 +122,6 @@ Una entrada solo se considera aprobada cuando el propietario la haya confirmado 
 
 ## Historial
 
+- 0.3.0 — Añadió D-0016 para formalizar la Browser Factory como herramienta independiente.
 - 0.2.0 — Wave 2 añadió decisiones históricas explícitas y reglas de evolución sin borrar el log previo.
 - 0.1.0 — Registro inicial.
