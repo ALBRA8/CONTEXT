@@ -1,7 +1,7 @@
 # Índice de conocimiento
 
 - Estado: CLOSURE / WAVE 5
-- Versión: 0.6.0
+- Versión: 0.7.0
 - Base: `71b8ae55ae8dd4bd4b04cc00b12197043c940910`
 
 ## Fuentes canónicas internas
@@ -18,6 +18,7 @@
 | Registro de agentes | [../01_AGENTS/AGENT_REGISTRY.md](../01_AGENTS/AGENT_REGISTRY.md) | Wave 3 evidence |
 | Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | Historical + Wave 2 |
 | Auditorías | [../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) | CLOSURE |
+| Auditoría actual AGENTE-GENERAL | [../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md](../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md) | PARTIAL / code review; production not verified |
 | Historial de auditorías | [../03_AUDITS/WAVE2_AUDIT_HISTORY.md](../03_AUDITS/WAVE2_AUDIT_HISTORY.md) | Historical |
 | Proyectos | [../04_PROJECTS/README.md](../04_PROJECTS/README.md) + project closure docs | CLOSURE / WAVE 5 |
 | Prompts/frameworks | [../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md](../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md) + operational framework references | SOURCE-PRESERVED / WAVE 5 |
@@ -27,6 +28,14 @@
 ## Agentes
 
 Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y su nivel de evidencia está en `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
+
+## Auditoría actual AGENTE-GENERAL — 2026-10-17
+
+- HEAD consultado: `7a71f0126331345d884ed140fec079c95b3840f4`.
+- El repo ya contiene dashboard y adaptación selectiva de utilidades de OpenClaw para WhatsApp; no es una migración completa a OpenClaw.
+- GitHub checks del HEAD en éxito; el conteo “744+ passed” proviene del mensaje del merge, no de una ejecución local de esta revisión.
+- `docs/CERTIFICATION.md` está desactualizado respecto del HEAD y todavía dice 648 tests / dashboard externo.
+- Recomendación: conservar el Seed, no operar Hermes + OpenClaw como dos cerebros; cerrar brechas MCP remoto, integración Leads, ASR y aceptación de producción. Ver auditoría enlazada en la tabla de fuentes canónicas.
 
 ## Proyectos
 
@@ -78,6 +87,7 @@ La onda no cambia la autoridad de los repositorios fuente, no aprueba automátic
 
 ## Historial
 
+- 0.7.0 — Auditoría actual de AGENTE-GENERAL (HEAD 7a71f01), integración selectiva OpenClaw, estado CI y brechas de producción.
 - 0.6.0 — Wave 5: corrección quirúrgica y actualización del índice de conocimiento.
 - 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
 - 0.4.0 — Wave 3: evidencia directa adicional.
