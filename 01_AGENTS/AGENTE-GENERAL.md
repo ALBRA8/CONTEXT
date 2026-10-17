@@ -2,12 +2,22 @@
 
 - Repositorio: `ALBRA8/AGENTE-GENERAL`
 - Clasificación: Seed universal / agente genérico domain-agnostic.
-- Estado de referencia vigente en fuente: READY_TO_FREEZE / frozen reference.
-- Código certificado: `8437f2a425a58fa76920ecc5c97ec99c85c0036` (`8437f2a`).
-- Certificación: `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9` (`00a353c`).
-- Evidencia principal: `docs/CERTIFICATION.md` y commit `8437f2a`.
+- **Estado de esta ficha Wave 3:** HISTÓRICO; no describe por sí sola el HEAD actual.
+- **HEAD consultado 2026-10-17:** `7a71f0126331345d884ed140fec079c95b3840f4` (merge PR #57).
+- **Certificación histórica:** `8437f2a425a58fa76920ecc5c97ec99c85c0036` / `00a353cee9602fe8929ed3d6f6b6055f0ae8cd9`; no atribuirla al HEAD actual.
+- **Estado actual:** checks de GitHub del HEAD en éxito; documentación de certificación desactualizada; producción NOT VERIFIED.
+- **Auditoría actual:** [`../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md`](../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md).
 
-## Evolución recuperada
+## Estado vigente según revisión del 2026-10-17
+
+- El HEAD incorpora dashboard Next.js y provider settings API, almacén de configuración con Fernet y un daemon de WhatsApp basado en Baileys.
+- `dashboard/src/server/openclaw-adapted.js` adapta utilidades de la extensión WhatsApp de OpenClaw bajo MIT (sesión persistente, escritura atómica/backup, backoff, watchdogs, lock y deduplicación). No es el runtime completo de OpenClaw.
+- El repositorio actual incluye A2A HTTP y MCP; el servidor MCP concreto revisado es `InMemoryMCPServer`, mientras Handoff resuelve handlers in-process. No afirmar MCP remoto listo sin transporte real demostrado.
+- `docs/CERTIFICATION.md` sigue informando 648 tests y fecha 2026-10-14 y contiene una afirmación ya obsoleta sobre dashboard fuera del repo. El merge actual reporta 744+ tests y la API de GitHub muestra checks exitosos, pero esta auditoría no ejecutó los tests localmente.
+- `docs/ASR_LIMITATION.md` declara ASR no operativo por problemas de proveedores externos a fecha 2026-10-17; no se reprodujeron esos errores aquí.
+- Recomendación: conservar el Seed; no sustituirlo íntegramente por Hermes/OpenClaw ni mantener dos cerebros centrales. Completar aceptación real de seguridad/HITL, actualizar certificación y probar integración con AGENTE-LEADS.
+
+## Evolución recuperada (histórica; no representa el HEAD actual)
 
 La historia documentada en CONTEXT y la evolución registrada durante la migración identifican esta secuencia de hitos:
 
