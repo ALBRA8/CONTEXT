@@ -1,7 +1,7 @@
 # Índice de conocimiento
 
 - Estado: CLOSURE / WAVE 5
-- Versión: 0.6.0
+- Versión: 0.7.0
 - Base: `71b8ae55ae8dd4bd4b04cc00b12197043c940910`
 
 ## Fuentes canónicas internas
@@ -79,6 +79,7 @@ La onda no cambia la autoridad de los repositorios fuente, no aprueba automátic
 
 ## Historial
 
+- 0.7.0 — Indexada la propuesta P-0010 de Instagram Contact Enrichment & Audience Intelligence; estado PROPOSED.
 - 0.6.0 — Wave 5: corrección quirúrgica y actualización del índice de conocimiento.
 - 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
 - 0.4.0 — Wave 3: evidencia directa adicional.
