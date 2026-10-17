@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.8.0] - 2026-10-17 — Auditoría de encaje de agentes para Instagram
+
+### Added
+- `03_AUDITS/INSTAGRAM_AGENT_FIT_AUDIT_2026-10-17.md`: documenta el encaje recomendado entre AGENTE-LEADS, AGENTE-CHISMOSO y AGENTE-GENERAL, evidencia interna revisada, opciones externas y siguientes pasos.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizado a 0.8.0 para localizar la auditoría y registrar las responsabilidades recomendadas.
+
+### Findings / Boundaries
+- AGENTE-LEADS es el lugar recomendado para la capacidad de prospecting/enriquecimiento Instagram dentro de Radar de Clientes; CHISMOSO sigue como inteligencia de mercado upstream y deriva oportunidades a Leads.
+- La herramienta Instagram heredada de Leads consulta resultados indexados vía Google/Apify (máximo documentado de 10 resultados); no debe describirse como extracción completa de seguidores.
+- Referencias de proveedores externos son pistas para evaluación, no benchmarks ni garantías independientes de cobertura, calidad, precio o cumplimiento.
+- No se ejecutaron suites de pruebas nuevas ni se modificó ningún repositorio de agentes. No se implementó la capacidad.
+- La propuesta P-0010 sigue en estado PROPOSED y requiere aprobación explícita antes de considerarse decisión aprobada.
+
+
 ## [0.7.0] - 2026-10-17 — Propuesta Instagram Contact Enrichment & Audience Intelligence
 
 ### Added
