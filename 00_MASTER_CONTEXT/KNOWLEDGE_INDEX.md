@@ -1,7 +1,7 @@
 # Índice de conocimiento
 
 - Estado: CLOSURE / WAVE 5
-- Versión: 0.7.0
+- Versión: 0.8.0
 - Base: `71b8ae55ae8dd4bd4b04cc00b12197043c940910`
 
 ## Fuentes canónicas internas
@@ -18,6 +18,7 @@
 | Registro de agentes | [../01_AGENTS/AGENT_REGISTRY.md](../01_AGENTS/AGENT_REGISTRY.md) | Wave 3 evidence |
 | Decisiones | [../02_DECISIONS/DECISION_LOG.md](../02_DECISIONS/DECISION_LOG.md) | Historical + Wave 2 |
 | Auditorías | [../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) | CLOSURE |
+| Auditoría de encaje Instagram | [../03_AUDITS/INSTAGRAM_AGENT_FIT_AUDIT_2026-10-17.md](../03_AUDITS/INSTAGRAM_AGENT_FIT_AUDIT_2026-10-17.md) | Revisión documental; implementación no realizada |
 | Historial de auditorías | [../03_AUDITS/WAVE2_AUDIT_HISTORY.md](../03_AUDITS/WAVE2_AUDIT_HISTORY.md) | Historical |
 | Proyectos | [../04_PROJECTS/README.md](../04_PROJECTS/README.md) + project closure docs | CLOSURE / WAVE 5 |
 | Prompts/frameworks | [../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md](../05_PROMPTS/ORIGINAL_SOURCE_CATALOG.md) + operational framework references | SOURCE-PRESERVED / WAVE 5 |
@@ -27,6 +28,12 @@
 ## Agentes
 
 Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y su nivel de evidencia está en `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
+
+### Encaje de responsabilidades (recomendación, no implementación)
+- **AGENTE-CHISMOSO:** inteligencia de mercado, tendencias/señales y oportunidades trazables; puede derivar oportunidades a Leads.
+- **AGENTE-LEADS:** dueño recomendado de descubrimiento/enriquecimiento de prospectos y de la futura capacidad Instagram dentro de Radar de Clientes.
+- **AGENTE-GENERAL:** infraestructura/runtime/seguridad compartida; no absorber la lógica especializada de prospección. Seed sigue congelado.
+- Fuente y límites: `03_AUDITS/INSTAGRAM_AGENT_FIT_AUDIT_2026-10-17.md`.
 
 ## Proyectos
 
@@ -79,6 +86,7 @@ La onda no cambia la autoridad de los repositorios fuente, no aprueba automátic
 
 ## Historial
 
+- 0.8.0 — Añadida auditoría de encaje Instagram: Leads como dueño recomendado; Chismoso como inteligencia upstream; límites y trabajo pendiente documentados.
 - 0.7.0 — Indexada la propuesta P-0010 de Instagram Contact Enrichment & Audience Intelligence; estado PROPOSED.
 - 0.6.0 — Wave 5: corrección quirúrgica y actualización del índice de conocimiento.
 - 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
