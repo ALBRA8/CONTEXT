@@ -30,6 +30,7 @@ Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y
 
 ## Proyectos
 
+- `04_PROJECTS/INSTAGRAM_CONTACT_ENRICHMENT_AUDIENCE_INTELLIGENCE.md` — propuesta P-0010; PROPOSED, no implementada.
 - `04_PROJECTS/YOUTUBE_AUTOMATION_CLOSURE.md`
 - `04_PROJECTS/HANDS_V1_ARCHITECTURE_REFERENCE.md`
 - `04_PROJECTS/EEC_MISSION_CONTROL.md`
