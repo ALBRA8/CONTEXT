@@ -1,7 +1,7 @@
 # Estado actual de ALBRA-CONTEXT
 
 - Estado del documento: CLOSURE / READY FOR OPERATIONAL USE
-- Última actualización: 2026-10-12
+- Última actualización: 2026-10-17
 - Repositorio: `ALBRA8/CONTEXT`
 - Base de cierre Wave 4: `fe4ca05faf2775cbd456b2814cf9f1299ce9650d`
 
@@ -17,7 +17,7 @@ Las fichas existentes en `01_AGENTS/` conservan la evidencia recuperada durante 
 
 Puntos actuales importantes:
 
-- AGENTE-GENERAL: el Seed congelado histórico fue `8437f2a` con certificación `00a353c`, pero el repositorio tiene un HEAD posterior `43563c81c7a77bb9a762921037fd7f91414cb212` que integra memoria en el reasoning loop. Ese HEAD declara NOT_READY_TO_FREEZE pendiente de CI/auditoría. Por tanto, el Seed congelado y el HEAD actual son estados históricos distintos.
+- AGENTE-GENERAL: la ficha del Seed congelado histórico `8437f2a` / certificación `00a353c` ya no representa el HEAD. HEAD consultado el 2026-10-17: `7a71f0126331345d884ed140fec079c95b3840f4` (merge PR #57: dashboard/provider settings, adaptación selectiva OpenClaw y ASR fixes). GitHub reporta checks del HEAD en éxito; el mensaje de merge informa 744+ tests, mientras `docs/CERTIFICATION.md` sigue con fecha 2026-10-14 y 648 tests. Ver [auditoría actual](../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md). Estado: producción NOT VERIFIED; no declarar freeze final.
 - AGENTE-KREA: último commit recuperado `460605e5b4966e5e9243c1ec3fcb4852c6758e1b`; V2.1 documentada como condicionalmente aprobada, 241 tests; proveedores externos NOT_VERIFIED.
 - AGENTE-LEADS: último commit recuperado `e73d15beeb0b5573d3728f08b8afc52cd00a5afc`; cierre de producción documentado con 219 tests y E2E 9/9; auditoría independiente actual NOT_VERIFIED.
 - AGENTE-CHISMOSO: último commit recuperado `731f76b3d72432f268ecd795bd2c97713f5a874f`; clean-room histórico PASS con 276 unit tests y una desviación documentada por SDK interno; auditoría independiente actual NOT_VERIFIED.
@@ -97,3 +97,8 @@ Se añadió `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md` como con
 **Estado del agente: NOT READY FOR FINAL FREEZE / PRODUCTION NOT VERIFIED.** La CI documentada de 648 tests corresponde a `4c838850161f9c876dbdf084833a02dca6ed5806`; no certifica PRs abiertos ni despliegue real. El plan es un requisito de implementación y aceptación, no evidencia de que esos controles estén implementados o aprobados.
 
 Por la regla de alcance de este flujo, AGENTE-GENERAL continúa como fuente de solo lectura. No se modificó su código ni se fusionó ningún PR. La implementación en el repositorio del agente requiere un flujo de trabajo autorizado para escribir allí.
+
+
+## 8. Auditoría actual de AGENTE-GENERAL — 2026-10-17
+
+La auditoría documental y revisión estática del HEAD `7a71f0126331345d884ed140fec079c95b3840f4` está registrada en [`03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md`](../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md). Hallazgo estratégico: AGENTE-GENERAL ya incluye dashboard y adaptación selectiva de utilidades OpenClaw para WhatsApp; no es una migración completa a OpenClaw. Los checks actuales de GitHub terminaron en éxito, pero la certificación canónica está desactualizada, ASR se declara bloqueado por dependencias externas y la aceptación de producción/HITL sigue pendiente. Recomendación: no reemplazar todo el Seed ni mantener dos agentes centrales; cerrar brechas concretas y evaluar Hermes solo con una comparación funcional equivalente.
