@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.0] - 2026-10-17 — Auditoría actual de AGENTE-GENERAL
+
+### Added / Updated
+- Añadida `03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md` con revisión estática del HEAD `7a71f0126331345d884ed140fec079c95b3840f4`, evidencia CI, arquitectura, seguridad, MCP/A2A, dashboard, adaptación OpenClaw, WhatsApp, ASR y recomendación de no migración total.
+- Actualizadas ficha del agente, estado actual, índice de conocimiento y matriz de repositorios.
+- Hallazgo clave: el HEAD actual ya reutiliza selectivamente código/patrones de OpenClaw para el daemon WhatsApp; no es una instalación ni sustitución completa por OpenClaw.
+- GitHub reporta checks del HEAD en éxito. El conteo 744+ tests viene del mensaje del merge; no se ejecutó el test suite localmente. `docs/CERTIFICATION.md` sigue desactualizado y producción/HITL no están verificados.
+- Se mantiene AGENTE-GENERAL como fuente de solo lectura; los cambios se proponen exclusivamente en CONTEXT mediante PR.
+
+
 Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico inverso. Este archivo resume cambios documentales; el historial Git conserva los commits completos.
 
 ## [0.6.0] - 2026-10-14 — Radar de Clientes: P2 cerrado (D-0015)

@@ -4,7 +4,7 @@ This matrix is a snapshot of the latest evidence recoverable at closure time. A 
 
 | Repository | Type | Latest known commit | Latest evidence | Independent current audit |
 |---|---|---|---|---|
-| AGENTE-GENERAL | Agent Seed | `43563c81c7a77bb9a762921037fd7f91414cb212` | Memory integration commit; 532 tests reported in commit; final status in commit is NOT_READY_TO_FREEZE pending CI/audit | NOT_VERIFIED |
+| AGENTE-GENERAL | Universal Agent Seed + dashboard/provider settings + WhatsApp daemon | `7a71f0126331345d884ed140fec079c95b3840f4` | Merge PR #57; GitHub checks for Python 3.10–3.12, Windows and dashboard reported success; merge message reports 744+ tests. Dashboard now tracked; selective OpenClaw WhatsApp utilities adapted under MIT. Canonical certification docs still stale (648 tests / dashboard absent); ASR declared blocked; MCP concrete server reviewed is in-memory. See `AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md`. | PARTIAL — current static review and CI status observed; production/HITL acceptance NOT VERIFIED |
 | AGENTE-KREA | Agent | `460605e5b4966e5e9243c1ec3fcb4852c6758e1b` | V2.1 FINAL VERIFICATION, conditionally approved; 241 tests; external providers NOT_VERIFIED | PARTIAL / historical verification; fresh independent audit NOT_VERIFIED |
 | AGENTE-LEADS | Agent | `e73d15beeb0b5573d3728f08b8afc52cd00a5afc` | Production closure; 219 tests; E2E 9/9; multiple contracts closed | NOT_VERIFIED current independently |
 | AGENTE-CHISMOSO | Agent | `731f76b3d72432f268ecd795bd2c97713f5a874f` | Clean-room report PASS; 276 unit tests; 10-signal investigation; one internal SDK caveat | PARTIAL / historical verification |

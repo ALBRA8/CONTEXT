@@ -112,3 +112,8 @@ Do not label the agent production-ready or frozen until all of the following are
 ## Current audit conclusion
 
 Based on the evidence reviewed on 2026-10-14, AGENTE-GENERAL is **NOT READY FOR FINAL FREEZE / PRODUCTION NOT VERIFIED**. The documented 648-test CI result applies to commit `4c838850161f9c876dbdf084833a02dca6ed5806`; it does not certify later open pull requests or a real deployment. This plan is a requirements/acceptance contract, not evidence that the listed controls have been implemented or passed.
+
+
+## Addendum — estado del repositorio al 2026-10-17
+
+La revisión del HEAD `7a71f0126331345d884ed140fec079c95b3840f4` confirma que `dashboard/` ahora está versionado en `ALBRA8/AGENTE-GENERAL`, a diferencia del alcance descrito en la versión original de este plan. El dashboard tiene workflow propio y GitHub reporta checks de build/escaneo de secretos en éxito para el HEAD consultado. Esto no elimina la necesidad de aceptación real de producción/HITL, revisión de secretos en el entorno desplegado ni validación de backups/rotación y configuración de red. La certificación canónica `docs/CERTIFICATION.md` sigue mostrando fecha 2026-10-14, 648 tests y texto que dice que el dashboard no está incluido; debe actualizarse en el repositorio fuente mediante un flujo autorizado. La revisión completa disponible en CONTEXT está en [`../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md`](../03_AUDITS/AGENTE_GENERAL_FULL_AUDIT_2026-10-17.md).
