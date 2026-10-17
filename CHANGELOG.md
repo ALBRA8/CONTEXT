@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.0] - 2026-10-17 — Propuesta Instagram Contact Enrichment & Audience Intelligence
+
+### Added
+- `04_PROJECTS/INSTAGRAM_CONTACT_ENRICHMENT_AUDIENCE_INTELLIGENCE.md` (P-0010): propuesta para AGENTE-LEADS/Radar de Clientes, con módulos separados de contacto empresarial y análisis agregado de audiencia.
+- Define evidencia por campo, revisión de permisos/fuentes, límites de privacidad y seguridad, fases de entrega y criterios de aceptación.
+
+### Status / Boundaries
+- Estado PROPOSED; pendiente de aprobación explícita del propietario. No representa implementación ni decisión arquitectónica aprobada.
+- No se modificó `ALBRA8/AGENTE-LEADS` ni ningún otro repositorio externo a CONTEXT.
+
 Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico inverso. Este archivo resume cambios documentales; el historial Git conserva los commits completos.
 
 ## [0.6.0] - 2026-10-14 — Radar de Clientes: P2 cerrado (D-0015)
