@@ -26,6 +26,8 @@ La ficha pública indexada la describe como extensión de SRZ Club para Instagra
 Fuente pública secundaria: https://chrome-stats.com/d/akflldkdlocnbdjgncigkglnnhaekpoa  
 Ficha de Chrome Web Store: https://chromewebstore.google.com/detail/srzburner/akflldkdlocnbdjgncigkglnnhaekpoa
 
+**Precisión de alcance (verificación cruzada de esta pasada):** la ficha oficial de Chrome Web Store consultada describe explícitamente Instagram y TikTok; la referencia de Chrome-Stats también menciona Facebook. Esta discrepancia no permite afirmar soporte oficial vigente para Facebook. Para el diseño de ALBRA, Instagram/TikTok quedan como plataformas descritas por la ficha oficial; Facebook queda **PENDIENTE DE CONFIRMACIÓN DEL PROVEEDOR**. La ficha oficial declara que la extensión maneja información personal identificable, información de autenticación y contenido de sitios web; antes de conectar cualquier flujo deben revisarse la política de privacidad y los términos completos. La ficha pública no acredita una API ni permiso de integración de terceros.
+
 ### Extension-CAZADOR — extractor web general, no motor de inteligencia social
 
 El README de `ALBRA8/Extension-CAZADOR` presenta un clon de scraper web con IA: la extensión captura una instantánea de la pestaña activa, sugiere campos con GLM, extrae filas estructuradas y permite exportar CSV/XLSX. Documenta extractores especializados para Dropi, Hotmart, JVZoo y Muncheye; no documenta un extractor especializado de Instagram, TikTok o Facebook.
