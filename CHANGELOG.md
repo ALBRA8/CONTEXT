@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.6.2] - 2026-10-19 — YOUTUBE-AUTOMATION Flow Script Processor LIVE FAIL
+
+### Added / Updated
+- Nuevo registro documental `03_AUDITS/YOUTUBE_AUTOMATION_FLOW_SCRIPT_PROCESSOR_POST_LIVE_FAIL_2026-10-19.md`: ejecución LIVE real, fallo de extracción de metadatos, autopsia de `fetch(Request)`, fix local reportado y checklist de auditoría independiente.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md`: estado de YOUTUBE-AUTOMATION actualizado, con distinción entre reporte del implementador y verificación independiente.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md`: indexación del nuevo registro.
+- `04_PROJECTS/YOUTUBE_AUTOMATION_CLOSURE.md`: estado específico del parser/telemetría y gates previos a commit/LIVE.
+
+### Evidence / Limits
+- Flow completó el video, pero la extensión no capturó metadatos esperados; `LIVE FAIL` aplica al parsing/telemetría.
+- Antigravity reportó fix local y 235/235 tests, no reejecutados independientemente aquí.
+- El diff íntegro aún no ha sido auditado en esta operación. No existe LIVE PASS del fix.
+- Sin cambios a `ALBRA8/YOUTUBE-AUTOMATION`; la escritura se limitó a `ALBRA8/CONTEXT`.
+- Gates: NO COMMIT, NO LIVE, NO MERGE, NO CONSTRUCTOR.
+
+
 Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico inverso. Este archivo resume cambios documentales; el historial Git conserva los commits completos.
 
 ## [0.6.0] - 2026-10-14 — Radar de Clientes: P2 cerrado (D-0015)
