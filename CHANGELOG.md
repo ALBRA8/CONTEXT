@@ -102,3 +102,20 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 ### Security / Status
 - `CURRENT_STATE.md` registra AGENTE-GENERAL como NOT READY FOR FINAL FREEZE / PRODUCTION NOT VERIFIED. La certificación CI de 648 tests pertenece al commit documentado y no acredita PRs abiertos ni despliegue real.
 - No se modificó AGENTE-GENERAL. El plan es especificación y checklist, no afirmación de implementación ni certificación dinámica.
+
+
+## [0.6.2] - 2026-10-19 — pasada de diferencias de repositorios
+
+### Added
+- `03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md`: commits recientes de los 14 repositorios accesibles; CI y ramas divergentes de AGENTE-GENERAL; cambios recientes de YOUTUBE-AUTOMATION, CRM-ALBRA y AGENTE-TRADING; límites de evidencia.
+
+### Updated
+- `00_MASTER_CONTEXT/CURRENT_STATE.md`: estado de repositorios posterior a Wave 4 y aclaración de CI versus estado real de producción.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md`: referencia al nuevo informe.
+- `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`: addendum con hashes/estados consultados en esta pasada, conservando la tabla original como histórico de Wave 4.
+- `04_PROJECTS/ALBRA_BROWSER_FACTORY.md`: registra que el propietario declara implementación local en su PC; la implementación queda NO INSPECCIONADA INDEPENDIENTEMENTE hasta tener archivos/código disponibles. Se aclara que Browser Factory es el nombre del producto y Dolphin Anty solo referencia funcional.
+
+### Evidence boundaries
+- No se modificaron repositorios fuente distintos de CONTEXT.
+- No se inspeccionó el PC local ni se ejecutaron todas las suites de los 14 repositorios.
+- Los resultados de pruebas citados desde commits/documentación se conservan como evidencia reportada, no como reruns independientes.
