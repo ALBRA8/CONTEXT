@@ -53,3 +53,16 @@ Do not create a separate Video Editor Agent merely because video editing exists 
 - Real Google Flow physical execution: NOT_VERIFIED.
 - External provider production run: NOT_VERIFIED.
 - Separate Video Editor Agent: NOT_IMPLEMENTED / intentionally deferred.
+
+
+## Flow Script Processor — estado posterior a LIVE FAIL (2026-10-19)
+
+Registro detallado: [`03_AUDITS/YOUTUBE_AUTOMATION_FLOW_SCRIPT_PROCESSOR_POST_LIVE_FAIL_2026-10-19.md`](../03_AUDITS/YOUTUBE_AUTOMATION_FLOW_SCRIPT_PROCESSOR_POST_LIVE_FAIL_2026-10-19.md).
+
+- **LIVE observado/reportado:** Google Flow completó un video real con Start Frame; la extensión 2.6.0 no extrajo metadatos de la solicitud `eb1hJf`. Veredicto: `LIVE FAIL` del parsing/telemetría, no del render del video.
+- **Causa raíz reportada por Antigravity:** el interceptor consultaba `init.body`, pero la llamada real utilizaba un objeto `Request` con `init` ausente.
+- **Fix local reportado:** `extension/injector.js`, `tests/flow_batchexecute_eb1hjf_mock.js`, `tests/test_flow_startframe_eb1hjf.py`; sin commit reportado. Tests informados: 235/235, todavía no reejecutados independientemente.
+- **Estado:** IMPLEMENTATION READY FOR REVIEW (declaración del implementador); auditoría del diff pendiente; NO LIVE PASS del fix.
+- **Gate:** auditoría técnica del diff completo en modo solo lectura antes de autorizar commit o LIVE. NO COMMIT / NO LIVE / NO MERGE / NO CONSTRUCTOR hasta autorización explícita.
+
+La actualización de CONTEXT no modifica el repositorio fuente ni constituye certificación del código local.
