@@ -91,3 +91,9 @@ La onda no cambia la autoridad de los repositorios fuente, no aprueba automátic
 ## AGENTE-GENERAL — cierre de seguridad
 
 Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md`. Usar como checklist de implementación para autenticación, secretos/cifrado, dashboard, provider egress/SSRF, toolkit/planner, HITL, runtime y staging. El documento distingue requisitos pendientes de evidencia realmente verificada; no es certificación de producción.
+
+
+## Pasada de repositorios — 2026-10-19
+
+- [REPOSITORY_DELTA_REVIEW_2026-10-19.md](../03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md) — commits recientes de 14 repositorios accesibles, CI y ramas divergentes de AGENTE-GENERAL, inventario documentado de YOUTUBE-AUTOMATION, CRM-ALBRA y corrección de estado de Browser Factory. Es una revisión documental; no certifica todos los repositorios ni inspecciona el PC local.
+- [FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) — la tabla Wave 4 se conserva como histórico; consultar su addendum 2026-10-19 para estado posterior.
