@@ -112,3 +112,18 @@ Se añadió el registro de auditoría documental `03_AUDITS/YOUTUBE_AUTOMATION_F
 - **Gate:** NO COMMIT, NO LIVE, NO MERGE, NO CONSTRUCTOR hasta veredicto de auditoría y nueva autorización explícita.
 
 La documentación separa hechos observados/reportados de conclusiones pendientes de verificación. El commit documental en CONTEXT no significa que se haya modificado YOUTUBE-AUTOMATION.
+
+
+## 12. Pasada de actualización de repositorios — 2026-10-19
+
+Informe completo: [`03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md`](../03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md).
+
+- Se consultaron los commits recientes de los 14 repositorios ALBRA8 accesibles y se revisaron con más profundidad AGENTE-GENERAL, YOUTUBE-AUTOMATION, CONTEXT y CRM-ALBRA.
+- AGENTE-GENERAL `main` consultado: `5f277b3574e36745884d2d0cfe745a45dc3b7b44`. Clean-Room PASS y Dashboard Build FAIL en ejecuciones separadas. Otro run en rama feature falló en ESLint; TypeScript/build fueron omitidos. Esto acredita un fallo de gate del dashboard, no que el agente entero o producción estén caídos.
+- Se detectaron ramas divergentes de AGENTE-GENERAL con cambios de memoria/seguridad, HITL, dashboard y staging. No se deben tratar como integradas en `main` sin revisar merges y PRs.
+- YOUTUBE-AUTOMATION `main` consultado: `3dc5c3076f0c615727dffca7c6b9360606320ec9`. El inventario del repo declara Flow Bridge, cola SQLite, endpoints, extensión, QA, métricas, MCP y Production Doctor con suites asociadas. La correlación de protocolo entre request real y `mediaId` de Start Frame sigue pendiente; el incidente de parser LIVE FAIL es telemetría/parsing, no fallo del vídeo generado.
+- CRM-ALBRA `main` consultado: `07ca93b204f465f252027d802dad1a7c95c6253d`, kit de arranque Windows; commits previos reportan cierre CHALECO, 370/370 tests y E2E 22/22, no repetidos independientemente aquí.
+- AGENTE-TRADING: Pine v2.2; alertas JSON incluyen `breakerLevel`; lanzador con actualización automática documentada en commits recientes.
+- La matriz de Wave 4 queda como snapshot histórico. Ver el addendum de la matriz y el informe nuevo para hashes/estado consultados en esta pasada.
+- Browser Factory: el propietario aclara que la implementación existe localmente en su PC. Estado documental corregido a **implementación local reportada por el propietario; no inspeccionada independientemente**. No se obtuvo código/hash/tests locales. El producto se llama Browser Factory; Dolphin Anty es solo referencia funcional.
+- No se modificó ningún repositorio fuente distinto de CONTEXT ni se ejecutaron localmente todas las suites. Los tests citados son declaraciones de commits/documentación salvo cuando se enlaza CI real.
