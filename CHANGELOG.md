@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.3] - 2026-10-20 — Evaluación SRZburner × NEX-SCOPE
+
+### Added / Updated
+- Nuevo documento `04_PROJECTS/SRZBURNER_NEX_SCOPE_INTEGRATION.md`: evaluación de SRZburner como fuente potencial de inteligencia multiplataforma para NEX-SCOPE.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md`: indexación del documento.
+- Recomendación provisional: NEX-SCOPE es el candidato natural por su agente, registro de herramientas, endpoint MCP y contrato de procedencia.
+
+### Evidence / Limits
+- La ficha pública indexada describe investigación/descarga/biblioteca/estadísticas para Instagram, TikTok y Facebook y exige cuenta SRZ Club.
+- No se verificó API pública, SDK, webhook, exportación soportada ni código fuente de SRZburner; la viabilidad técnica sigue pendiente.
+- No se modificó `ALBRA8/NEX-SCOPE`, no se implementó integración y no se autorizó uso de la extensión. Solo se actualizó `ALBRA8/CONTEXT`.
+- Gates siguientes: confirmar interfaz oficial y términos; diseñar contrato read-only; revisar seguridad antes de cualquier prototipo.
+
+
 ## [0.6.2] - 2026-10-19 — YOUTUBE-AUTOMATION Flow Script Processor LIVE FAIL
 
 ### Added / Updated
