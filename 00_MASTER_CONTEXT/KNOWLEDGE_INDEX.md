@@ -97,3 +97,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 
 - [REPOSITORY_DELTA_REVIEW_2026-10-19.md](../03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md) — commits recientes de 14 repositorios accesibles, CI y ramas divergentes de AGENTE-GENERAL, inventario documentado de YOUTUBE-AUTOMATION, CRM-ALBRA y corrección de estado de Browser Factory. Es una revisión documental; no certifica todos los repositorios ni inspecciona el PC local.
 - [FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) — la tabla Wave 4 se conserva como histórico; consultar su addendum 2026-10-19 para estado posterior.
+
+
+## Evaluación de integración — SRZburner × NEX-SCOPE (2026-10-20)
+
+- [SRZBURNER_NEX_SCOPE_INTEGRATION.md](../04_PROJECTS/SRZBURNER_NEX_SCOPE_INTEGRATION.md) — evaluación arquitectónica de la extensión SRZburner como fuente potencial de señales sociales para NEX-SCOPE. NEX-SCOPE es el candidato recomendado por su endpoint MCP, registro de herramientas, agente y contrato de procedencia. No hay evidencia confirmada de API/exportación autorizada de SRZ Club; no implementado ni aprobado en seguridad.
