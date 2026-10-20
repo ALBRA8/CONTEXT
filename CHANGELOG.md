@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.4] - 2026-10-20 — Comparativa SRZburner × CAZADOR × NEX-SCOPE
+
+### Added / Updated
+- Se documenta la comparativa arquitectónica en `04_PROJECTS/SRZBURNER_CAZADOR_NEX_SCOPE_INTEGRATION_REVIEW.md`.
+- Se confirma la recomendación de NEX-SCOPE como propietario funcional de inteligencia social; CAZADOR queda como extractor web general opcional, no como dependencia obligatoria.
+- Se precisa una discrepancia de alcance: Chrome Web Store describe Instagram/TikTok; Chrome-Stats también menciona Facebook. Facebook queda pendiente de confirmación oficial.
+- Se explicita que el endpoint MCP de NEX-SCOPE exige sesión autenticada; el acceso servicio-a-servicio requiere diseño propio y revisión de seguridad.
+
+### Evidence / Limits
+- Inspección de README, manifest y extractor de CAZADOR; README, registro de herramientas, ruta MCP y contrato de procedencia de NEX-SCOPE.
+- Sin ejecución runtime, sin instalación de extensiones, sin conexión a SRZ Club y sin integración implementada.
+- No se modificaron repositorios de producto. La documentación no certifica compatibilidad ni aprobación legal/seguridad.
+
+
 ## [0.6.3] - 2026-10-20 — Evaluación SRZburner × NEX-SCOPE
 
 ### Added / Updated
