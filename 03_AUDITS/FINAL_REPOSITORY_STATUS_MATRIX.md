@@ -28,3 +28,31 @@ This matrix is a snapshot of the latest evidence recoverable at closure time. A 
 - `MISSING`: source evidence was not recovered.
 
 A repository being public and accessible is not itself an audit result.
+
+
+---
+
+# ADDENDUM — ACTUALIZACIÓN DE REPOSITORIOS 2026-10-19
+
+La tabla superior es el snapshot histórico de Wave 4. No usarla como HEAD actual sin consultar este addendum y el informe detallado [REPOSITORY_DELTA_REVIEW_2026-10-19.md](REPOSITORY_DELTA_REVIEW_2026-10-19.md).
+
+| Repository | HEAD consultado en esta pasada | Evidencia/cambios recientes | Límite actual |
+|---|---|---|---|
+| AGENTE-GENERAL | `5f277b3574e36745884d2d0cfe745a45dc3b7b44` | Multi-provider Groq/NVIDIA, estabilidad WhatsApp y limpieza de credenciales obsoletas. Clean-Room PASS; Dashboard Build FAIL. | El fallo de dashboard CI no demuestra caída de producción. Ramas de hardening divergentes no se consideran integradas por defecto. |
+| YOUTUBE-AUTOMATION | `3dc5c3076f0c615727dffca7c6b9360606320ec9` | Evidencia live UI Flow Start Frame y actualización de auditoría. `ESTADO_REAL.md` enumera Flow Bridge, endpoints, extensión, QA, métricas, MCP y Doctor con suites asociadas. | Correlación del request real con el `mediaId` de Start Frame pendiente; parser tuvo LIVE FAIL de telemetría y el fix reportado no tiene LIVE PASS independiente. |
+| CRM-ALBRA | `07ca93b204f465f252027d802dad1a7c95c6253d` | Kit de arranque Windows; commits previos reportan CHALECO CRM, 370/370 tests, E2E 22/22 y build gates OK. | Evidencia declarada por commits; suites no repetidas en esta pasada. |
+| AGENTE-LEADS | `e73d15beeb0b5573d3728f08b8afc52cd00a5afc` | Cierre de producción declarado; 219 tests en mensaje del commit. | Sin rerun independiente. |
+| AGENTE-TRADING | `0559ac3975149d2ac6b4e0ea0080e18635f4b2f8` | Pine v2.2 blindada; `breakerLevel` en alertas JSON; motor/señales declarados intactos. | Sin backtest nuevo en esta pasada. |
+| NEX-SCOPE | `09f0cb18d259fc1ef6be007be61338b4350807ee` | Rutas/MCP/error-loading y limpieza de uploads; commit previo declara hardening de memoria/provenance/trace/doctor. | Sin auditoría independiente actual. |
+| RADAR-SECOP2 | `8380deed7c9be02ebea7254e48f47402957de7c0` | Sincronización de PROMPT 05; historial declara Evidence Contract/TruthLevel/Doctor y 165 checks. | Sin rerun independiente. |
+| AGENTE-CHISMOSO | `731f76b3d72432f268ecd795bd2c97713f5a874f` | Clean-room PASS documentado históricamente. | No equivale a rerun actual. |
+| AGENTE-KREA | `460605e5b4966e5e9243c1ec3fcb4852c6758e1b` | V2.1 condicional, 241 tests reportados; proveedores externos NOT_VERIFIED. | Integraciones externas pendientes. |
+| Extension-CAZADOR | `b55f58f92b132f0be213cd2cf03123dcb5d891ad` | JSON-LD, dedup, SCRAPE shortcut; 130 tests reportados. | Sin rerun. |
+| PURO-PODER-CONOCIMIENTO | `9f1704b9ce8b3c992e48d0cb044b105d2e3e8904` | Último commit visible es carga de archivos. | Evidencia técnica limitada. |
+| DESPACHO-JURIDICO | `1801d6947c816a0cd9fb9b8dce87736212963ea1` | Auditoría de ingestión de fuentes reales V1.1 marcada PASS; 3 documentos/12 artículos y 461 passed/5 skipped declarados. | Sin rerun independiente. |
+| MAXI-APP | `24f493b63ddb83ceb3c23233135228d139b27598` | Footer y política de privacidad, abril de 2026. | Sin evidencia reciente de cierre técnico. |
+| CONTEXT | Cambios de documentación de esta pasada | Nuevo informe de diferencias, actualización de estado/índice/matriz y ficha Browser Factory. | La documentación no sustituye una auditoría de código de cada fuente. |
+
+## Browser Factory — evidencia y límite
+
+El propietario declara que Browser Factory ya está implementada en su PC. Estado: **IMPLEMENTACIÓN LOCAL REPORTADA POR EL PROPIETARIO; NO INSPECCIONADA INDEPENDIENTEMENTE**. No hay aquí ruta local, hash, diff ni salida de tests que permita certificar contenido o integración. El nombre del producto ALBRA es Browser Factory; Dolphin Anty es solo referencia funcional documentada.
