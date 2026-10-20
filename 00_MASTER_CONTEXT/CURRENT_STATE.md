@@ -1,7 +1,7 @@
 # Estado actual de ALBRA-CONTEXT
 
 - Estado del documento: CLOSURE / READY FOR OPERATIONAL USE
-- Última actualización: 2026-10-12
+- Última actualización: 2026-10-19
 - Repositorio: `ALBRA8/CONTEXT`
 - Base de cierre Wave 4: `fe4ca05faf2775cbd456b2814cf9f1299ce9650d`
 
@@ -97,3 +97,18 @@ Se añadió `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md` como con
 **Estado del agente: NOT READY FOR FINAL FREEZE / PRODUCTION NOT VERIFIED.** La CI documentada de 648 tests corresponde a `4c838850161f9c876dbdf084833a02dca6ed5806`; no certifica PRs abiertos ni despliegue real. El plan es un requisito de implementación y aceptación, no evidencia de que esos controles estén implementados o aprobados.
 
 Por la regla de alcance de este flujo, AGENTE-GENERAL continúa como fuente de solo lectura. No se modificó su código ni se fusionó ningún PR. La implementación en el repositorio del agente requiere un flujo de trabajo autorizado para escribir allí.
+
+
+## 11. YOUTUBE-AUTOMATION — Flow Script Processor LIVE FAIL (2026-10-19)
+
+Se añadió el registro de auditoría documental `03_AUDITS/YOUTUBE_AUTOMATION_FLOW_SCRIPT_PROCESSOR_POST_LIVE_FAIL_2026-10-19.md`.
+
+- Extensión 2.6.0 en `harness-v1`: el HEAD base `85ab666bc283509c1617feabefc98aee3bac5ed4` y los cambios locales post-autopsia son valores **reportados en la sesión**, no revalidados directamente en el PC durante esta actualización.
+- LIVE: Flow completó una generación real, pero la extensión no extrajo los metadatos esperados de `eb1hJf`; veredicto reportado: `LIVE FAIL` para el parsing/telemetría.
+- Causa raíz reportada: interceptor `fetch` que solo inspeccionaba `init.body`, sin manejar `fetch(new Request(...))` cuando `init` está ausente.
+- Fix local descrito por Antigravity en tres archivos, sin commit reportado; pruebas reportadas 235/235.
+- **Estado vigente:** implementación `READY FOR REVIEW` según el implementador; auditoría independiente del diff pendiente; no hay LIVE PASS del fix.
+- **Siguiente paso:** revisión de solo lectura del diff íntegro y semántica Fetch/Request, streams, privacidad y regresiones.
+- **Gate:** NO COMMIT, NO LIVE, NO MERGE, NO CONSTRUCTOR hasta veredicto de auditoría y nueva autorización explícita.
+
+La documentación separa hechos observados/reportados de conclusiones pendientes de verificación. El commit documental en CONTEXT no significa que se haya modificado YOUTUBE-AUTOMATION.
