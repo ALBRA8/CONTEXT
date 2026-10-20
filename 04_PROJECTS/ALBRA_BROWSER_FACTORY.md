@@ -164,3 +164,15 @@ La implementación técnica futura tendrá su propio repositorio. `ALBRA8/CONTEX
 ## 13. Decisión relacionada
 
 Ver `02_DECISIONS/DECISION_LOG.md` → `D-0016 — ALBRA Browser Factory como herramienta independiente`.
+
+
+## 14. Actualización de estado — 2026-10-19
+
+**Corrección aportada por el propietario:** Browser Factory ya está implementada en su PC. El estado anterior “Implementación: NO DECLARADA” solo reflejaba la evidencia recuperada por CONTEXT y ya no debe interpretarse como que el producto no existe.
+
+- Estado actual de conocimiento: **IMPLEMENTACIÓN LOCAL REPORTADA POR EL PROPIETARIO; NO INSPECCIONADA INDEPENDIENTEMENTE**.
+- No se ha inspeccionado el árbol local, código, manifest, hash, tests, instalador ni conexión de la instancia del PC con los repositorios disponibles. No declarar todavía qué componentes o integraciones están implementados.
+- El nombre del producto es **ALBRA Browser Factory**. Dolphin Anty aparece únicamente como referencia funcional para ingeniería inversa, no como nombre del producto ALBRA.
+- Próxima auditoría cuando el código local esté accesible: inventario de archivos/versiones, arquitectura, aislamiento de perfiles y sesiones, routing explícito contenido→destino, almacenamiento/secretos, APIs/IPC, launcher, pruebas, permisos y conexión con YOUTUBE-AUTOMATION/HANDS/EEC.
+
+Esta actualización registra la declaración del propietario sin fingir acceso al PC ni elevar una afirmación a verificación técnica.
