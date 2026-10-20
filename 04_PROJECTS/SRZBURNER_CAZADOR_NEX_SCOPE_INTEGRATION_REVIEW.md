@@ -21,7 +21,7 @@ El adaptador podría vivir dentro de NEX-SCOPE inicialmente; no se recomienda cr
 
 ### SRZburner — fuente/capacidad externa potencial
 
-La ficha pública indexada la describe como extensión de SRZ Club para Instagram, TikTok y Facebook, con descarga de vídeos/audio, biblioteca y estadísticas de perfiles/publicaciones; requiere cuenta con acceso de SRZ Club. La ficha pública y un agregador no permiten concluir que exista API, SDK, webhook o exportación automatizable para integraciones de terceros. Tampoco se inspeccionó su código fuente ni backend.
+La ficha oficial de Chrome Web Store describe Instagram y TikTok; un agregador externo también menciona Facebook, por lo que el soporte oficial vigente para Facebook queda sin confirmar. La extensión se describe con funciones de descarga de vídeos/audio, biblioteca y estadísticas de perfiles/publicaciones, y requiere cuenta con acceso de SRZ Club. Ninguna de estas fichas demuestra que exista API, SDK, webhook o exportación automatizable para integraciones de terceros. Tampoco se inspeccionó su código fuente ni backend.
 
 Fuente pública secundaria: https://chrome-stats.com/d/akflldkdlocnbdjgncigkglnnhaekpoa  
 Ficha de Chrome Web Store: https://chromewebstore.google.com/detail/srzburner/akflldkdlocnbdjgncigkglnnhaekpoa
