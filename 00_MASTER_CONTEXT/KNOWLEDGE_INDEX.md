@@ -102,3 +102,7 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## Evaluación de integración — SRZburner × NEX-SCOPE (2026-10-20)
 
 - [SRZBURNER_NEX_SCOPE_INTEGRATION.md](../04_PROJECTS/SRZBURNER_NEX_SCOPE_INTEGRATION.md) — evaluación arquitectónica de la extensión SRZburner como fuente potencial de señales sociales para NEX-SCOPE. NEX-SCOPE es el candidato recomendado por su endpoint MCP, registro de herramientas, agente y contrato de procedencia. No hay evidencia confirmada de API/exportación autorizada de SRZ Club; no implementado ni aprobado en seguridad.
+
+## Análisis comparativo — SRZburner × CAZADOR × NEX-SCOPE (2026-10-20)
+
+- [SRZBURNER_CAZADOR_NEX_SCOPE_INTEGRATION_REVIEW.md](../04_PROJECTS/SRZBURNER_CAZADOR_NEX_SCOPE_INTEGRATION_REVIEW.md) — inspección directa del README y código relevante de CAZADOR y NEX-SCOPE. Conclusión: NEX-SCOPE es el propietario funcional; CAZADOR es opcional y no tiene soporte social específico demostrado. Se documenta que MCP requiere sesión autenticada, por lo que el acceso servicio-a-servicio también queda pendiente. No implementado.
