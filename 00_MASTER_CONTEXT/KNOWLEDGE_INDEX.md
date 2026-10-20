@@ -24,6 +24,10 @@
 | Sesiones | [../06_SESSIONS/2026-10-12_MIGRACION_WAVE4.md](../06_SESSIONS/2026-10-12_MIGRACION_WAVE4.md) | CLOSURE |
 | Artefactos | [../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md](../99_ARCHIVE/WAVE3_ARTIFACT_RECOVERY.md) | CLOSURE / GAPS RETAINED |
 
+## Auditoría reciente — YOUTUBE-AUTOMATION
+
+- [Flow Script Processor: autopsia LIVE FAIL y plan de auditoría (2026-10-19)](../03_AUDITS/YOUTUBE_AUTOMATION_FLOW_SCRIPT_PROCESSOR_POST_LIVE_FAIL_2026-10-19.md) — LIVE FAIL del parsing, causa raíz reportada, fix local pendiente de revisión independiente; NO LIVE PASS.
+
 ## Agentes
 
 Las fichas están en `01_AGENTS/`. El estado más reciente de los repositorios y su nivel de evidencia está en `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
