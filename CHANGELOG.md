@@ -180,3 +180,17 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 ### Evidence / Limits
 - Inspección documental de `package.json`, `KREA_FINAL_VERIFICATION.md` e historial de commits.
 - No se ejecutó código, pruebas, proveedor LLM ni operaciones de base de datos; no se modificó AGENTE-KREA.
+
+
+## [0.6.7] - 2026-10-21 — Reauditoría cruzada NEX-SCOPE + AGENTE-KREA
+
+### Added / Updated
+- `06_SESSIONS/2026-10-21_NEX_SCOPE_KREA_REAUDIT.md`: registro de continuidad y fronteras entre proyectos.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` y `00_MASTER_CONTEXT/CURRENT_STATE.md` actualizados con referencias canónicas.
+- Se aclara que `03_AUDITS/AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md` es la auditoría principal de KREA y que la ficha en `04_PROJECTS/` es complementaria.
+
+### Findings retained
+- NEX-SCOPE tiene una arquitectura agentic/MCP/memory/provenance/trace más madura que su descripción anterior, pero eso no prueba captura social nativa ni integración autorizada con SRZburner.
+- KREA V2.1 es una Product Factory comercial; `test:e2e` no corre E2E y `db:push --accept-data-loss` requiere precaución.
+- Las pruebas/Golden Flows reportados por KREA no se reejecutaron independientemente.
+- No se modificaron NEX-SCOPE, KREA ni CAZADOR; únicamente se actualizó CONTEXT.
