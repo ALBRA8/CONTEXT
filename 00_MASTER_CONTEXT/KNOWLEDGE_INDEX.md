@@ -126,3 +126,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - [Estado actual de NEX-SCOPE](../04_PROJECTS/NEX_SCOPE_CURRENT_STATE_2026-10-21.md) — agente, MCP, memoria persistente, provenance, execution trace y diagnóstico; no demuestra captura social nativa ni integración autorizada con SRZburner.
 
 **Regla de vigencia:** los documentos de integración SRZburner del 2026-10-20 son antecedentes. Deben releerse junto con el estado actual de NEX-SCOPE; no representan autorización para implementar ni evidencia de integración existente.
+
+## Instalador global + EEC — auditoría de integración (2026-10-22)
+
+- [INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md](../03_AUDITS/INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md) — estado actual de INSTALADOR, EEC/PANEL-DE-CONTROL y AGENTE-GENERAL; distingue código existente de integración no implementada; documenta gates de runtime real, autenticación/RBAC, adapters y VPS.
+- Decisión de arquitectura documentada: INSTALADOR = lifecycle; EEC = control plane; AGENTE-GENERAL = Seed/Host; agentes especializados = productos independientes; CONTEXT = documentación institucional separada, no miembro de EEC.
