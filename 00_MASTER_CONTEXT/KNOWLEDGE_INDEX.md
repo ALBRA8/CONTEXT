@@ -1,8 +1,8 @@
 # Índice de conocimiento
 
 - Estado: CLOSURE / WAVE 5
-- Versión: 0.6.0
-- Base: `71b8ae55ae8dd4bd4b04cc00b12197043c940910`
+- Versión: 0.6.6
+- Base: `99c95b20833ba4d6696dbc7fc5e66175e266721e`
 
 ## Fuentes canónicas internas
 
@@ -82,22 +82,20 @@ La onda no cambia la autoridad de los repositorios fuente, no aprueba automátic
 
 ## Historial
 
+- 0.6.6 — auditoría documental actualizada de AGENTE-KREA V2.1 y gates pendientes.
 - 0.6.0 — Wave 5: corrección quirúrgica y actualización del índice de conocimiento.
 - 0.5.0 — Wave 4: cierre, matriz de repositorios, catálogo de fuentes originales y prueba de continuidad.
 - 0.4.0 — Wave 3: evidencia directa adicional.
 - 0.3.0 — Wave 2: ampliación estructural.
 
-
 ## AGENTE-GENERAL — cierre de seguridad
 
 Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_CLOSURE_PLAN.md`. Usar como checklist de implementación para autenticación, secretos/cifrado, dashboard, provider egress/SSRF, toolkit/planner, HITL, runtime y staging. El documento distingue requisitos pendientes de evidencia realmente verificada; no es certificación de producción.
-
 
 ## Pasada de repositorios — 2026-10-19
 
 - [REPOSITORY_DELTA_REVIEW_2026-10-19.md](../03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md) — commits recientes de 14 repositorios accesibles, CI y ramas divergentes de AGENTE-GENERAL, inventario documentado de YOUTUBE-AUTOMATION, CRM-ALBRA y corrección de estado de Browser Factory. Es una revisión documental; no certifica todos los repositorios ni inspecciona el PC local.
 - [FINAL_REPOSITORY_STATUS_MATRIX.md](../03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md) — la tabla Wave 4 se conserva como histórico; consultar su addendum 2026-10-19 para estado posterior.
-
 
 ## Evaluación de integración — SRZburner × NEX-SCOPE (2026-10-20)
 
@@ -106,3 +104,11 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## Análisis comparativo — SRZburner × CAZADOR × NEX-SCOPE (2026-10-20)
 
 - [SRZBURNER_CAZADOR_NEX_SCOPE_INTEGRATION_REVIEW.md](../04_PROJECTS/SRZBURNER_CAZADOR_NEX_SCOPE_INTEGRATION_REVIEW.md) — inspección directa del README y código relevante de CAZADOR y NEX-SCOPE. Conclusión: NEX-SCOPE es el propietario funcional; CAZADOR es opcional y no tiene soporte social específico demostrado. Se documenta que MCP requiere sesión autenticada, por lo que el acceso servicio-a-servicio también queda pendiente. No implementado.
+
+## AGENTE-KREA — auditoría actual (2026-10-21)
+
+- [AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md](../03_AUDITS/AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md) — KREA V2.1 como Product Factory comercial; historial de evolución, modelos de persistencia, findings sobre script E2E que solo devuelve exit 0, `db:push --accept-data-loss`, exposición potencial del Doctor, PDF/QA físico y proveedores externos aún no certificados. Solo documentación; sin cambios en KREA.
+
+## NEX-SCOPE — estado arquitectónico actualizado (2026-10-21)
+
+- [NEX_SCOPE_CURRENT_STATE_2026-10-21.md](../04_PROJECTS/NEX_SCOPE_CURRENT_STATE_2026-10-21.md) — actualización contra `ALBRA8/NEX-SCOPE` `main` @ `09f0cb18d259fc1ef6be007be61338b4350807ee`. Documenta la evolución a plataforma agentic/operable con MCP, memoria persistente, provenance/truth levels, execution trace, doctor, version visibility y E2E reportado. Mantiene separados los hechos verificados de las capacidades sociales aún no demostradas.
