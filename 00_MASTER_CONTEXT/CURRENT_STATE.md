@@ -127,3 +127,16 @@ Informe completo: [`03_AUDITS/REPOSITORY_DELTA_REVIEW_2026-10-19.md`](../03_AUDI
 - La matriz de Wave 4 queda como snapshot histórico. Ver el addendum de la matriz y el informe nuevo para hashes/estado consultados en esta pasada.
 - Browser Factory: el propietario aclara que la implementación existe localmente en su PC. Estado documental corregido a **implementación local reportada por el propietario; no inspeccionada independientemente**. No se obtuvo código/hash/tests locales. El producto se llama Browser Factory; Dolphin Anty es solo referencia funcional.
 - No se modificó ningún repositorio fuente distinto de CONTEXT ni se ejecutaron localmente todas las suites. Los tests citados son declaraciones de commits/documentación salvo cuando se enlaza CI real.
+
+
+## 13. AGENTE-KREA — revisión actual del repositorio (2026-10-21)
+
+Ficha: [`04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md`](../04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md).
+
+- El HEAD visible consultado de `ALBRA8/AGENTE-KREA` es `460605e5b4966e5e9243c1ec3fcb4852c6758e1b` (2026-10-08); no apareció un commit posterior en la consulta del 2026-10-21.
+- KREA V2.1 se describe como Product Factory comercial: Product Brain, dossier/blueprint/specification, Commercial Product Engine, Book Factory/PDF, packaging/oferta, gestión de activos/versiones, QA, readiness, feedback y launch package.
+- 241 tests, Golden Flows F/G/H, build y clean-room son PASS **reportados** por `KREA_FINAL_VERIFICATION.md`; no se reejecutaron independientemente en esta revisión.
+- Hallazgo de script: `package.json` define `test:e2e` como echo + exit 0; ejecutar ese script no ejecuta pruebas E2E.
+- Riesgo operativo: `db:push` usa `prisma db push --accept-data-loss`; no ejecutarlo contra datos valiosos sin revisión y respaldo.
+- LLM real/Z.AI y dos comprobaciones visuales quedan NOT_VERIFIED según el informe. Handoff externo no conectado por diseño. Producción E2E no certificada.
+- Solo se actualizó CONTEXT. No se modificó ni ejecutó AGENTE-KREA.
