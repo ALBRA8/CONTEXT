@@ -112,3 +112,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## NEX-SCOPE — estado arquitectónico actualizado (2026-10-21)
 
 - [NEX_SCOPE_CURRENT_STATE_2026-10-21.md](../04_PROJECTS/NEX_SCOPE_CURRENT_STATE_2026-10-21.md) — actualización contra `ALBRA8/NEX-SCOPE` `main` @ `09f0cb18d259fc1ef6be007be61338b4350807ee`. Documenta la evolución a plataforma agentic/operable con MCP, memoria persistente, provenance/truth levels, execution trace, doctor, version visibility y E2E reportado. Mantiene separados los hechos verificados de las capacidades sociales aún no demostradas.
+
+
+## AGENTE-KREA — estado actual revisado (2026-10-21)
+
+- [AGENTE_KREA_CURRENT_STATE_2026-10-21.md](../04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md) — ficha de KREA V2.1 como Product Factory comercial. Registra el HEAD visible `460605e5b4966e5e9243c1ec3fcb4852c6758e1b`, los 241 tests/Golden Flows reportados (no reejecutados aquí), los proveedores externos NOT_VERIFIED, la discrepancia de `test:e2e` que solo hace echo y sale 0, y el riesgo operativo de `db:push --accept-data-loss`.
