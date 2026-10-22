@@ -151,3 +151,14 @@ Registro de continuidad: [2026-10-21_NEX_SCOPE_KREA_REAUDIT.md](../06_SESSIONS/2
 - **Hallazgos KREA:** `test:e2e` no ejecuta E2E automatizado (echo + exit 0); `db:push --accept-data-loss` es riesgo operacional; proveedor LLM real y dos verificaciones visuales permanecen NOT_VERIFIED en el informe fuente. 241 tests/Golden Flows son evidencia reportada, no rerun independiente de esta sesión.
 - **SRZburner/CAZADOR:** la decisión anterior es histórica y no autoriza integración. No se modificaron ambos proyectos.
 - **Límites de esta actualización:** cambios solo en CONTEXT; no se ejecutó KREA ni NEX-SCOPE, no se inspeccionó PC local ni se probaron proveedores externos.
+
+## 15. Auditoría de INSTALADOR global + EEC + AGENTE-GENERAL — 2026-10-22
+
+Auditoría canónica: [INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md](../03_AUDITS/INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md).
+
+- `ALBRA8/INSTALADOR` `main` @ `451d7203cfa9a9ba86026f058130b8c9d11c08ad`: GUI y lifecycle de productos implementados a nivel de código; el catálogo visible es CRM/LEADS y no demuestra instalación universal de agentes. `SelfHostedDeploymentAdapter.isImplemented() === false`. El runtime actual escribe estados/handles en DB, pero no se observó arranque/parada de procesos reales.
+- `ALBRA8/PANEL-DE-CONTROL` `main` @ `71b46ef5a58795aa032474298829befa93031020`: EEC con control plane, contratos/provider registry, tareas/runs, eventos, auditoría, aprobaciones y GUI. El provider por defecto sigue siendo `local-sim`; conexión de agentes externos y lifecycle real no están verificados.
+- Gate de seguridad: revisar autenticación/RBAC en rutas EEC antes de cualquier exposición remota. La ruta de comandos recibe `requesterType` desde el cuerpo y la ruta de estado devuelve un snapshot amplio; no se certificó un control externo que las proteja.
+- `ALBRA8/AGENTE-GENERAL` `main` @ `69c79dad8337be156bcc60e74b53f98d5a993d54`: PB-02 y harness YouTube especializados integrados en commits recientes; esto no demuestra integración general con EEC/INSTALADOR.
+- **Frontera vigente:** INSTALADOR gestiona ciclo de vida; EEC coordina/observa/aprueba; AGENTE-GENERAL aporta Seed/Host transversal; agentes especializados mantienen sus repositorios. CONTEXT permanece fuera de la EEC como documentación institucional.
+- **Estado de integración:** INSTALADOR ↔ EEC NO IMPLEMENTED / NO E2E VERIFIED. VPS NO IMPLEMENTED. No se ejecutaron suites de los repositorios en esta auditoría; los recuentos de tests citados por commits no se consideran rerun independiente.
