@@ -117,3 +117,12 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## AGENTE-KREA — estado actual revisado (2026-10-21)
 
 - [AGENTE_KREA_CURRENT_STATE_2026-10-21.md](../04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md) — ficha de KREA V2.1 como Product Factory comercial. Registra el HEAD visible `460605e5b4966e5e9243c1ec3fcb4852c6758e1b`, los 241 tests/Golden Flows reportados (no reejecutados aquí), los proveedores externos NOT_VERIFIED, la discrepancia de `test:e2e` que solo hace echo y sale 0, y el riesgo operativo de `db:push --accept-data-loss`.
+
+## Reauditoría cruzada — NEX-SCOPE + AGENTE-KREA (2026-10-21)
+
+- [Registro de continuidad](../06_SESSIONS/2026-10-21_NEX_SCOPE_KREA_REAUDIT.md) — evolución, límites de evidencia y fronteras entre proyectos.
+- [Auditoría canónica de AGENTE-KREA](../03_AUDITS/AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md) — dictamen, secuencia de commits, findings y límites de verificación.
+- [Ficha de estado de AGENTE-KREA](../04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md) — resumen de KREA V2.1 como Product Factory comercial; complementa la auditoría canónica.
+- [Estado actual de NEX-SCOPE](../04_PROJECTS/NEX_SCOPE_CURRENT_STATE_2026-10-21.md) — agente, MCP, memoria persistente, provenance, execution trace y diagnóstico; no demuestra captura social nativa ni integración autorizada con SRZburner.
+
+**Regla de vigencia:** los documentos de integración SRZburner del 2026-10-20 son antecedentes. Deben releerse junto con el estado actual de NEX-SCOPE; no representan autorización para implementar ni evidencia de integración existente.
