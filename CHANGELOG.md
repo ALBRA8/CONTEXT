@@ -1,3 +1,19 @@
+## [0.6.7] - 2026-10-22 — Auditoría de INSTALADOR global + EEC + AGENTE-GENERAL
+
+### Added / Updated
+- Nuevo informe `03_AUDITS/INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md` con inspección directa de los tres repositorios y sus HEAD consultados.
+- `CURRENT_STATE.md` actualizado con el estado vigente de INSTALADOR, EEC/PANEL-DE-CONTROL y AGENTE-GENERAL.
+- `KNOWLEDGE_INDEX.md` actualizado para localizar el informe y fijar las fronteras arquitectónicas.
+- `EEC_MISSION_CONTROL.md` actualizado: existe implementación de EEC en repo, pero no certificación de producción ni integración de agentes reales.
+- Dictamen: INSTALADOR ↔ EEC todavía no tiene integración E2E demostrada; el adapter VPS declara `isImplemented() === false`; los providers EEC por defecto son de simulación; el runtime del instalador aún no demuestra procesos reales.
+
+### Evidence / Limits
+- HEAD consultados: INSTALADOR `451d7203cfa9a9ba86026f058130b8c9d11c08ad`; PANEL-DE-CONTROL `71b46ef5a58795aa032474298829befa93031020`; AGENTE-GENERAL `69c79dad8337be156bcc60e74b53f98d5a993d54`.
+- Inspección documental/código de contratos, adapters, runtime, pipeline y rutas API; no se ejecutaron suites ni despliegues. Los tests descritos por los commits no se consideran verificados de forma independiente.
+- Solo se modificó documentación en CONTEXT; no se cambió código de los repositorios de producto.
+
+---
+
 # Changelog
 
 ## [0.6.6] - 2026-10-21 — Auditoría actual de AGENTE-KREA V2.1
