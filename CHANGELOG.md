@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.6.6] - 2026-10-21 — Auditoría actual de AGENTE-KREA V2.1
+
+### Added / Updated
+- Nuevo informe `03_AUDITS/AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md`.
+- Se documenta KREA V2.1 como Product Factory comercial con oportunidad, decisión, dossier, blueprint, packaging, factory orchestration, assets/versioning, QA, readiness, launch package, content y feedback.
+- Se separan los tests reportados por commits de la verificación independiente.
+- Se registran gates: `npm run test:e2e` no ejecuta E2E y termina con código 0; `db:push` usa `--accept-data-loss`; revisar acceso a Doctor; PDF/QA real y proveedores/handoff permanecen sin certificación.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizado para localizar la auditoría.
+
+### Evidence / Limits
+- Inspección documental directa de `package.json`, `prisma/schema.prisma`, `src/app/api/doctor/route.ts`, `vitest.config.ts`, `VERIFICATION-REPORT.md` e historial de commits.
+- HEAD consultado: `460605e5b4966e5e9243c1ec3fcb4852c6758e1b` (2026-10-08).
+- Sin ejecución clean-room, sin rerun de tests, sin despliegue y sin modificación de `ALBRA8/AGENTE-KREA`.
+- La aprobación documentada sigue siendo condicional; proveedores externos `NOT_VERIFIED`.
+
 ## [0.6.4] - 2026-10-20 — Comparativa SRZburner × CAZADOR × NEX-SCOPE
 
 ### Added / Updated
