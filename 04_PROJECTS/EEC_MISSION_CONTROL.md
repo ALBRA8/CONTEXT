@@ -44,3 +44,10 @@ The EEC should eventually be usable by any agent, but this does not make the EEC
 ## Current conclusion
 
 EEC/Mission Control remains a real ALBRA project concept with a detailed functional design, but it must not be represented as implemented software until a source repository or implementation artifact provides evidence.
+
+
+## Actualización de implementación — 2026-10-22
+
+La afirmación histórica “implementación de repositorio NOT_VERIFIED” queda superada por la evidencia nueva de `ALBRA8/PANEL-DE-CONTROL`, rama `main`, HEAD consultado `71b46ef5a58795aa032474298829befa93031020`. El repositorio contiene una EEC funcional como aplicación/control plane, con pipeline de comandos, contratos, providers, estado, tareas, runs, approvals, eventos y GUI.
+
+Esta actualización **no certifica producción**: los adapters registrados por defecto son locales de simulación; la integración con procesos/agentes reales, la autenticación/RBAC efectiva de rutas API, el puente con INSTALADOR y el despliegue VPS siguen pendientes de verificación. Véase [auditoría de integración 2026-10-22](../03_AUDITS/INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md).
