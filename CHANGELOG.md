@@ -162,3 +162,21 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 - No se modificaron repositorios fuente distintos de CONTEXT.
 - No se inspeccionó el PC local ni se ejecutaron todas las suites de los 14 repositorios.
 - Los resultados de pruebas citados desde commits/documentación se conservan como evidencia reportada, no como reruns independientes.
+
+
+## [0.6.6] - 2026-10-21 — Revisión actual de AGENTE-KREA
+
+### Added / Updated
+- Nueva ficha `04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md`: estado de KREA V2.1 como Product Factory comercial y sus fronteras con LEADS, CHISMOSO, Despacho Jurídico y YOUTUBE-AUTOMATION.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` e índice actualizados con la revisión del repo `ALBRA8/AGENTE-KREA`.
+- Se preserva el límite entre los tests/Golden Flows reportados por el proyecto y una repetición independiente.
+
+### Hallazgos relevantes
+- `package.json` declara `test:e2e` como `echo ... && exit 0`; el script no ejecuta E2E automatizado.
+- `db:push` usa `prisma db push --accept-data-loss`; riesgo operacional si se ejecuta sin revisar schema y respaldo.
+- LLM real/Z.AI, dos comprobaciones de QA visual y entrega externa permanecen NOT_VERIFIED/no conectadas según el informe.
+- HEAD visible consultado: `460605e5b4966e5e9243c1ec3fcb4852c6758e1b` (2026-10-08); no se encontró commit posterior en la consulta del 2026-10-21.
+
+### Evidence / Limits
+- Inspección documental de `package.json`, `KREA_FINAL_VERIFICATION.md` e historial de commits.
+- No se ejecutó código, pruebas, proveedor LLM ni operaciones de base de datos; no se modificó AGENTE-KREA.
