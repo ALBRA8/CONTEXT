@@ -140,3 +140,14 @@ Ficha: [`04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md`](../04_PROJECTS/AG
 - Riesgo operativo: `db:push` usa `prisma db push --accept-data-loss`; no ejecutarlo contra datos valiosos sin revisión y respaldo.
 - LLM real/Z.AI y dos comprobaciones visuales quedan NOT_VERIFIED según el informe. Handoff externo no conectado por diseño. Producción E2E no certificada.
 - Solo se actualizó CONTEXT. No se modificó ni ejecutó AGENTE-KREA.
+
+
+## 14. Reauditoría cruzada NEX-SCOPE + AGENTE-KREA — 2026-10-21
+
+Registro de continuidad: [2026-10-21_NEX_SCOPE_KREA_REAUDIT.md](../06_SESSIONS/2026-10-21_NEX_SCOPE_KREA_REAUDIT.md).
+
+- **NEX-SCOPE:** estado actual documentado en [NEX_SCOPE_CURRENT_STATE_2026-10-21.md](../04_PROJECTS/NEX_SCOPE_CURRENT_STATE_2026-10-21.md). Plataforma de inteligencia con agente operativo, MCP, memoria persistente, provenance/truth levels, execution trace y diagnóstico. Sin prueba de captura social nativa ni de API/exportación autorizada de SRZburner.
+- **AGENTE-KREA:** auditoría canónica [AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md](../03_AUDITS/AGENTE_KREA_CURRENT_AUDIT_2026-10-21.md) y ficha complementaria [AGENTE_KREA_CURRENT_STATE_2026-10-21.md](../04_PROJECTS/AGENTE_KREA_CURRENT_STATE_2026-10-21.md). KREA V2.1 se caracteriza como Product Factory comercial.
+- **Hallazgos KREA:** `test:e2e` no ejecuta E2E automatizado (echo + exit 0); `db:push --accept-data-loss` es riesgo operacional; proveedor LLM real y dos verificaciones visuales permanecen NOT_VERIFIED en el informe fuente. 241 tests/Golden Flows son evidencia reportada, no rerun independiente de esta sesión.
+- **SRZburner/CAZADOR:** la decisión anterior es histórica y no autoriza integración. No se modificaron ambos proyectos.
+- **Límites de esta actualización:** cambios solo en CONTEXT; no se ejecutó KREA ni NEX-SCOPE, no se inspeccionó PC local ni se probaron proveedores externos.
