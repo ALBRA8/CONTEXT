@@ -1,3 +1,19 @@
+## [0.6.9] - 2026-10-24 — Cierre reportado de Capa 2A y autorización de especificación 2B
+
+### Added / Updated
+- Nuevo documento `04_PROJECTS/CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md` con el resultado del piloto reportado, estado de seguridad, límites arquitectónicos y gate de implementación.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` actualizado con el cierre reportado de 2A y la autorización de redactar `FICHA.md` para 2B.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizado para localizar el documento canónico.
+- `04_PROJECTS/CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md` actualizado para reflejar que el siguiente paso es la especificación 2B, no una nueva auditoría general.
+- Se fijan los requisitos de lock check inicial/final, fallo cerrado ante estado desconocido, despacho exclusivo por CRM, no acceso directo a su BD comercial, supresiones/consentimiento e idempotencia.
+
+### Evidence / Limits
+- Piloto real, latencia de 321 ms, ausencia de duplicados, no invocación del LLM y reversión de `AGENTIC_2A_ENABLED=false`: **reportados por el propietario**, no reproducidos independientemente en esta actualización.
+- `crmSynced: false` queda registrado como observación con explicación aportada; no se declara resuelto mediante inspección independiente del código.
+- No se modificaron repositorios de producto ni clones locales. No se escribió código 2B, no se conectaron servicios y no se enviaron mensajes/campañas.
+
+---
+
 ## [0.6.8] - 2026-10-24 — Arquitectura CRM ALBRA + Chat Marketing por capas
 
 ### Added / Updated
