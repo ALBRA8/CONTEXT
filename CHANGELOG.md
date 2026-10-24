@@ -272,3 +272,14 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 - KREA V2.1 es una Product Factory comercial; `test:e2e` no corre E2E y `db:push --accept-data-loss` requiere precaución.
 - Las pruebas/Golden Flows reportados por KREA no se reejecutaron independientemente.
 - No se modificaron NEX-SCOPE, KREA ni CAZADOR; únicamente se actualizó CONTEXT.
+
+## [0.6.8] - 2026-10-24 — CRM ALBRA: hito C2B inbound
+
+### Added / Updated
+- `04_PROJECTS/CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md`: registra el mensaje entrante natural “Hola”, la asociación a contacto/conversación y la deduplicación, según el informe de Antigravity.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md`, `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` y `04_PROJECTS/CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md` actualizados con el nuevo hito y sus límites de evidencia.
+
+### Safety / Evidence
+- Se conserva `isAutoReply=0` para la conversación piloto; `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false` se reportan preservados.
+- No se autorizaron respuestas automáticas ni envíos adicionales.
+- El resultado se clasifica como reportado por Antigravity; la DB y los logs locales no se revalidaron independientemente durante esta actualización.
