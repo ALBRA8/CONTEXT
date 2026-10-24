@@ -1,7 +1,7 @@
 # Índice de conocimiento
 
 - Estado: CLOSURE / WAVE 5
-- Versión: 0.6.8
+- Versión: 0.6.9
 - Base: `99c95b20833ba4d6696dbc7fc5e66175e266721e`
 
 ## Fuentes canónicas internas
@@ -137,3 +137,9 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 
 - [CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md) — decisión conceptual de conservar CRM ALBRA como Capa 1 y separar la ampliación en 2A Agéntico/Conversacional y 2B Superpowers/Chat Marketing. Incluye límites de responsabilidad, contrato/eventos por diseñar, fases de investigación y gate explícito de no construir aún.
 - Estado: arquitectura conceptual acordada; auditoría actual de contratos, matriz definitiva e implementación pendientes.
+
+
+## CRM ALBRA — cierre 2A y especificación 2B (2026-10-24)
+
+- [CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md) — registra el piloto 2A como superado según el reporte del propietario, conserva `AGENTIC_2A_ENABLED=false`, documenta la observación `crmSynced: false` y autoriza únicamente la especificación de 2B, no su implementación.
+- La ficha de 2B debe definir locks antes de encolar y justo antes del despacho, fallar cerrado ante estado no verificable, usar solo interfaces reales del CRM/2A, mantener la autoridad de despacho en el CRM y documentar consentimiento, supresiones e idempotencia.
