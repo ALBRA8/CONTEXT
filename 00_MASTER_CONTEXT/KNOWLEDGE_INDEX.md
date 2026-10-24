@@ -153,3 +153,10 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## CRM ALBRA — primer piloto real saliente Capa 2B (2026-10-24)
 
 - [Cierre del primer piloto real saliente de Capa 2B](../04_PROJECTS/CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md) — negocio `573163301286` → cliente `573017543786`, mensaje promocional de zapatos, HTTP 200/Message ID y persistencia outbound reportados. Distingue el despacho registrado de la entrega/lectura y deja como siguiente hito observar una respuesta entrante natural. Evidencia aportada por el propietario/Antigravity; no revalidada independientemente.
+
+
+## CRM ALBRA — Hito C2B: respuesta entrante natural (2026-10-24)
+
+- [Registro del hito C2B](../04_PROJECTS/CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md) — Antigravity reportó que el “Hola” entrante del cliente `573017543786` se registró y asoció al contacto/conversación correctos, con deduplicación por `waMessageId`.
+- Salvaguardas reportadas: `isAutoReply=0` solo en la conversación piloto, `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false`; no se autorizaron respuestas automáticas ni envíos adicionales.
+- Evidencia declarada por Antigravity; logs/DB no revalidados independientemente en esta actualización. Mantener la pausa hasta nueva autorización expresa.
