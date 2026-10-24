@@ -10,6 +10,8 @@ Este índice auxiliar conecta los artefactos de organización documental y las f
 6. [Índice de conocimiento](./KNOWLEDGE_INDEX.md): punto de entrada a fichas de agentes, proyectos, decisiones, auditorías y prompts existentes.
 7. [Estado actual](./CURRENT_STATE.md): estado operativo documental conocido; no equivale a una auditoría independiente de todos los repositorios.
 8. [Gaps de migración](./MIGRATION_MISSING_INFORMATION.md): fuentes, binarios y verificaciones aún faltantes.
+9. [Reconciliación KREA `.env`](../03_AUDITS/RECONCILIATION_CORRECTIONS_2026-10-24.md): corrige la alerta preliminar de secreto expuesto y conserva sus límites de evidencia.
+10. [Reauditoría INSTALADOR × EEC](../03_AUDITS/INSTALLER_EEC_CURRENT_REAUDIT_2026-10-24.md): verifica la frontera actual entre lifecycle engine y EEC/PANEL-DE-CONTROL y define el gate para el primer despliegue real.
 
 ## Regla
 
