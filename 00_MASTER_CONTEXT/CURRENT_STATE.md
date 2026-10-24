@@ -175,3 +175,16 @@ Documento canónico: [CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md]
 - **Estado:** decisión conceptual registrada; la auditoría actual de CRM-ALBRA y la verificación de los clones/matriz locales quedan pendientes. No se han implementado contratos ni funcionalidades en esta actualización.
 - **Siguiente paso:** Antigravity debe auditar, clasificar capacidades, proponer contratos mínimos y entregar riesgos/licencias antes de solicitar aprobación de construcción.
 - **Restricción:** no crear NEXFLOW como CRM/sistema independiente; no conectar componentes experimentales ni ejecutar campañas reales durante la investigación.
+
+
+## 16. CRM ALBRA — cierre del piloto 2A y autorización de especificación 2B (2026-10-24)
+
+Documento canónico: [CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md).
+
+- **Capa 2A:** el propietario reporta el piloto supervisado real como superado: mensaje `PRECIO` procesado por `keyword_rule`, latencia reportada de 321 ms, sin llamada al LLM del CRM y sin duplicados. El CRM/daemon Baileys mantuvo la autoridad exclusiva de despacho físico.
+- **Seguridad:** `AGENTIC_2A_ENABLED=false`, allowlist limitada a `3017543786` / `573017543786`; no se autorizan nuevos mensajes reales ni ampliaciones sin permiso expreso.
+- **Observación:** `crmSynced: false` queda pendiente de aclaración técnica definitiva; se registra la explicación del propietario de que las reglas de catálogo/precios no mutan entidades comerciales. No se presenta como verificación independiente del código.
+- **Capa 2B:** autorizado preparar la especificación técnica y `FICHA.md` para `clones/albra-broadcast-2b/`. No se ha escrito código y la implementación no está autorizada.
+- **Fronteras:** 2B no atiende inbound ni abre sockets de WhatsApp; despacho por interfaz contractual del CRM y sin acceso directo a su BD comercial. Los locks de 2A se consultan antes de encolar y de nuevo antes del despacho; ante fallo/timeout/estado desconocido, no enviar.
+- **Pendiente para FICHA.md:** verificar los endpoints reales de CRM y 2A, autenticación, estados de lock, idempotencia, supresiones, consentimiento, reintentos, recuperación y criterios de aceptación. No inventar interfaces.
+- **Evidencia:** el resultado del piloto es un reporte documental del propietario; esta actualización no reprodujo la prueba ni inspeccionó el PC local. No confundir documentación con verificación independiente.
