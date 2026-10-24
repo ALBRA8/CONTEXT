@@ -1,7 +1,7 @@
 # Estado actual de ALBRA-CONTEXT
 
 - Estado del documento: CLOSURE / READY FOR OPERATIONAL USE
-- Última actualización: 2026-10-19
+- Última actualización: 2026-10-24
 - Repositorio: `ALBRA8/CONTEXT`
 - Base de cierre Wave 4: `fe4ca05faf2775cbd456b2814cf9f1299ce9650d`
 
@@ -162,3 +162,16 @@ Auditoría canónica: [INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.
 - `ALBRA8/AGENTE-GENERAL` `main` @ `69c79dad8337be156bcc60e74b53f98d5a993d54`: PB-02 y harness YouTube especializados integrados en commits recientes; esto no demuestra integración general con EEC/INSTALADOR.
 - **Frontera vigente:** INSTALADOR gestiona ciclo de vida; EEC coordina/observa/aprueba; AGENTE-GENERAL aporta Seed/Host transversal; agentes especializados mantienen sus repositorios. CONTEXT permanece fuera de la EEC como documentación institucional.
 - **Estado de integración:** INSTALADOR ↔ EEC NO IMPLEMENTED / NO E2E VERIFIED. VPS NO IMPLEMENTED. No se ejecutaron suites de los repositorios en esta auditoría; los recuentos de tests citados por commits no se consideran rerun independiente.
+
+
+## 13. CRM ALBRA + Chat Marketing — arquitectura por capas (2026-10-24)
+
+Documento canónico: [CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md).
+
+- **Capa 1:** CRM ALBRA / Chaleco, fuente canónica de datos comerciales, pipeline, timeline, permisos, canales y contratos existentes.
+- **Capa 2A:** motor agéntico/conversacional — flujos, triggers, contexto, calificación, handoff y acciones comerciales autorizadas.
+- **Capa 2B:** motor Superpowers/Chat Marketing — campañas, broadcast, audiencias, control de frecuencia, tracking, métricas y protección responsable de reputación.
+- **Frontera:** 2A y 2B evolucionan separadamente; intercambian señales mediante contratos/eventos explícitos. No duplican el CRM ni asumen una conexión directa interna.
+- **Estado:** decisión conceptual registrada; la auditoría actual de CRM-ALBRA y la verificación de los clones/matriz locales quedan pendientes. No se han implementado contratos ni funcionalidades en esta actualización.
+- **Siguiente paso:** Antigravity debe auditar, clasificar capacidades, proponer contratos mínimos y entregar riesgos/licencias antes de solicitar aprobación de construcción.
+- **Restricción:** no crear NEXFLOW como CRM/sistema independiente; no conectar componentes experimentales ni ejecutar campañas reales durante la investigación.
