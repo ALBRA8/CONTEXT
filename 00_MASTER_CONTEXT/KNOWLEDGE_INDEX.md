@@ -1,7 +1,7 @@
 # Índice de conocimiento
 
 - Estado: CLOSURE / WAVE 5
-- Versión: 0.6.6
+- Versión: 0.6.8
 - Base: `99c95b20833ba4d6696dbc7fc5e66175e266721e`
 
 ## Fuentes canónicas internas
@@ -131,3 +131,9 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 
 - [INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md](../03_AUDITS/INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md) — estado actual de INSTALADOR, EEC/PANEL-DE-CONTROL y AGENTE-GENERAL; distingue código existente de integración no implementada; documenta gates de runtime real, autenticación/RBAC, adapters y VPS.
 - Decisión de arquitectura documentada: INSTALADOR = lifecycle; EEC = control plane; AGENTE-GENERAL = Seed/Host; agentes especializados = productos independientes; CONTEXT = documentación institucional separada, no miembro de EEC.
+
+
+## CRM ALBRA — arquitectura Chat Marketing por capas (2026-10-24)
+
+- [CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md) — decisión conceptual de conservar CRM ALBRA como Capa 1 y separar la ampliación en 2A Agéntico/Conversacional y 2B Superpowers/Chat Marketing. Incluye límites de responsabilidad, contrato/eventos por diseñar, fases de investigación y gate explícito de no construir aún.
+- Estado: arquitectura conceptual acordada; auditoría actual de contratos, matriz definitiva e implementación pendientes.
