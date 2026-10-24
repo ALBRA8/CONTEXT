@@ -1,3 +1,18 @@
+## [0.6.10] - 2026-10-24 — MVP de Capa 2B construido; integración pendiente
+
+### Added / Updated
+- Nuevo documento `04_PROJECTS/CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md`.
+- `CURRENT_STATE.md`, `KNOWLEDGE_INDEX.md` y la arquitectura CRM + Chat Marketing se actualizan para reflejar el MVP 2B reportado construido y la suite CP-B01–CP-B10 reportada 10/10 PASS.
+- El siguiente hito es integración contractual controlada sin envío real: daemon CRM, locks/supresiones de 2A y reconciliación de resultados de despacho inciertos.
+
+### Evidence / Limits
+- Suite y arquitectura son resultados reportados por el propietario; no se reejecutaron independientemente en esta actualización.
+- El informe indica `MockDispatcher`, sala limpia y cero mensajes reales. `AGENTIC_2A_ENABLED=false` se reporta preservado.
+- No se modificaron repositorios de producto ni clones locales. No se conectaron servicios reales ni se autorizaron campañas o envíos de producción.
+- La idempotencia local no se presenta como garantía distribuida de entrega exactamente una vez.
+
+---
+
 ## [0.6.9] - 2026-10-24 — Cierre reportado de Capa 2A y autorización de especificación 2B
 
 ### Added / Updated
