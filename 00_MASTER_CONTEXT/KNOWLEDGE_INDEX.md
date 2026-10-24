@@ -148,3 +148,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## CRM ALBRA — Cierre de MVP Capa 2B (2026-10-24)
 
 - [CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md) — MVP de broadcast reportado construido; CP-B01–CP-B10 10/10 PASS en sala limpia con MockDispatcher. Registra el límite entre pruebas aisladas e integración contractual real, y prohíbe campañas reales hasta autorización posterior.
+
+
+## CRM ALBRA — primer piloto real saliente Capa 2B (2026-10-24)
+
+- [Cierre del primer piloto real saliente de Capa 2B](../04_PROJECTS/CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md) — negocio `573163301286` → cliente `573017543786`, mensaje promocional de zapatos, HTTP 200/Message ID y persistencia outbound reportados. Distingue el despacho registrado de la entrega/lectura y deja como siguiente hito observar una respuesta entrante natural. Evidencia aportada por el propietario/Antigravity; no revalidada independientemente.
