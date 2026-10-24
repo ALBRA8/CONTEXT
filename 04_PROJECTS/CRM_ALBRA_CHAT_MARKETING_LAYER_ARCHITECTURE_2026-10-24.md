@@ -1,8 +1,8 @@
 # CRM ALBRA + Chat Marketing Layer — Arquitectura por capas
 
 - **Fecha:** 2026-10-24
-- **Estado arquitectónico:** decisión conceptual acordada; diseño de contratos pendiente.
-- **Estado de implementación:** NO INICIADA / NO AUTORIZADA en esta fase.
+- **Estado arquitectónico:** Capa 2A con piloto real supervisado reportado como superado; especificación de Capa 2B autorizada.
+- **Estado de implementación:** Capa 2A: piloto reportado como ejecutado; Capa 2B: NO IMPLEMENTADA / implementación NO AUTORIZADA todavía.
 - **Repositorio base:** [ALBRA8/CRM-ALBRA](https://github.com/ALBRA8/CRM-ALBRA)
 - **Fuente de continuidad:** conversación del 2026-10-24 y matriz de investigación local reportada por el propietario.
 - **Alcance de esta actualización:** documentación institucional en ALBRA8/CONTEXT; no se modificó CRM-ALBRA ni los clones locales.
@@ -146,4 +146,13 @@ Durante las fases actuales no modificar la lógica de producción de CRM ALBRA, 
 - Matriz reportada: `investigacion_camino/MATRIZ_ARQUITECTURA_CAPAS_ALBRA.md`.
 - Referencias de investigación mencionadas: WhatsOn, Kommo, ManyChat, Zernflow, ChatbotX y OpenReply.
 
-Esta entrada registra la decisión conceptual y las instrucciones de trabajo. **No certifica que los repositorios/clones locales, los contratos ni las capacidades se hayan inspeccionado o probado en esta operación.** El siguiente paso es que Antigravity continúe la investigación con esta separación, entregue auditoría/matriz/contratos propuestos y espere aprobación antes de construir.
+Esta entrada registra la decisión conceptual inicial. Su siguiente paso histórico de auditoría/clasificación queda actualizado por el cierre del piloto 2A y la autorización de especificación 2B registrados en [CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md](CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md). La ficha 2B debe verificar únicamente las interfaces concretas necesarias para definir contratos; no repetir una auditoría general. La documentación no certifica inspección independiente de los logs locales ni de los repositorios de producto.
+
+
+## 8. Actualización de estado — cierre 2A y preparación 2B (2026-10-24)
+
+- Según el informe del propietario, el piloto supervisado de Capa 2A procesó `PRECIO` mediante `keyword_rule`, con latencia reportada de 321 ms, sin invocar el LLM del CRM y sin duplicados. El CRM/daemon Baileys conservó la autoridad de despacho.
+- `AGENTIC_2A_ENABLED=false` y allowlist restringida quedan como estado operativo reportado; no se autorizan nuevos mensajes reales ni ampliaciones.
+- `crmSynced: false` queda documentado como observación explicada para reglas determinísticas que no alteran entidades comerciales; no se declara verificado independientemente el comportamiento del código.
+- **Siguiente paso autorizado:** redactar `FICHA.md` y contratos de Capa 2B. La implementación sigue bloqueada hasta una autorización expresa posterior.
+- Requisitos destacados: despacho solo por CRM, sin sockets de WhatsApp en 2B; lock check inicial y final; no enviar si la consulta falla o el estado es desconocido; consentimiento/supresiones y variación legítima, no evasión antispam.
