@@ -143,3 +143,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 
 - [CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md) — registra el piloto 2A como superado según el reporte del propietario, conserva `AGENTIC_2A_ENABLED=false`, documenta la observación `crmSynced: false` y autoriza únicamente la especificación de 2B, no su implementación.
 - La ficha de 2B debe definir locks antes de encolar y justo antes del despacho, fallar cerrado ante estado no verificable, usar solo interfaces reales del CRM/2A, mantener la autoridad de despacho en el CRM y documentar consentimiento, supresiones e idempotencia.
+
+
+## CRM ALBRA — Cierre de MVP Capa 2B (2026-10-24)
+
+- [CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md) — MVP de broadcast reportado construido; CP-B01–CP-B10 10/10 PASS en sala limpia con MockDispatcher. Registra el límite entre pruebas aisladas e integración contractual real, y prohíbe campañas reales hasta autorización posterior.
