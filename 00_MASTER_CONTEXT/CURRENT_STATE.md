@@ -210,3 +210,13 @@ Documento canónico: [INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md](../04
 - Tras desplegar EEC, se valida el contrato autenticado de lifecycle y se incorpora un agente pequeño, determinista y real para probar ejecución, resultado, health, trazabilidad, parada y recuperación.
 - INSTALADOR mantiene la autoridad del ciclo de vida; EEC coordina y observa; AGENTE-GENERAL sigue siendo Seed/Host transversal; CONTEXT permanece fuera de EEC.
 - **Esto es una decisión de arquitectura, no evidencia de integración completada.** INSTALADOR ↔ EEC sigue pendiente de un E2E reproducible. Los resultados de pruebas declarados por commits no se consideran rerun independiente.
+
+
+## 15. CRM ALBRA — primer piloto real saliente Capa 2B (2026-10-24)
+
+- Informe canónico: [CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md).
+- Según el reporte del propietario/Antigravity, se ejecutó un único mensaje desde el negocio `573163301286` al cliente `573017543786`: “Tengo estos zapatos para la venta.”
+- Resultado reportado: `POST /send` → HTTP 200; Message ID `3EB0CF12FBDA035FFC3A12`; registro `outbound` persistido en `custom.db`; JIT lock `available: true`; suppression `suppressed: false`.
+- Salvaguardas reportadas: `allowRealDispatch=false` restaurado y `AGENTIC_2A_ENABLED=false` preservado.
+- **Evidencia limitada:** los datos proceden del informe aportado; no se inspeccionaron independientemente los logs locales. El despacho reportado no demuestra por sí solo entrega/lectura del teléfono receptor ni certifica campañas masivas.
+- **Siguiente hito:** observar una respuesta real entrante cuando ocurra naturalmente y comprobar persistencia, asociación al contacto y enrutamiento a 2A sin duplicación. No enviar mensajes adicionales para forzar la prueba.
