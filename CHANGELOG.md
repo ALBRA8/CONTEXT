@@ -1,3 +1,19 @@
+## [0.6.8] - 2026-10-24 — Arquitectura CRM ALBRA + Chat Marketing por capas
+
+### Added / Updated
+- Nuevo documento `04_PROJECTS/CRM_ALBRA_CHAT_MARKETING_LAYER_ARCHITECTURE_2026-10-24.md`.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` actualizado con la decisión conceptual de separar la ampliación en Capa 2A Agéntico/Conversacional y Capa 2B Superpowers/Chat Marketing.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizado para localizar el documento canónico.
+- Se fija CRM ALBRA como fuente comercial canónica; 2A/2B deben integrarse mediante contratos explícitos sin duplicar CRM.
+- Se registra que la fase vigente es investigación/clasificación/diseño de contratos, no construcción.
+
+### Evidence / Limits
+- Documentación basada en la decisión e instrucciones registradas en la conversación del 2026-10-24.
+- Los informes y rutas locales de ClonaKit/Antigravity se registran como referencias reportadas; no fueron inspeccionados desde esta escritura documental.
+- No se modificó `ALBRA8/CRM-ALBRA` ni ningún clon de producto. No se implementaron contratos, endpoints ni funcionalidades; no se ejecutaron pruebas ni campañas.
+
+---
+
 ## [0.6.7] - 2026-10-22 — Auditoría de INSTALADOR global + EEC + AGENTE-GENERAL
 
 ### Added / Updated
