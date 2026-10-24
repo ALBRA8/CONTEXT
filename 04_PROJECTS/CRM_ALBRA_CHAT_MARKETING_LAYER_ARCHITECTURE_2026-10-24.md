@@ -156,3 +156,10 @@ Esta entrada registra la decisión conceptual inicial. Su siguiente paso histór
 - `crmSynced: false` queda documentado como observación explicada para reglas determinísticas que no alteran entidades comerciales; no se declara verificado independientemente el comportamiento del código.
 - **Siguiente paso autorizado:** redactar `FICHA.md` y contratos de Capa 2B. La implementación sigue bloqueada hasta una autorización expresa posterior.
 - Requisitos destacados: despacho solo por CRM, sin sockets de WhatsApp en 2B; lock check inicial y final; no enviar si la consulta falla o el estado es desconocido; consentimiento/supresiones y variación legítima, no evasión antispam.
+
+
+## 8. Actualización de estado — MVP Capa 2B (2026-10-24)
+
+El informe del propietario declara construido el MVP en `clones/albra-broadcast-2b/` y 10/10 pruebas CP-B01–CP-B10 aprobadas con `MockDispatcher`, sin mensajes reales. Se registra como **MVP construido según reporte; integración real pendiente**.
+
+El siguiente paso queda limitado a confirmar los contratos reales del daemon CRM (`POST /send`), locks/supresiones de 2A y recuperación de resultados de despacho inciertos, con prueba integrada sin envío. `AGENTIC_2A_ENABLED=false` permanece en reposo según el informe. No hay autorización para campañas reales. La suite no fue reejecutada independientemente durante esta actualización documental.
