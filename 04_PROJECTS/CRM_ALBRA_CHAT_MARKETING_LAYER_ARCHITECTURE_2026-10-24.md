@@ -1,8 +1,8 @@
 # CRM ALBRA + Chat Marketing Layer — Arquitectura por capas
 
 - **Fecha:** 2026-10-24
-- **Estado arquitectónico:** Capa 2A con piloto real supervisado reportado como superado; especificación de Capa 2B autorizada.
-- **Estado de implementación:** Capa 2A: piloto reportado como ejecutado; Capa 2B: NO IMPLEMENTADA / implementación NO AUTORIZADA todavía.
+- **Estado arquitectónico:** Capa 2A con piloto real supervisado reportado como superado; MVP 2B y primer piloto saliente real reportados como ejecutados.
+- **Estado de implementación:** Capa 2B tiene MVP reportado y un envío saliente supervisado reportado; esto no certifica campañas masivas ni producción general.
 - **Repositorio base:** [ALBRA8/CRM-ALBRA](https://github.com/ALBRA8/CRM-ALBRA)
 - **Fuente de continuidad:** conversación del 2026-10-24 y matriz de investigación local reportada por el propietario.
 - **Alcance de esta actualización:** documentación institucional en ALBRA8/CONTEXT; no se modificó CRM-ALBRA ni los clones locales.
@@ -163,3 +163,19 @@ Esta entrada registra la decisión conceptual inicial. Su siguiente paso histór
 El informe del propietario declara construido el MVP en `clones/albra-broadcast-2b/` y 10/10 pruebas CP-B01–CP-B10 aprobadas con `MockDispatcher`, sin mensajes reales. Se registra como **MVP construido según reporte; integración real pendiente**.
 
 El siguiente paso queda limitado a confirmar los contratos reales del daemon CRM (`POST /send`), locks/supresiones de 2A y recuperación de resultados de despacho inciertos, con prueba integrada sin envío. `AGENTIC_2A_ENABLED=false` permanece en reposo según el informe. No hay autorización para campañas reales. La suite no fue reejecutada independientemente durante esta actualización documental.
+
+
+## 9. Actualización — primer piloto real saliente Capa 2B (2026-10-24)
+
+El informe [CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md](CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md) registra el primer piloto saliente con contenido comercial apropiado, según reporte del propietario/Antigravity:
+
+- Negocio/emisor: `573163301286`.
+- Cliente/receptor: `573017543786`.
+- Mensaje: “Tengo estos zapatos para la venta.”
+- HTTP 200 del daemon, Message ID y registro `outbound` en CRM reportados.
+- Checks JIT de lock/suppression y restauración de `allowRealDispatch=false` reportados.
+- `AGENTIC_2A_ENABLED=false` se reporta preservado.
+
+La ejecución no fue revalidada independientemente desde esta actualización documental y el resultado de despacho no acredita por sí solo entrega/lectura. El piloto previo con el texto “que servicios tienes?” se conserva como antecedente de outbound reportado, pero no como validación del contenido comercial de 2B.
+
+Siguiente hito: observar una respuesta entrante real cuando ocurra naturalmente y verificar que llegue al CRM, se asocie al contacto correcto y se procese en 2A sin duplicación. No generar mensajes adicionales para forzar la prueba.
