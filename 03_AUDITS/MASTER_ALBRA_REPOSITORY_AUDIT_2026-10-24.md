@@ -15,7 +15,7 @@ Alcance: 17 repositorios públicos ALBRA8 accesibles y documentos de CONTEXT. Se
 | [AGENTE-GENERAL](https://github.com/ALBRA8/AGENTE-GENERAL) | Seed universal técnico, cognitivo, memoria, seguridad, ejecución e integración | 69c79dad8337be156bcc60e74b53f98d5a993d54 (2026-10-22) | PARCIAL. La certificación del Seed congelado histórico no debe confundirse con el HEAD actual. Revisar ramas/HEAD y CI antes de certificar. |
 | [AGENTE-LEADS](https://github.com/ALBRA8/AGENTE-LEADS) | Prospección e inteligencia de leads, Telegram, pipelines, evidencia, outreach y CRM hook | eb2b471dc6a8a856e41186332554441494b340b6 (2026-10-22) | PARCIAL. Delta: migración ARNÉS Fases 0–7; Fases 8–10 (LIPO, API routes, validación final) figuran pendientes en el commit. No asumir que el antiguo cierre de producción describe la migración nueva. Typecheck PASS reportado, no rerun. |
 | [AGENTE-CHISMOSO](https://github.com/ALBRA8/AGENTE-CHISMOSO) | Plataforma de investigación/inteligencia con app Next y paquete chismoso | 5d5169ea975fa6b9f60664b8106cafaa1e4111fd (2026-10-22) | PARCIAL. Último commit informa fix P0 del orden de build Docker, prebuild y systemd. Declara aptitud interna single-tenant/VPN, no internet público sin WAF/DNS/monitorización/load test. Pruebas reportadas, no rerun. |
-| [AGENTE-KREA](https://github.com/ALBRA8/AGENTE-KREA) | Product Factory y creación/empaquetado de productos digitales | 460605e5b4966e5e9243c1ec3fcb4852c6758e1b (2026-10-08) | PARCIAL. V2.1 condicional; 241 tests reportados, proveedores externos NOT_VERIFIED. **Hallazgo prioritario:** el listado público de la raíz contiene un archivo llamado .env. No se abrió ni copió su contenido. Verificar de forma segura; si contiene secretos, revocarlos/rotarlos y limpiar historial conforme al procedimiento. |
+| [AGENTE-KREA](https://github.com/ALBRA8/AGENTE-KREA) | Product Factory y creación/empaquetado de productos digitales | 460605e5b4966e5e9243c1ec3fcb4852c6758e1b (2026-10-08) | PARCIAL. V2.1 condicional; 241 tests reportados, proveedores externos NOT_VERIFIED. El `.env` de raíz fue inspeccionado posteriormente y el contenido disponible solo contiene `DATABASE_URL=file:./db/custom.db`; no se confirmó una credencial o secreto en ese archivo. La presencia del `.env` público sigue siendo una cuestión de higiene/configuración, pero la alerta de secreto expuesto queda descartada para el contenido inspeccionado. |
 | [AGENTE-TRADING](https://github.com/ALBRA8/AGENTE-TRADING) | Análisis/operativa SMC, Telegram y bridge local MetaTrader 5 | 0559ac3975149d2ac6b4e0ea0080e18635f4b2f8 (2026-10-19) | PARCIAL. Pine v2.2 y breakerLevel descritos en commit. Sin backtest ni prueba MT5 en esta pasada; no inferir rentabilidad. |
 | [CRM-ALBRA](https://github.com/ALBRA8/CRM-ALBRA) | CRM SaaS multi-tenant / CHALECO; contratos REST/MCP/MemoryDV para hosts | db95a5bec99bb85298f7ecbd6c630ebb8b60e669 (2026-10-22) | PARCIAL. Commit reporta estrategia consultiva en WhatsApp/Instagram/webhooks/Telegram y saneamiento del agente propietario; 381/381 tests, tsc y eslint PASS reportados, no rerun. Hallazgos locales del 24-oct (toNumber/LID y estado Git) no están demostrados como incorporados al HEAD remoto. Mantener despacho real desactivado hasta autorización expresa. |
 | [YOUTUBE-AUTOMATION](https://github.com/ALBRA8/YOUTUBE-AUTOMATION) | Orquestador/fábrica audiovisual: producción, Flow, extensión, assets, render y entrega | f54f2adfe23b098b0fa50ee2cdc0f0fc587d3643 (2026-10-24) | PARCIAL. Incluye CONTEXTO YOUTUBE y ESTADO_REAL.md, que exige código y pruebas antes de declarar terminado. Último commit registra INT-035 en índice. Revalidar Flow/GoogleFlowMCP contra el HEAD actual; informes del 19–20-oct son históricos. |
@@ -32,8 +32,8 @@ Alcance: 17 repositorios públicos ALBRA8 accesibles y documentos de CONTEXT. Se
 
 ## 3. Hallazgos transversales
 
-### P0 — posible exposición de secreto
-AGENTE-KREA muestra un archivo .env en la raíz del repositorio público según el listado consultado. No se abrió su contenido. Verificarlo de forma segura; si contiene secretos, revocarlos/rotarlos inmediatamente y limpiar el historial. No copiar valores secretos a CONTEXT ni al informe.
+### P0 — secreto en AGENTE-KREA: descartado para el contenido inspeccionado
+La observación inicial era la existencia de un archivo `.env` en la raíz pública. El contenido disponible fue inspeccionado posteriormente de forma controlada y solo contiene `DATABASE_URL=file:./db/custom.db`. No se confirmó una credencial, token o secreto en ese archivo. La presencia del `.env` sigue siendo una cuestión de higiene/configuración, pero no debe seguir reportándose como secreto expuesto confirmado.
 
 ### P1 — documentación desfasada o deltas sin reconciliar
 - DESPACHO-JURIDICO: README y commit reciente describen estados distintos sobre conocimiento y especialistas.
@@ -53,6 +53,7 @@ Ejecutado:
 - Enumeración de los 17 repositorios accesibles.
 - Consulta de metadata, HEAD/commit reciente, archivos de raíz y README/manifiestos seleccionados.
 - Detección de deltas relevantes frente a la matriz de contexto previa.
+- Revisión controlada posterior del `.env` de AGENTE-KREA para resolver la alerta preliminar.
 - Escritura limitada a CONTEXT.
 
 Pendiente:
@@ -60,17 +61,20 @@ Pendiente:
 - Ejecución de todas las suites en entornos limpios.
 - Pruebas de integraciones externas, WhatsApp/Telegram, Flow/Desktop, MT5, DIAN y despliegues.
 - Inspección de clones/locales del PC.
-- Verificación segura del .env público de KREA.
+- Revisión de diffs críticos recientes y conciliación de HEADs posteriores.
 - No se puede afirmar todavía “auditoría 100% completa”.
 
 ## 5. Secuencia de cierre
-1. Verificar la posible exposición de .env en AGENTE-KREA sin divulgar su contenido.
-2. Leer diffs y archivos críticos de INSTALADOR, CRM-ALBRA, AGENTE-LEADS, DESPACHO-JURIDICO, AGENTE-CHISMOSO, YOUTUBE-AUTOMATION y NEX-SCOPE.
-3. Auditar cada proyecto por arquitectura, seguridad, persistencia, APIs/contratos, tests/CI, despliegue, dependencias externas y documentación.
-4. Ejecutar suites cuando el entorno permita reproducirlas y conservar logs verificables.
-5. Conciliar fichas, decisiones, auditorías y proyectos en CONTEXT.
-6. Inventariar Library/archivos y preservar originales, versiones y procedencia; no borrar conversaciones ni fuentes.
-7. Actualizar la matriz final solo cuando cada fila tenga alcance, fecha, HEAD, evidencia y limitaciones.
+1. Leer diffs y archivos críticos de INSTALADOR, CRM-ALBRA, AGENTE-LEADS, DESPACHO-JURIDICO, AGENTE-CHISMOSO, YOUTUBE-AUTOMATION y NEX-SCOPE.
+2. Auditar cada proyecto por arquitectura, seguridad, persistencia, APIs/contratos, tests/CI, despliegue, dependencias externas y documentación.
+3. Ejecutar suites cuando el entorno permita reproducirlas y conservar logs verificables.
+4. Conciliar fichas, decisiones, auditorías y proyectos en CONTEXT.
+5. Inventariar Library/archivos y preservar originales, versiones y procedencia; no borrar conversaciones ni fuentes.
+6. Actualizar la matriz final solo cuando cada fila tenga alcance, fecha, HEAD, evidencia y limitaciones.
 
 ## 6. Dictamen provisional
-CONTEXT está estructurado, pero el ecosistema no está auditado al 100%. La prioridad documental es una ficha por proyecto con repositorio, estado, decisiones vigentes, evidencia, riesgos, pendientes e historia. La prioridad técnica inmediata es investigar el posible .env público de KREA y reconciliar los deltas recientes antes de emitir certificaciones de producción.
+CONTEXT está estructurado, pero el ecosistema no está auditado al 100%. La prioridad documental es una ficha por proyecto con repositorio, estado, decisiones vigentes, evidencia, riesgos, pendientes e historia. La prioridad técnica inmediata es reconciliar los deltas recientes y continuar la verificación proyecto por proyecto antes de emitir certificaciones de producción.
+
+## 7. Addendum de reconciliación
+
+La corrección detallada del hallazgo de AGENTE-KREA queda registrada en `03_AUDITS/RECONCILIATION_CORRECTIONS_2026-10-24.md`. Ese addendum establece la procedencia de la inspección y sus límites.
