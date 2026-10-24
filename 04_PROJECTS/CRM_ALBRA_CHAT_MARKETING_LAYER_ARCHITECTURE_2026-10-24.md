@@ -179,3 +179,10 @@ El informe [CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md](CRM_ALBRA_2B_F
 La ejecución no fue revalidada independientemente desde esta actualización documental y el resultado de despacho no acredita por sí solo entrega/lectura. El piloto previo con el texto “que servicios tienes?” se conserva como antecedente de outbound reportado, pero no como validación del contenido comercial de 2B.
 
 Siguiente hito: observar una respuesta entrante real cuando ocurra naturalmente y verificar que llegue al CRM, se asocie al contacto correcto y se procese en 2A sin duplicación. No generar mensajes adicionales para forzar la prueba.
+
+
+## 10. Hito C2B — respuesta entrante natural (2026-10-24)
+
+Según el informe de Antigravity, después del piloto saliente comercial se recibió el mensaje natural “Hola” del cliente `573017543786` a las 10:25:14. El mensaje quedó registrado como inbound y asociado al contacto/conversación esperados; la deduplicación por `waMessageId` fue reportada como correcta. El detalle y los identificadores están en [CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md](CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md).
+
+La conversación se mantuvo con `isAutoReply=0` para evitar que el auto-reply nativo contestara; `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false` quedaron preservados según el reporte. No se autorizó responder automáticamente ni enviar mensajes adicionales. Los logs y DB locales no fueron inspeccionados independientemente en esta actualización. Mantener el estado pausado hasta autorización expresa; este hito no certifica integración general ni campañas masivas.
