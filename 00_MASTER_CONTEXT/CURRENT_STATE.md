@@ -220,3 +220,13 @@ Documento canónico: [INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md](../04
 - Salvaguardas reportadas: `allowRealDispatch=false` restaurado y `AGENTIC_2A_ENABLED=false` preservado.
 - **Evidencia limitada:** los datos proceden del informe aportado; no se inspeccionaron independientemente los logs locales. El despacho reportado no demuestra por sí solo entrega/lectura del teléfono receptor ni certifica campañas masivas.
 - **Siguiente hito:** observar una respuesta real entrante cuando ocurra naturalmente y comprobar persistencia, asociación al contacto y enrutamiento a 2A sin duplicación. No enviar mensajes adicionales para forzar la prueba.
+
+
+## 17. CRM ALBRA — Hito C2B: respuesta entrante natural (2026-10-24)
+
+Registro canónico: [CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md).
+
+- Antigravity reportó que el mensaje natural `Hola` del cliente `573017543786` entró a CRM a las 10:25:14, quedó asociado al contacto y conversación esperados, y fue deduplicado por `waMessageId`.
+- La conversación específica permaneció con `isAutoReply=0`; `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false` se reportaron preservados. No se autorizó respuesta automática ni nuevos envíos.
+- Los IDs de mensaje/contacto/conversación y logs están documentados en el informe canónico. Esta actualización no inspeccionó directamente la base de datos ni los logs locales: la evidencia se clasifica como **reportada por Antigravity, no revalidada independientemente**.
+- **Estado vigente:** hito inbound registrado según reporte; mantener la pausa por conversación. No restaurar auto-respuesta ni ejecutar otra prueba real sin autorización expresa.
