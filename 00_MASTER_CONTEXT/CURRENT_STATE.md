@@ -199,3 +199,14 @@ Documento canónico: [CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-2
 - **Estado vigente:** MVP construido según reporte; integración contractual real 2B ↔ 2A ↔ daemon CRM pendiente. Campañas y envíos reales NO AUTORIZADOS.
 - Siguiente hito: confirmar contratos reales de despacho, locks y supresiones, y probar integración con stub/no-op sin enviar mensajes. No repetir auditorías generales ni declarar entrega exactamente una vez sin soporte contractual.
 - Evidencia: resultados y arquitectura proceden del informe del propietario; no fueron reproducidos independientemente en esta actualización documental.
+
+
+## 17. Decisión de arquitectura — INSTALADOR despliega primero el EEC (2026-10-24)
+
+Documento canónico: [INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md](../04_PROJECTS/INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md).
+
+- Se fija **PANEL-DE-CONTROL (EEC) como primer proyecto oficial desplegado mediante INSTALADOR** y como primer piloto operativo de la arquitectura ALBRA.
+- El despliegue inicial se inicia desde un entorno administrativo externo; no se admite una dependencia circular de autoinstalación.
+- Tras desplegar EEC, se valida el contrato autenticado de lifecycle y se incorpora un agente pequeño, determinista y real para probar ejecución, resultado, health, trazabilidad, parada y recuperación.
+- INSTALADOR mantiene la autoridad del ciclo de vida; EEC coordina y observa; AGENTE-GENERAL sigue siendo Seed/Host transversal; CONTEXT permanece fuera de EEC.
+- **Esto es una decisión de arquitectura, no evidencia de integración completada.** INSTALADOR ↔ EEC sigue pendiente de un E2E reproducible. Los resultados de pruebas declarados por commits no se consideran rerun independiente.
