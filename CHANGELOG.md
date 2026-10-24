@@ -1,3 +1,18 @@
+## [0.6.11] - 2026-10-24 — Primer piloto real saliente de Capa 2B reportado
+
+### Added / Updated
+- Nuevo cierre documental `04_PROJECTS/CRM_ALBRA_2B_FIRST_REAL_OUTBOUND_PILOT_2026-10-24.md`.
+- `CURRENT_STATE.md` y `KNOWLEDGE_INDEX.md` actualizados con el resultado reportado y el siguiente hito.
+- Arquitectura CRM + Chat Marketing actualizada para distinguir MVP 2B, primer envío saliente reportado y validación pendiente de respuesta entrante.
+
+### Evidence / Limits
+- El informe de Antigravity/propietario reporta un envío único de `573163301286` (negocio) a `573017543786` (cliente), texto “Tengo estos zapatos para la venta.”, HTTP 200, Message ID y persistencia `outbound`.
+- JIT lock/suppression, restauración de `allowRealDispatch=false` y preservación de `AGENTIC_2A_ENABLED=false` son resultados reportados, no inspeccionados independientemente en esta actualización.
+- El despacho registrado no demuestra por sí solo entrega o lectura; no se autorizan campañas adicionales. El próximo hito es observar una respuesta entrante natural sin enviar mensajes para forzarla.
+- Solo se modificó documentación en `ALBRA8/CONTEXT`; no se modificaron CRM-ALBRA ni clones locales.
+
+---
+
 ## [0.6.10] - 2026-10-24 — MVP de Capa 2B construido; integración pendiente
 
 ### Added / Updated
