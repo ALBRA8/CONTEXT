@@ -160,3 +160,10 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - [Registro del hito C2B](../04_PROJECTS/CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md) — Antigravity reportó que el “Hola” entrante del cliente `573017543786` se registró y asoció al contacto/conversación correctos, con deduplicación por `waMessageId`.
 - Salvaguardas reportadas: `isAutoReply=0` solo en la conversación piloto, `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false`; no se autorizaron respuestas automáticas ni envíos adicionales.
 - Evidencia declarada por Antigravity; logs/DB no revalidados independientemente en esta actualización. Mantener la pausa hasta nueva autorización expresa.
+
+
+## Auditoría maestra del ecosistema — 2026-10-24
+
+- [MASTER_ALBRA_REPOSITORY_AUDIT_2026-10-24.md](../03_AUDITS/MASTER_ALBRA_REPOSITORY_AUDIT_2026-10-24.md) — inventario de 17 repositorios accesibles, deltas recientes, hallazgos prioritarios y plan de cierre. Es una pasada documental parcial, no una certificación global.
+- Prioridad inmediata: revisar un posible archivo de configuración sensible publicado en AGENTE-KREA sin leer ni reproducir su contenido; reconciliar los deltas recientes de INSTALADOR, CRM-ALBRA, AGENTE-LEADS, DESPACHO-JURIDICO y YOUTUBE-AUTOMATION.
+- Las pruebas descritas por commits permanecen clasificadas como reportadas hasta un rerun independiente.
