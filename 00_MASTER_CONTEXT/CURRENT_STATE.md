@@ -188,3 +188,14 @@ Documento canónico: [CRM_ALBRA_2A_PILOT_CLOSURE_AND_2B_SPEC_2026-10-24.md](../0
 - **Fronteras:** 2B no atiende inbound ni abre sockets de WhatsApp; despacho por interfaz contractual del CRM y sin acceso directo a su BD comercial. Los locks de 2A se consultan antes de encolar y de nuevo antes del despacho; ante fallo/timeout/estado desconocido, no enviar.
 - **Pendiente para FICHA.md:** verificar los endpoints reales de CRM y 2A, autenticación, estados de lock, idempotencia, supresiones, consentimiento, reintentos, recuperación y criterios de aceptación. No inventar interfaces.
 - **Evidencia:** el resultado del piloto es un reporte documental del propietario; esta actualización no reprodujo la prueba ni inspeccionó el PC local. No confundir documentación con verificación independiente.
+
+
+## 13. CRM ALBRA — Capa 2B MVP construido; integración pendiente (2026-10-24)
+
+Documento canónico: [CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md](../04_PROJECTS/CRM_ALBRA_2B_MVP_ACCEPTANCE_AND_INTEGRATION_GATE_2026-10-24.md).
+
+- Capa 2B (`clones/albra-broadcast-2b/`): el propietario reporta MVP construido y CP-B01 a CP-B10 en 10/10 PASS con `MockDispatcher`, sala limpia y cero mensajes reales.
+- Se mantienen las fronteras declaradas: base SQLite propia, sin acceso directo a la BD comercial, y despacho delegado al daemon CRM; `AGENTIC_2A_ENABLED=false` preservado según el informe.
+- **Estado vigente:** MVP construido según reporte; integración contractual real 2B ↔ 2A ↔ daemon CRM pendiente. Campañas y envíos reales NO AUTORIZADOS.
+- Siguiente hito: confirmar contratos reales de despacho, locks y supresiones, y probar integración con stub/no-op sin enviar mensajes. No repetir auditorías generales ni declarar entrega exactamente una vez sin soporte contractual.
+- Evidencia: resultados y arquitectura proceden del informe del propietario; no fueron reproducidos independientemente en esta actualización documental.
