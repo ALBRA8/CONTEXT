@@ -51,3 +51,10 @@ EEC/Mission Control remains a real ALBRA project concept with a detailed functio
 La afirmación histórica “implementación de repositorio NOT_VERIFIED” queda superada por la evidencia nueva de `ALBRA8/PANEL-DE-CONTROL`, rama `main`, HEAD consultado `71b46ef5a58795aa032474298829befa93031020`. El repositorio contiene una EEC funcional como aplicación/control plane, con pipeline de comandos, contratos, providers, estado, tareas, runs, approvals, eventos y GUI.
 
 Esta actualización **no certifica producción**: los adapters registrados por defecto son locales de simulación; la integración con procesos/agentes reales, la autenticación/RBAC efectiva de rutas API, el puente con INSTALADOR y el despliegue VPS siguen pendientes de verificación. Véase [auditoría de integración 2026-10-22](../03_AUDITS/INSTALLER_EEC_AGENT_GENERAL_INTEGRATION_AUDIT_2026-10-22.md).
+
+
+## Decisión de despliegue piloto — 2026-10-24
+
+Se registra que PANEL-DE-CONTROL (EEC) será el primer proyecto oficial desplegado por INSTALADOR y el primer piloto operativo de la arquitectura ALBRA. La secuencia, fronteras y criterios de aceptación quedan definidos en [INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md](INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md).
+
+La decisión no certifica integración ni despliegue real. El primer despliegue debe originarse en un entorno administrativo externo. Después de demostrar salud y observabilidad reales, se conectará el contrato autenticado de INSTALADOR y se probará un agente piloto determinista real. No confundir esta decisión con una certificación E2E.
