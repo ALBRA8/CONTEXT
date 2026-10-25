@@ -175,3 +175,10 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - **Cierre:** `VERIFIED WITH LIMITATIONS` según el informe, no revalidado independientemente por esta actualización de CONTEXT.
 - **Limitaciones:** integración con `PrismaClient` real `NOT VERIFIED`; entrega E2E a WhatsApp no ejecutada; sin reconciliador autónomo de propuestas huérfanas ni de resultados ambiguos.
 - Mantener `ALLOW_REAL_DISPATCH=false`; no iniciar la siguiente fase ni realizar envíos sin autorización expresa.
+
+
+## Recarga de contexto y continuidad CRM-ALBRA (2026-10-25)
+
+- [Registro de recarga canónica y continuidad CRM D.5](../06_SESSIONS/2026-10-25_CONTEXT_RELOAD_AND_CRM_D5_CONTINUITY.md) — registra la relectura del Bootstrap, CURRENT_STATE, ADN, arquitectura, índice, gaps, matriz de repositorios y documentos CRM pertinentes.
+- Mantiene los límites: ADN/arquitectura `PROPOSED`; solo CONTEXT escribible; CRM es fuente comercial canónica; capas 2A/2B separadas; reportes de pruebas no son rerun independiente.
+- Para D.5, consultar también [auditoría atómica](../04_PROJECTS/CRM_ALBRA_D5_ATOMIC_DISPATCH_AUDIT_2026-10-25.md): `VERIFIED WITH LIMITATIONS` según el informe, PrismaClient real `NOT VERIFIED`, E2E externo no ejecutado y recuperación de casos ambiguos pendiente.
