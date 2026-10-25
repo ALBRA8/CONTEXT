@@ -167,3 +167,11 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - [MASTER_ALBRA_REPOSITORY_AUDIT_2026-10-24.md](../03_AUDITS/MASTER_ALBRA_REPOSITORY_AUDIT_2026-10-24.md) — inventario de 17 repositorios accesibles, deltas recientes, hallazgos prioritarios y plan de cierre. Es una pasada documental parcial, no una certificación global.
 - Prioridad inmediata: revisar un posible archivo de configuración sensible publicado en AGENTE-KREA sin leer ni reproducir su contenido; reconciliar los deltas recientes de INSTALADOR, CRM-ALBRA, AGENTE-LEADS, DESPACHO-JURIDICO y YOUTUBE-AUTOMATION.
 - Las pruebas descritas por commits permanecen clasificadas como reportadas hasta un rerun independiente.
+
+
+## CRM-ALBRA — Auditoría de atomicidad de despacho D.5 (2026-10-25)
+
+- [Auditoría final D.5](../04_PROJECTS/CRM_ALBRA_D5_ATOMIC_DISPATCH_AUDIT_2026-10-25.md) — atomicidad SQLite, CAS, rollback, concurrencia, anti-replay, matriz HTTP, recuperación tras crash y estado Git según el informe de Antigravity.
+- **Cierre:** `VERIFIED WITH LIMITATIONS` según el informe, no revalidado independientemente por esta actualización de CONTEXT.
+- **Limitaciones:** integración con `PrismaClient` real `NOT VERIFIED`; entrega E2E a WhatsApp no ejecutada; sin reconciliador autónomo de propuestas huérfanas ni de resultados ambiguos.
+- Mantener `ALLOW_REAL_DISPATCH=false`; no iniciar la siguiente fase ni realizar envíos sin autorización expresa.
