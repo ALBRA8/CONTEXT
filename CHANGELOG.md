@@ -1,3 +1,18 @@
+## [0.6.13] - 2026-10-25 — Recarga canónica de contexto y continuidad CRM-ALBRA
+
+### Added / Updated
+- `06_SESSIONS/2026-10-25_CONTEXT_RELOAD_AND_CRM_D5_CONTINUITY.md`: registro de lectura del Bootstrap, CURRENT_STATE, ADN, arquitectura, índice, gaps, matriz de repositorios y documentos canónicos de CRM.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md`: nueva sección de continuidad con fronteras arquitectónicas, estado D.5 y salvaguardas vigentes.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md`: referencia al nuevo registro de sesión y a la auditoría D.5.
+
+### Evidence / Limits
+- Los documentos de CONTEXT fueron consultados directamente en GitHub durante esta recarga.
+- Las pruebas locales, la base de datos operativa y los hitos CRM citados en los informes no se reejecutaron ni inspeccionaron independientemente en esta sesión.
+- Se conserva D.5 como `VERIFIED WITH LIMITATIONS` según informe; PrismaClient real `NOT VERIFIED`; E2E externo no ejecutado.
+- No se modificó ningún repositorio de producto ni se realizaron envíos reales. Despacho y auto-respuesta permanecen desactivados según el último estado reportado.
+
+---
+
 ## [0.6.12] - 2026-10-25 — CRM-ALBRA: auditoría de atomicidad D.5
 
 ### Added / Updated
