@@ -230,3 +230,15 @@ Registro canónico: [CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md](../04
 - La conversación específica permaneció con `isAutoReply=0`; `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false` se reportaron preservados. No se autorizó respuesta automática ni nuevos envíos.
 - Los IDs de mensaje/contacto/conversación y logs están documentados en el informe canónico. Esta actualización no inspeccionó directamente la base de datos ni los logs locales: la evidencia se clasifica como **reportada por Antigravity, no revalidada independientemente**.
 - **Estado vigente:** hito inbound registrado según reporte; mantener la pausa por conversación. No restaurar auto-respuesta ni ejecutar otra prueba real sin autorización expresa.
+
+
+## 18. CRM-ALBRA — Cierre controlado de Fase D.5 (2026-10-25)
+
+Registro canónico: [CRM_ALBRA_D5_ATOMIC_DISPATCH_AUDIT_2026-10-25.md](../04_PROJECTS/CRM_ALBRA_D5_ATOMIC_DISPATCH_AUDIT_2026-10-25.md).
+
+- Antigravity reportó 14/14 pruebas D.5 y suites de regresión adicionales PASS; los resultados no se reejecutaron independientemente en esta actualización documental.
+- Estado declarado: **VERIFIED WITH LIMITATIONS**. La atomicidad local con `better-sqlite3`, rollback, CAS y anti-replay se consideran verificados según la evidencia reportada, no por una auditoría independiente actual.
+- La integración con `PrismaClient` real permanece `NOT VERIFIED`: el Test 12 usa un mock sobre SQLite.
+- La entrega E2E real a WhatsApp no se ejecutó. `ALLOW_REAL_DISPATCH=false` y `AGENTIC_2A_ENABLED=false` se reportan preservados.
+- Línea base reportada: 3 mensajes salientes históricos; propuesta `cmvmr0j6c1qvmjt` sigue `proposed/blocked`; conversación piloto con `isAutoReply=0`. La base local no fue consultada independientemente en esta actualización.
+- Riesgo pendiente: no hay reconciliador autónomo para propuestas huérfanas en `dispatching` ni reconciliación automática de resultados ambiguos. No reintentar a ciegas; no habilitar despacho real ni avanzar de fase sin autorización explícita.
