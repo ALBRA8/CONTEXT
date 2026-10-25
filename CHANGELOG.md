@@ -1,3 +1,17 @@
+## [0.6.12] - 2026-10-25 — CRM-ALBRA: auditoría de atomicidad D.5
+
+### Added / Updated
+- `04_PROJECTS/CRM_ALBRA_D5_ATOMIC_DISPATCH_AUDIT_2026-10-25.md`: registro de la auditoría final D.5, matriz HTTP, análisis de crash/recovery, pruebas reportadas, línea base y limitaciones.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` y `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizados para reflejar el cierre documental.
+
+### Evidence / Limits
+- Estado reportado por Antigravity: `VERIFIED WITH LIMITATIONS`; resultados de pruebas y consulta de base operativa no se reejecutaron independientemente durante esta actualización de CONTEXT.
+- Integración con `PrismaClient` real: `NOT VERIFIED`; el test informado utiliza un mock. Entrega externa E2E a WhatsApp: no ejecutada.
+- Se documentan riesgos pendientes de recuperación de propuestas huérfanas y resultados ambiguos. Mantener `ALLOW_REAL_DISPATCH=false`; no autorizar despachos ni avanzar de fase por este registro.
+- Solo se modificó documentación en `ALBRA8/CONTEXT`; no se modificó CRM-ALBRA ni código de producto.
+
+---
+
 ## [0.6.11] - 2026-10-24 — Primer piloto real saliente de Capa 2B reportado
 
 ### Added / Updated
