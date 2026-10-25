@@ -1,3 +1,17 @@
+## [0.6.12] - 2026-10-25 — Registro de informe fuente de auditoría D.5
+
+### Added / Updated
+- `04_PROJECTS/CRM_ALBRA_D5_FINAL_AUDIT_2026-10-25.md`: registra el informe de auditoría D.5 aportado por el propietario, con matriz HTTP, análisis de crash, pruebas declaradas, línea base reportada y limitaciones.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` y `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` enlazan el nuevo registro.
+
+### Evidence / Limits
+- La clasificación `VERIFIED WITH LIMITATIONS` es la conclusión del informe fuente, no una certificación independiente realizada al registrar el documento.
+- `PrismaClient` real y entrega E2E a WhatsApp siguen `NOT VERIFIED`; recuperación automática de huérfanos/resultados ambiguos pendiente.
+- Se omitieron números telefónicos/datos personales directos de la salida operativa por tratarse de un repositorio público.
+- No se modificó CRM-ALBRA ni se consultó su base operativa durante esta actualización documental.
+
+---
+
 ## [0.6.11] - 2026-10-24 — Primer piloto real saliente de Capa 2B reportado
 
 ### Added / Updated
