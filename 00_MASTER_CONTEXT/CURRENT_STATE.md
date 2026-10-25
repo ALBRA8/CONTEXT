@@ -230,3 +230,18 @@ Registro canónico: [CRM_ALBRA_2B_INBOUND_RESPONSE_HITO_C2B_2026-10-24.md](../04
 - La conversación específica permaneció con `isAutoReply=0`; `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false` se reportaron preservados. No se autorizó respuesta automática ni nuevos envíos.
 - Los IDs de mensaje/contacto/conversación y logs están documentados en el informe canónico. Esta actualización no inspeccionó directamente la base de datos ni los logs locales: la evidencia se clasifica como **reportada por Antigravity, no revalidada independientemente**.
 - **Estado vigente:** hito inbound registrado según reporte; mantener la pausa por conversación. No restaurar auto-respuesta ni ejecutar otra prueba real sin autorización expresa.
+
+
+## 18. CRM-ALBRA — Auditoría final de Fase D.5 registrada (2026-10-25)
+
+Documento: [CRM_ALBRA_D5_FINAL_AUDIT_2026-10-25.md](../04_PROJECTS/CRM_ALBRA_D5_FINAL_AUDIT_2026-10-25.md).
+
+- El informe aportado declara cierre **`VERIFIED WITH LIMITATIONS`** para la adquisición atómica de despacho SQLite.
+- El informe declara suites unitarias/concurrencia PASS y `git diff --check` limpio; estos resultados no se reejecutaron durante la actualización de CONTEXT.
+- Integración con `PrismaClient` real: `NOT VERIFIED`. El Test 12 usa un mock sobre SQLite.
+- Entrega E2E externa a WhatsApp: `NOT VERIFIED`; no fue ejecutada.
+- Recuperación autónoma de propuestas huérfanas y reconciliación de resultados ambiguos: pendiente. No reintentar a ciegas.
+- La matriz HTTP varía según la capa y el punto de validación; mantener pruebas de contrato para consumidores.
+- La línea base de `db/custom.db` se conserva como reportada por el informe, no revalidada por esta sesión.
+- Mantener `ALLOW_REAL_DISPATCH=false`, `AGENTIC_2A_ENABLED=false` y la pausa `isAutoReply=0` según el estado reportado. No activar envíos ni avanzar de fase sin autorización expresa.
+- El informe público omite números telefónicos/datos personales directos presentes en la salida original.
