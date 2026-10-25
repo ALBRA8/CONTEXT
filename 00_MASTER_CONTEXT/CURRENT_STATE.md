@@ -242,3 +242,16 @@ Registro canónico: [CRM_ALBRA_D5_ATOMIC_DISPATCH_AUDIT_2026-10-25.md](../04_PRO
 - La entrega E2E real a WhatsApp no se ejecutó. `ALLOW_REAL_DISPATCH=false` y `AGENTIC_2A_ENABLED=false` se reportan preservados.
 - Línea base reportada: 3 mensajes salientes históricos; propuesta `cmvmr0j6c1qvmjt` sigue `proposed/blocked`; conversación piloto con `isAutoReply=0`. La base local no fue consultada independientemente en esta actualización.
 - Riesgo pendiente: no hay reconciliador autónomo para propuestas huérfanas en `dispatching` ni reconciliación automática de resultados ambiguos. No reintentar a ciegas; no habilitar despacho real ni avanzar de fase sin autorización explícita.
+
+
+## 19. Recarga de CONTEXT y continuidad operativa (2026-10-25)
+
+Registro de sesión: [2026-10-25_CONTEXT_RELOAD_AND_CRM_D5_CONTINUITY.md](../06_SESSIONS/2026-10-25_CONTEXT_RELOAD_AND_CRM_D5_CONTINUITY.md).
+
+- Se releyeron Bootstrap, estado actual, ADN, arquitectura, índice, registro de gaps, matriz de repositorios y documentos canónicos de CRM-ALBRA antes de continuar.
+- Se reafirma que solo CONTEXT es escribible en este flujo; repositorios fuente son de consulta. `ALBRA_DNA.md` y `ALBRA_ARCHITECTURE.md` siguen `PROPOSED`.
+- CRM ALBRA conserva la fuente comercial canónica y la autoridad de despacho. 2A es conversacional/agéntica; 2B es campañas/broadcast; no duplicar el CRM ni inventar contratos/endpoints.
+- Hitos 2A/2B y resultados de D.5 se mantienen como reportados por el propietario/Antigravity donde no hubo rerun independiente.
+- D.5 continúa `VERIFIED WITH LIMITATIONS` según el informe: PrismaClient real `NOT VERIFIED`, E2E externo no ejecutado y reconciliación autónoma de huérfanos/resultados ambiguos pendiente.
+- Mantener `AGENTIC_2A_ENABLED=false`, `ALLOW_REAL_DISPATCH=false` y la pausa `isAutoReply=0` de la conversación piloto, según el último estado reportado. No enviar ni activar nada sin autorización expresa.
+- Esta recarga fue documental: no se ejecutó código, no se consultó la DB local ni se inspeccionó la máquina del propietario.
