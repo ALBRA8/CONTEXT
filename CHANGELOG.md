@@ -311,3 +311,14 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 - Se conserva `isAutoReply=0` para la conversación piloto; `AGENTIC_2A_ENABLED=false` y `allowRealDispatch=false` se reportan preservados.
 - No se autorizaron respuestas automáticas ni envíos adicionales.
 - El resultado se clasifica como reportado por Antigravity; la DB y los logs locales no se revalidaron independientemente durante esta actualización.
+
+## [0.6.9] - 2026-10-26 — CRM-ALBRA: baseline Prisma y preparación standalone
+
+### Added / Updated
+- `03_AUDITS/CRM_ALBRA_PRISMA_BASELINE_AND_STANDALONE_READINESS_2026-10-26.md`: registra la marcación reportada de `0_init`, el estado standalone local y las limitaciones del dictamen.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` y `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizados con el estado `READY FOR PRODUCTION REVIEW`.
+
+### Evidence / Safety
+- El comando de baseline, el estado Prisma, la integridad SQLite y la salud de los servicios se registran como resultados del informe del propietario/Antigravity; no se reprodujeron independientemente en este cambio documental.
+- No se certifica despliegue externo al 100 %. `ALLOW_REAL_DISPATCH=false` y `isAutoReply=0` permanecen reportados como vigentes; no se autorizaron nuevos despachos reales.
+- Solo se modificó `ALBRA8/CONTEXT`; no se modificó el repositorio CRM-ALBRA.
