@@ -268,3 +268,17 @@ Registro canónico: [CRM_ALBRA_PRISMA_BASELINE_AND_STANDALONE_READINESS_2026-10-
 - **Estado: READY FOR PRODUCTION REVIEW.** Esto documenta preparación/ejecución standalone local según el reporte; no certifica despliegue externo al 100 %, disponibilidad pública sostenida ni autorización de envíos reales.
 - Mantener despachos reales deshabilitados hasta autorización operativa independiente. No repetir auditorías sin causa concreta.
 - Límite de evidencia: esta actualización registra el informe fuente; no reprodujo los comandos ni inspeccionó la máquina local.
+
+
+## 20. Revisión cruzada CRM-ALBRA + WHATSPOWER + WHATSPOWER-ULTRA (2026-10-26)
+
+Informe canónico: [Actualización cruzada de repositorios — CRM-ALBRA, WHATSPOWER y WHATSPOWER-ULTRA](../04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REPOSITORY_REFRESH_2026-10-26.md).
+
+- HEAD público de `CRM-ALBRA/main` consultado: `db95a5bec99bb85298f7ecbd6c630ebb8b60e669` (2026-10-22). El commit reporta estrategia comercial consultiva multicanal y 381/381 tests, TypeScript y ESLint PASS; no se reejecutaron.
+- HEAD público de `WHATSPOWER/main`: `d8547491630a3023013a2dd49dca31c7e18f9a9d` (2026-10-26), con nuevas funciones de equipo/round-robin, canned responses, growth links, triggers CRM y enlaces de pago.
+- HEAD público de `WHATSPOWER-ULTRA/main`: `b7b5a5dabe7e84ecd3c74171dfaa0c9b75b340c9` (2026-10-26), con motor heurístico de neuromarketing y generación de Spintax; los commits previos agregan ingesta de leads, atribución y adaptador Meta Cloud.
+- **Divergencia crítica:** `src/whatsapp-daemon/dispatch-gate.mjs` no existe en el HEAD público de CRM-ALBRA/main consultado (404), así que D.5/E.2.R local reportado no debe confundirse con código ya integrado en esa rama.
+- **Deuda documental:** `WHATSPOWER/FICHA.md` aún describe la capa 2A como diseño sin código, en contradicción con el README y los módulos actuales de Nivel 2.
+- **Gates de seguridad estáticos:** revisar en WHATSPOWER el secreto HMAC de fallback, la aceptación condicional de firma en inbound y la ruta de liberación de lock sin autorización visible; revisar autenticación/tenant de rutas administrativas en ambos niveles. No exponer servicios a Internet hasta cerrar esos puntos.
+- Pagos WHATSPOWER: enlaces y estado local presentes, pero pasarelas/callbacks reales no verificados. Meta Cloud en ULTRA usa mock cuando no hay token; el ID por defecto es placeholder. Ingesta webhook, consentimiento, supresiones, privacidad de tracking y aislamiento tenant requieren validación.
+- No se ejecutó código/tests ni se enviaron mensajes; los tres repositorios fuente permanecen sin cambios. `ALLOW_REAL_DISPATCH=false` y los gates de producción se mantienen.
