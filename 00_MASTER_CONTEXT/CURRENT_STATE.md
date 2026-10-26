@@ -257,3 +257,14 @@ Registro: [CRM-ALBRA E.2.R.6 — Protocolo de validación operativa supervisada]
 - **Advertencia de seguridad:** la sonda propuesta de enviar `senderType: "sonda_invalida"` a `POST /send` en el daemon operativo NO debe ejecutarse mientras el runtime pueda contener el código antiguo. El historial identifica una posible caída hacia la rama manual, lo que podría alcanzar el transporte. El protocolo documentado bloquea esa sonda hasta sustituirla por un método seguro de identificación de versión y con transporte impedido.
 - No reiniciar procesos, modificar `db/custom.db`/WAL/SHM, habilitar despacho ni ejecutar E.3 como consecuencia automática de este registro.
 - Esta actualización cambia solo documentación de CONTEXT; no certifica independientemente el código, los tests, el runtime ni la base operativa de CRM-ALBRA.
+
+## CRM-ALBRA — Baseline Prisma registrado; preparación standalone reportada (2026-10-26)
+
+Registro canónico: [CRM_ALBRA_PRISMA_BASELINE_AND_STANDALONE_READINESS_2026-10-26.md](../03_AUDITS/CRM_ALBRA_PRISMA_BASELINE_AND_STANDALONE_READINESS_2026-10-26.md).
+
+- Según el informe del propietario/Antigravity, `npx prisma migrate resolve --applied 0_init` terminó con exit code 0 tras una parada controlada de servicios; `prisma migrate status` reportó `Database schema is up to date!`.
+- Se reportaron `PRAGMA integrity_check: ok`, 10 mensajes (4 salientes), 2 nonces, cero despachos durante la intervención y servicios reiniciados: Next.js standalone puerto 3000 (PID 16260) y daemon WhatsApp puerto 3002 (PID 10544).
+- Se reportaron `/api/doctor` healthy (8/8), daemon `connected`, `ALLOW_REAL_DISPATCH=false` e `isAutoReply=0`.
+- **Estado: READY FOR PRODUCTION REVIEW.** Esto documenta preparación/ejecución standalone local según el reporte; no certifica despliegue externo al 100 %, disponibilidad pública sostenida ni autorización de envíos reales.
+- Mantener despachos reales deshabilitados hasta autorización operativa independiente. No repetir auditorías sin causa concreta.
+- Límite de evidencia: esta actualización registra el informe fuente; no reprodujo los comandos ni inspeccionó la máquina local.
