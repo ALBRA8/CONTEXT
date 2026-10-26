@@ -1,3 +1,18 @@
+## [0.6.14] - 2026-10-26 — Actualización cruzada CRM-ALBRA, WHATSPOWER y WHATSPOWER-ULTRA
+
+### Added / Updated
+- `04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REPOSITORY_REFRESH_2026-10-26.md`: HEAD públicos, cambios recientes, arquitectura por capas, deuda documental, hallazgos estáticos y gates de seguridad.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` y `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizados con la revisión.
+
+### Evidence / Safety
+- HEADs consultados: CRM-ALBRA `db95a5b` (2026-10-22), WHATSPOWER `d854749` y WHATSPOWER-ULTRA `b7b5a5d` (2026-10-26).
+- `dispatch-gate.mjs` no encontrado en CRM-ALBRA `main`; los informes de estado local D.5/E.2.R no prueban integración a esa rama.
+- Los nuevos tests declarados por los repositorios no se reejecutaron. Pagos reales, Meta Cloud, integración E2E y despliegue externo no se certifican.
+- Hallazgos estáticos prioritarios: autenticación y HMAC en WHATSPOWER, autorización de locks, endpoints administrativos, webhook/tenant/privacidad en ULTRA, y conciliación de la ficha histórica.
+- No se modificaron los repositorios de producto ni se enviaron mensajes; los gates de despacho real permanecen cerrados.
+
+---
+
 ## [0.6.13] - 2026-10-25 — Registro del protocolo CRM-ALBRA E.2.R.6
 
 ### Added / Updated
