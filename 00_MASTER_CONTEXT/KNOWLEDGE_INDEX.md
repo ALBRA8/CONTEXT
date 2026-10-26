@@ -186,3 +186,12 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - [Registro de baseline y preparación productiva](../03_AUDITS/CRM_ALBRA_PRISMA_BASELINE_AND_STANDALONE_READINESS_2026-10-26.md) — baseline `0_init` registrado y servicios standalone saludables según informe del propietario/Antigravity.
 - Estado correcto: `READY FOR PRODUCTION REVIEW`, no certificación de despliegue externo al 100 %. Los despachos reales siguen sin autorización y deben permanecer bloqueados.
 - Evidencias de runtime y DB reportadas por la fuente; no revalidadas independientemente durante la actualización documental.
+
+
+## CRM-ALBRA + WHATSPOWER + WHATSPOWER-ULTRA — revisión de repositorios (2026-10-26)
+
+- [Informe cruzado de estado y riesgos](../04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REPOSITORY_REFRESH_2026-10-26.md) — HEAD públicos, deltas de features, límites de integración y hallazgos estáticos de seguridad.
+- HEAD consultados: CRM-ALBRA `db95a5b` (2026-10-22), WHATSPOWER `d854749` (2026-10-26), WHATSPOWER-ULTRA `b7b5a5d` (2026-10-26).
+- Divergencia importante: `dispatch-gate.mjs` reportado en auditorías locales no aparece en CRM-ALBRA `main` consultado; verificar branch/commit antes de declarar D.5/E.2.R integrado.
+- WHATSPOWER `FICHA.md` está desactualizada frente al código/README. Hallazgos estáticos de auth/HMAC/locks y pasarelas requieren cierre antes de exposición pública.
+- No hubo rerun de pruebas ni envíos reales; esta revisión no certifica integración E2E o despliegue.
