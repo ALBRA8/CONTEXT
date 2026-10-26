@@ -175,3 +175,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - Estado declarado por la fuente: `VERIFIED WITH LIMITATIONS`; no equivale a rerun independiente de esta sesión.
 - Límites: `PrismaClient` real `NOT VERIFIED`, entrega E2E a WhatsApp no ejecutada, sin reconciliador autónomo de huérfanos/resultados ambiguos.
 - Mantener despacho y auto-respuesta desactivados según el último estado reportado; no enviar ni avanzar de fase sin autorización expresa.
+
+
+## CRM-ALBRA — E.2.R.6 (2026-10-25)
+
+- [Protocolo de validación operativa supervisada E.2.R.6](../03_AUDITS/CRM_ALBRA_E2R6_SUPERVISED_VALIDATION_PROTOCOL_2026-10-25.md) — registra el informe fuente, la matriz de pruebas herméticas reportada y los límites del runtime. **Aviso:** la sonda HTTP con `senderType: "sonda_invalida"` contra el daemon operativo queda bloqueada porque el proceso puede seguir ejecutando código antiguo y la petición podría alcanzar el transporte. No se autoriza reinicio, sonda, backup operativo, despacho real ni E.3 por el mero registro documental.
