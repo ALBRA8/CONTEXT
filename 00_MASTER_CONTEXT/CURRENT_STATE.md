@@ -245,3 +245,15 @@ Documento: [CRM_ALBRA_D5_FINAL_AUDIT_2026-10-25.md](../04_PROJECTS/CRM_ALBRA_D5_
 - La línea base de `db/custom.db` se conserva como reportada por el informe, no revalidada por esta sesión.
 - Mantener `ALLOW_REAL_DISPATCH=false`, `AGENTIC_2A_ENABLED=false` y la pausa `isAutoReply=0` según el estado reportado. No activar envíos ni avanzar de fase sin autorización expresa.
 - El informe público omite números telefónicos/datos personales directos presentes en la salida original.
+
+
+## 15. CRM-ALBRA — Fase E.2.R.6 (2026-10-25)
+
+Registro: [CRM-ALBRA E.2.R.6 — Protocolo de validación operativa supervisada](../03_AUDITS/CRM_ALBRA_E2R6_SUPERVISED_VALIDATION_PROTOCOL_2026-10-25.md).
+
+- Informe fuente declara `READY FOR AUTHORIZATION REVIEW`; resultados de código y 35/35 pruebas son reportados, no reejecutados independientemente en esta actualización documental.
+- E.2.R.5: corrección `senderType` reportada en disco; el daemon activo `task-3638` no se ha reiniciado y la versión en memoria continúa `NOT VERIFIED`.
+- `RUNTIME VERIFIED` y validación de bloqueo operativo en vivo siguen pendientes. `REAL WHATSAPP VERIFIED` sigue `NOT VERIFIED` y no autorizado.
+- **Advertencia de seguridad:** la sonda propuesta de enviar `senderType: "sonda_invalida"` a `POST /send` en el daemon operativo NO debe ejecutarse mientras el runtime pueda contener el código antiguo. El historial identifica una posible caída hacia la rama manual, lo que podría alcanzar el transporte. El protocolo documentado bloquea esa sonda hasta sustituirla por un método seguro de identificación de versión y con transporte impedido.
+- No reiniciar procesos, modificar `db/custom.db`/WAL/SHM, habilitar despacho ni ejecutar E.3 como consecuencia automática de este registro.
+- Esta actualización cambia solo documentación de CONTEXT; no certifica independientemente el código, los tests, el runtime ni la base operativa de CRM-ALBRA.
