@@ -1,3 +1,17 @@
+## [0.6.13] - 2026-10-25 — Registro del protocolo CRM-ALBRA E.2.R.6
+
+### Added / Updated
+- `03_AUDITS/CRM_ALBRA_E2R6_SUPERVISED_VALIDATION_PROTOCOL_2026-10-25.md`: protocolo fuente para una futura validación operativa supervisada, matriz hermética, protección SQLite/WAL, comprobación de runtime y gates de autorización.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` y `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` enlazan el registro y preservan la separación entre código/pruebas reportados y runtime no verificado.
+
+### Evidence / Limits
+- `READY FOR AUTHORIZATION REVIEW` es el dictamen del informe fuente; 35/35 pruebas son resultados reportados, no reejecutados independientemente al documentar.
+- Se añadió una advertencia crítica: no ejecutar la sonda propuesta con `senderType: "sonda_invalida"` contra el daemon operativo mientras la versión antigua pueda seguir cargada, porque podría caer en la rama manual y alcanzar el transporte.
+- Runtime `NOT VERIFIED`; envío real `NOT VERIFIED` y no autorizado; E.3 no autorizada.
+- Solo se modificó documentación en `ALBRA8/CONTEXT`. No se reiniciaron procesos, no se consultó ni modificó la base operativa y no se enviaron peticiones a CRM-ALBRA.
+
+---
+
 ## [0.6.12] - 2026-10-25 — Registro de informe fuente de auditoría D.5
 
 ### Added / Updated
