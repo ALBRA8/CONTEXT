@@ -1,3 +1,17 @@
+## [0.6.16] - 2026-10-26 — Auditoría estática de DESPACHO-JURIDICO
+
+### Added / Updated
+- `03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md`: revisión de `ALBRA8/DESPACHO-JURIDICO` `main` @ `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5`.
+- Actualizadas las fichas de agente/proyecto, `CURRENT_STATE.md`, `KNOWLEDGE_INDEX.md` y el índice de auditorías.
+- Se registran dos bloqueos P0: workflow CI aparentemente inválido (causa exacta no confirmada por log) y falta de prueba de que el hash del corpus V1.1 corresponda a bytes originales del HTML oficial.
+
+### Evidence / Limits
+- Inspección estática/documental y consulta de GitHub Actions; no se ejecutaron localmente tests, lint o clean-room, ni se verificó cada documento jurídico contra su fuente primaria.
+- No se modificó `ALBRA8/DESPACHO-JURIDICO`; solo se escribieron documentos en `ALBRA8/CONTEXT`.
+- El dictamen es PARTIAL / NOT VERIFIED INDEPENDENTLY BY TEST EXECUTION; no es certificación de producción ni dictamen jurídico sobre el contenido de cada norma.
+
+---
+
 ## [0.6.15] - 2026-10-26 — Revalidación de CRM-ALBRA, WHATSPOWER y WHATSPOWER-ULTRA
 
 ### Added / Updated
