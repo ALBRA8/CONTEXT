@@ -61,3 +61,14 @@ Estos nombres representan arquitectura propuesta en conversación; no deben conf
 ## Estado
 
 El repositorio es evidencia directa de una base jurídica preparada para especialización, pero no demuestra por sí solo que todo el pool de abogados propuesto esté implementado.
+
+
+## Reauditoría estática del repositorio — 2026-10-26
+
+- HEAD revisado: `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5`.
+- Informe canónico: [`DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md`](../03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md).
+- Dictamen documental: base de arquitectura amplia, pero estado **PARTIAL / NOT VERIFIED INDEPENDENTLY BY TEST EXECUTION**.
+- Bloqueos P0: CI/validación del workflow y trazabilidad/procedencia del corpus piloto.
+- La construcción de `raw_content` desde fragmentos Python no demuestra que el hash corresponda a bytes originales de HTML oficial. Corpus no apto para considerarse certificado hasta reconciliar fuentes primarias y consumidores.
+- No se ejecutaron localmente tests, lint ni clean-room; integraciones externas E2E y preparación de producción siguen sin verificar.
+- El pool de especialistas jurídicos y la guía de agente contador continúan siendo propuestas; no equivalen a subagentes desplegados ni a una especificación contable aprobada.
