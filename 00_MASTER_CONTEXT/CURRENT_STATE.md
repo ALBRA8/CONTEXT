@@ -307,3 +307,13 @@ Informe canónico: [`DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md`](../03_AU
 - Tests, lint, clean-room, E2E de proveedores/canales y verificación de cada norma contra fuente primaria no se reprodujeron en esta revisión.
 - La guía del futuro agente contador sigue PROPOSED; reutilizar solo patrones de ingeniería verificados y mantener separado el conocimiento contable.
 - Solo se modificó documentación de CONTEXT; el repositorio fuente no fue modificado.
+
+## 22. Expansión de agentes de soporte empresarial (2026-10-27)
+
+Se registró la iniciativa del propietario para desarrollar capacidades de Contador, Jurídico y Community Manager. Ver [plan canónico](../04_PROJECTS/ALBRA_BUSINESS_SUPPORT_AGENTS_PLAN_2026-10-27.md).
+
+- **Contador:** PROPOSED / IN DEVELOPMENT según declaración del propietario; no se identificó aún el repositorio ni se verificó implementación.
+- **Jurídico:** existe `ALBRA8/DESPACHO-JURIDICO` como base técnica. Su auditoría del 2026-10-26 declara PARTIAL / NOT VERIFIED INDEPENDENTLY BY TEST EXECUTION y mantiene bloqueos P0 de CI/procedencia del corpus.
+- **Community Manager:** iniciativa declarada; no se identificó aún ficha o repositorio específico ni se verificó implementación.
+- Fronteras propuestas: Contador no sustituye un sistema contable fuente; Jurídico conserva trazabilidad de fuentes y aprobación humana; Community Manager se enfoca en marca/comunidad/reputación y no duplica CRM, prospección ni el motor de campañas.
+- Esta actualización afecta solo CONTEXT. No se modificaron repositorios de producto ni se ejecutaron pruebas, integraciones o acciones externas.
