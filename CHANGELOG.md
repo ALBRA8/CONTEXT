@@ -1,3 +1,17 @@
+## [0.6.15] - 2026-10-26 — Revalidación de CRM-ALBRA, WHATSPOWER y WHATSPOWER-ULTRA
+
+### Added / Updated
+- Nuevo informe `04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REVALIDATION_2026-10-26.md`.
+- `CURRENT_STATE.md` y `KNOWLEDGE_INDEX.md` actualizados para reflejar la revalidación posterior del día.
+
+### Evidence / Limits
+- HEADs verificados de nuevo: CRM-ALBRA `db95a5b`, WHATSPOWER `d854749`, WHATSPOWER-ULTRA `b7b5a5d`.
+- Lectura estática focalizada confirma hallazgos de autorización en rutas de locks/campañas/webhooks y el fallback/condicionalidad de HMAC. El alcance no es pentest.
+- `dispatch-gate.mjs` no está accesible en CRM `main`; D.5/E.2.R local no se acredita en esa rama.
+- No se ejecutaron tests/builds, no se modificaron repositorios de producto y no se hicieron envíos reales.
+
+---
+
 ## [0.6.14] - 2026-10-26 — Actualización cruzada CRM-ALBRA, WHATSPOWER y WHATSPOWER-ULTRA
 
 ### Added / Updated
