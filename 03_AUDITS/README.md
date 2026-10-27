@@ -15,3 +15,8 @@ No usar una auditoría para afirmar más de lo que realmente verificó. Distingu
 - AGENTE-LEADS arquitectura y auditorías existentes.
 - YOUTUBE-AUTOMATION y HANDS.
 - Resto de agentes cuando se auditen expresamente.
+
+
+## Auditoría añadida — 2026-10-26
+
+- [DESPACHO-JURIDICO — auditoría de repositorio](./DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md): revisión estática del HEAD `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5`; bloqueos P0 de CI y procedencia del corpus; tests no reproducidos.
