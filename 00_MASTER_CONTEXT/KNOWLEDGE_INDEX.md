@@ -195,3 +195,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - Divergencia importante: `dispatch-gate.mjs` reportado en auditorías locales no aparece en CRM-ALBRA `main` consultado; verificar branch/commit antes de declarar D.5/E.2.R integrado.
 - WHATSPOWER `FICHA.md` está desactualizada frente al código/README. Hallazgos estáticos de auth/HMAC/locks y pasarelas requieren cierre antes de exposición pública.
 - No hubo rerun de pruebas ni envíos reales; esta revisión no certifica integración E2E o despliegue.
+
+
+## Revalidación cruzada — 2026-10-26
+
+- [CRM_WHATSPOWER_WHATSPOWER_ULTRA_REVALIDATION_2026-10-26.md](../04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REVALIDATION_2026-10-26.md) — revalidación del HEAD público, divergencia del `dispatch-gate.mjs`, y revisión estática focalizada de autorización/HMAC, campañas/webhooks y gates de producción. Sin rerun de tests ni cambios a los repositorios de producto.
