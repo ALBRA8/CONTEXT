@@ -282,3 +282,14 @@ Informe canónico: [Actualización cruzada de repositorios — CRM-ALBRA, WHATSP
 - **Gates de seguridad estáticos:** revisar en WHATSPOWER el secreto HMAC de fallback, la aceptación condicional de firma en inbound y la ruta de liberación de lock sin autorización visible; revisar autenticación/tenant de rutas administrativas en ambos niveles. No exponer servicios a Internet hasta cerrar esos puntos.
 - Pagos WHATSPOWER: enlaces y estado local presentes, pero pasarelas/callbacks reales no verificados. Meta Cloud en ULTRA usa mock cuando no hay token; el ID por defecto es placeholder. Ingesta webhook, consentimiento, supresiones, privacidad de tracking y aislamiento tenant requieren validación.
 - No se ejecutó código/tests ni se enviaron mensajes; los tres repositorios fuente permanecen sin cambios. `ALLOW_REAL_DISPATCH=false` y los gates de producción se mantienen.
+
+
+## 21. Revalidación cruzada CRM-ALBRA + WHATSPOWER + WHATSPOWER-ULTRA (2026-10-26)
+
+Informe: [Revalidación de repositorios — CRM-ALBRA, WHATSPOWER y WHATSPOWER-ULTRA](../04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REVALIDATION_2026-10-26.md).
+
+- Reconfirmados los HEAD públicos: CRM-ALBRA `db95a5bec99bb85298f7ecbd6c630ebb8b60e669`; WHATSPOWER `d8547491630a3023013a2dd49dca31c7e18f9a9d`; WHATSPOWER-ULTRA `b7b5a5dabe7e84ecd3c74171dfaa0c9b75b340c9`.
+- Revalidado que `src/whatsapp-daemon/dispatch-gate.mjs` no puede recuperarse desde `CRM-ALBRA/main` (404); el estado local D.5/E.2.R no está demostrado como integrado al HEAD público.
+- Hallazgos directos nuevos/confirmados: en WHATSPOWER `POST /api/internal/locks/:phone/release` carece de autorización visible y el HMAC inbound puede omitirse en entornos no productivos. En WHATSPOWER-ULTRA, los manejadores consultados para campañas y webhook de leads no muestran autenticación; el ingester no valida firma de origen. Bloquear exposición no confiable hasta cerrar auth/tenant/replay/validación.
+- `WHATSPOWER/FICHA.md` continúa desactualizada. Pasarelas de pago, Meta Cloud, despliegue e integración E2E no están verificados de forma independiente.
+- Solo se modificó CONTEXT; no se ejecutaron suites ni se enviaron mensajes. Mantener despacho real/campañas apagados salvo autorización expresa.
