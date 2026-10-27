@@ -30,7 +30,7 @@ Puntos actuales importantes:
 
 - YOUTUBE-AUTOMATION/HANDS: implementación y hardening documentados; conexión parcial de la capa de ejecución; E2E físico Flow/Desktop NOT_VERIFIED.
 - CRM ALBRA: sistema CRM con evidencia documental directa; auditoría independiente actual NOT_VERIFIED.
-- Despacho Jurídico: organismo legal base y corpus piloto documentado; último commit recuperado `1801d6947c816a0cd9fb9b8dce87736212963ea1`; auditoría independiente actual NOT_VERIFIED.
+- Despacho Jurídico: reauditoría estática de `main` @ `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5` el 2026-10-26. Base técnica amplia, pero estado PARTIAL / NOT VERIFIED INDEPENDENTLY BY TEST EXECUTION. CI/validación del workflow y procedencia del corpus son bloqueos P0; no se ejecutaron tests, lint ni clean-room. Ver `03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md`.
 - EEC/Mission Control: concepto/diseño con arquitectura visual/control-plane; implementación de repositorio NOT_VERIFIED.
 - Audiobook/Rights Research: IDEA/PROPOSAL; KREA queda del lado creativo y la clearance legal se separa hacia el Despacho Jurídico/pool legal propuesto. No existe una determinación de derechos concreta verificada en este contexto.
 
@@ -293,3 +293,17 @@ Informe: [Revalidación de repositorios — CRM-ALBRA, WHATSPOWER y WHATSPOWER-U
 - Hallazgos directos nuevos/confirmados: en WHATSPOWER `POST /api/internal/locks/:phone/release` carece de autorización visible y el HMAC inbound puede omitirse en entornos no productivos. En WHATSPOWER-ULTRA, los manejadores consultados para campañas y webhook de leads no muestran autenticación; el ingester no valida firma de origen. Bloquear exposición no confiable hasta cerrar auth/tenant/replay/validación.
 - `WHATSPOWER/FICHA.md` continúa desactualizada. Pasarelas de pago, Meta Cloud, despliegue e integración E2E no están verificados de forma independiente.
 - Solo se modificó CONTEXT; no se ejecutaron suites ni se enviaron mensajes. Mantener despacho real/campañas apagados salvo autorización expresa.
+
+
+## 14. DESPACHO-JURIDICO — reauditoría de repositorio (2026-10-26)
+
+Informe canónico: [`DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md`](../03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md).
+
+- HEAD consultado: `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5`.
+- La base contiene runtime, razonamiento, capabilities/tools, harness/bridges, conocimiento, evidencia/auditoría, comunicaciones, API y Doctor; existencia de módulos no demuestra integración E2E ni preparación de producción.
+- **P0 CI:** Actions para el HEAD revisado aparece fallida; el workflow contiene una construcción YAML aparentemente inválida en `clean-room`. La causa exacta no quedó confirmada por log.
+- **P0 corpus:** el módulo V1.1 calcula hash sobre contenido reconstruido desde fragmentos Python; el flujo inspeccionado no demuestra que ese hash autentique bytes originales del HTML oficial.
+- Las entradas de corpus deben permanecer fuera de uso jurídico operativo hasta verificar fuente primaria, contenido, vigencia, hash, transformaciones y rutas consumidoras.
+- Tests, lint, clean-room, E2E de proveedores/canales y verificación de cada norma contra fuente primaria no se reprodujeron en esta revisión.
+- La guía del futuro agente contador sigue PROPOSED; reutilizar solo patrones de ingeniería verificados y mantener separado el conocimiento contable.
+- Solo se modificó documentación de CONTEXT; el repositorio fuente no fue modificado.
