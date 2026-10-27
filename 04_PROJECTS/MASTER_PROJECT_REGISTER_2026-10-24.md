@@ -15,7 +15,7 @@ Este registro conecta los repositorios de producto con las fichas existentes en 
 | RADAR-SECOP2 | 01_AGENTS/RADAR-SECOP2.md | Reproducir CI y fuentes/MCP en entorno actual. |
 | Extension-CAZADOR | 01_AGENTS/EXTENSION-CAZADOR.md | Mantener separada de la extensión Flow de YouTube. |
 | PURO-PODER-CONOCIMIENTO | 01_AGENTS/PURO-PODER-CONOCIMIENTO.md | Corpus de referencia; no asumir agente autónomo. |
-| DESPACHO-JURIDICO | 01_AGENTS/DESPACHO-JURIDICO.md | Distinguir perfiles arquitectónicos, corpus y subagentes ejecutables. |
+| DESPACHO-JURIDICO | 01_AGENTS/DESPACHO-JURIDICO.md; 03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md | P0: validar CI/workflow y reconstruir la trazabilidad del corpus desde fuentes primarias. Tests, lint, clean-room y E2E no reproducidos; no declarar listo para producción. |
 | ERP-ADMON | Fichas generales y auditorías de proyecto | Verificar DIAN, firma, nómina y scripts de base de datos antes de producción. |
 | PANEL-DE-CONTROL | 04_PROJECTS/EEC_MISSION_CONTROL.md | Cerrar autenticación, autorización y frontera del proxy antes de exposición. |
 | INSTALADOR | 04_PROJECTS/INSTALADOR_EEC_FIRST_DEPLOYMENT_PILOT_2026-10-24.md | E2E autenticado con EEC; Windows y VPS pendientes de prueba. |
