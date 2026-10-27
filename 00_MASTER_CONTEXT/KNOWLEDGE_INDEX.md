@@ -200,3 +200,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## Revalidación cruzada — 2026-10-26
 
 - [CRM_WHATSPOWER_WHATSPOWER_ULTRA_REVALIDATION_2026-10-26.md](../04_PROJECTS/CRM_WHATSPOWER_WHATSPOWER_ULTRA_REVALIDATION_2026-10-26.md) — revalidación del HEAD público, divergencia del `dispatch-gate.mjs`, y revisión estática focalizada de autorización/HMAC, campañas/webhooks y gates de producción. Sin rerun de tests ni cambios a los repositorios de producto.
+
+
+## DESPACHO-JURIDICO — auditoría actual (2026-10-26)
+
+- [DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md](../03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md) — inspección estática de `main` @ `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5`. Hallazgos P0: workflow CI con sintaxis aparentemente inválida (causa exacta no confirmada por log) y hash/procedencia del corpus no demostrados sobre HTML original. No se ejecutaron tests, lint, clean-room ni E2E. Mantener corpus no certificado fuera del uso jurídico operativo.
