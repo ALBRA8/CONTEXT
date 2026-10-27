@@ -205,3 +205,9 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## DESPACHO-JURIDICO — auditoría actual (2026-10-26)
 
 - [DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md](../03_AUDITS/DESPACHO_JURIDICO_REPOSITORY_AUDIT_2026-10-26.md) — inspección estática de `main` @ `277be56540dd7298f3ebc6a5654c2c7aaa1ba0c5`. Hallazgos P0: workflow CI con sintaxis aparentemente inválida (causa exacta no confirmada por log) y hash/procedencia del corpus no demostrados sobre HTML original. No se ejecutaron tests, lint, clean-room ni E2E. Mantener corpus no certificado fuera del uso jurídico operativo.
+
+## Expansión de agentes de soporte empresarial — 2026-10-27
+
+- [Plan de agentes de soporte empresarial](../04_PROJECTS/ALBRA_BUSINESS_SUPPORT_AGENTS_PLAN_2026-10-27.md) — registra las iniciativas de Contador, Despacho Jurídico y Community Manager, sus fronteras con CRM/marketing y sus controles propuestos.
+- Estado: iniciativa del propietario; Contador y Community Manager no tienen repositorio identificado en el inventario consultado. No afirmar implementación, integración ni pruebas.
+- Despacho Jurídico mantiene la auditoría del 2026-10-26 como referencia de limitaciones y bloqueos pendientes.
