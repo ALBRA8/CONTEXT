@@ -75,14 +75,14 @@ Los handlers acumulan el cuerpo HTTP en memoria sin límite explícito y aceptan
 | Publicación automática en redes | No observada |
 | Identidad correo/teléfono/WhatsApp por cuenta | No implementada en el código revisado |
 | Integración con YOUTUBE-AUTOMATION/HANDS/EEC | No verificada/no observada en el código revisado |
-| Tests automatizados ejecutados en esta revisión | Ninguno |
+| Tests automatizados | GitHub Actions: chequeos de sintaxis y regresión estática en verde; runtime real no probado |
 | Producción/uso con cuentas reales validado | No verificado |
 
 ## Orden de trabajo recomendado
 
 1. Rotar credenciales expuestas y revisar el historial de Git.
 2. Revisar el PR #1; completar validación local antes de fusionar.
-3. Corregir validación de IDs, límites de cuerpo y validación/escape de proxy.
+3. Completar límites de tamaño de cuerpo y validación estricta de protocolo/host/puerto; ya se añadió validación del ID de perfil y serialización segura del código de extensión.
 4. Proteger datos locales: migración y plantilla de perfiles, sin borrar datos del propietario.
 5. Probar el lanzamiento de Chrome y proxies, incluyendo compatibilidad de la extensión.
 6. Alinear README/FICHA con las funciones reales.
@@ -90,4 +90,4 @@ Los handlers acumulan el cuerpo HTTP en memoria sin límite explícito y aceptan
 
 ## Conclusión
 
-Browser Factory no es solo una idea: hay una aplicación real en el repositorio. El código demuestra gestión local de perfiles, sesiones de Chrome, proxies y un registro manual de publicaciones. No demuestra publicación automática, integración con otros sistemas ni validación de producción. La corrección de seguridad está en una rama y PR abierto; por ahora no debe declararse cerrada.
+Browser Factory no es solo una idea: hay una aplicación real en el repositorio. El código demuestra gestión local de perfiles, sesiones de Chrome, proxies y un registro manual de publicaciones. No demuestra publicación automática, integración con otros sistemas ni validación de producción. La corrección de seguridad está en una rama y PR abierto. Los chequeos automatizados estáticos pasan, pero la rotación de credenciales, la revisión del historial y las pruebas de runtime siguen pendientes; por ahora no debe declararse cerrada.
