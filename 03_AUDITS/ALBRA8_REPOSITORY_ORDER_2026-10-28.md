@@ -93,3 +93,36 @@ Fuente: repositorios visibles en GitHub y último commit devuelto por búsqueda 
 - CONTADOR-PUBLICO: https://github.com/ALBRA8/CONTADOR-PUBLICO/commit/51029146d891bec12b534c3da95c8f089116cff3
 - CHAT-X: https://github.com/ALBRA8/CHAT-X/commit/fa2fffccdfd0c9bc247638dddd0885baff140cf1
 - BROWSER-FACTORY: https://github.com/ALBRA8/BROWSER-FACTORY/commit/98ebac48be8e07a7497949a09f75aeea12c01e1a
+
+
+## Cruce inicial de README (28-10-2026)
+Lectura de README hecha para los repositorios accesibles; esta sección distingue lo que declaran sus documentos, no lo que se ha probado en ejecución.
+
+- **CRM-ALBRA:** CRM SaaS multi-tenant; contratos REST de acciones, MCP y MemoryDV; WhatsApp vía daemon Baileys.
+- **WHATSPOWER:** capa conversacional/nodos de flujo, bridge HMAC entrante desde CRM, locks de atención humana y lista de supresión. El README declara `ALLOW_REAL_DISPATCH=false` como configuración clave.
+- **WHATSPOWER-ULTRA:** capa de campañas y despacho; integración con locks de WHATSPOWER o modo standalone contra daemon CRM.
+- **AGENTE-GENERAL:** seed transversal, no agente especializado; base de capacidades, seguridad, memoria, ejecución y auditoría.
+- **CHAT-X — DISCREPANCIA DE IDENTIDAD:** README todavía describe un “Estudio de Modelos Virtuales IA” con módulos E1-E7; el último commit describe CHAT-X como plataforma central de seis módulos del ecosistema ALBRA8. Antes de integrarlo como centro operativo hay que aclarar si el README quedó obsoleto o si el commit cambió el alcance.
+- **YOUTUBE-AUTOMATION:** fábrica local de videos con IA, pipeline de guion, imágenes, voz, render, subtítulos y publicación opcional.
+- **AGENTE-LEADS:** agente Telegram para prospección B2B, investigación y outreach opcional.
+- **AGENTE-TRADING:** análisis SMC con bridge local a MetaTrader 5; el README aclara que el track record no promete rentabilidad.
+- **NEX-SCOPE:** SaaS de investigación de nichos YouTube, keywords, competencia y planes de contenido.
+- **RADAR-SECOP2:** detección, evaluación y preparación de oportunidades de contratación pública colombiana.
+- **Extension-CAZADOR:** extensión Chrome con scraping asistido por IA, backend local y dashboard; el último commit expande extractor JVZoo.
+- **PURO-PODER-CONOCIMIENTO:** compendio de cinco cursos sobre marketing, chat marketing, investigación viral, modelos IA y automatización.
+- **DESPACHO-JURIDICO:** agente jurídico colombiano con auditoría de citas, aprobaciones humanas, matters y corpus normativo.
+- **COMUNITI-MANAGER:** arnés de community management para AGENTE-GENERAL; declara integraciones con CRM, Leads, Ultra, KREA, YouTube y NEX-SCOPE.
+- **CONTADOR-PUBLICO:** asistencia a declaración de renta de personas naturales (Formulario 210); cálculos deterministas y revisión humana, sin firma/presentación/pago automático.
+- **ERP-ADMON:** ERP contable-administrativo independiente y complementario al CRM.
+- **PANEL-DE-CONTROL:** control plane EEC para orquestación con autorización, policy, simulación explícita y aprobación humana.
+- **BROWSER-FACTORY:** gestión local de perfiles TikTok/YouTube y despacho de videos; el commit de seguridad deja rotación de credenciales y validación real como tareas pendientes.
+- **MAXI-APP:** README muy genérico; no permite identificar con confianza producto, usuario objetivo ni estado.
+- **AGENTE-CHISMOSO, AGENTE-KREA e INSTALADOR:** no se encontró `README.md` en la ruta raíz consultada (404). Esto no demuestra que no exista documentación en otras rutas; queda pendiente localizar su punto de entrada real.
+- **CONTEXT:** su README indica que `ALBRA_BOOTSTRAP.md` es la entrada canónica y que la existencia de un documento no implica aprobación ni verificación independiente.
+
+## Siguiente trabajo de organización
+1. Leer `ALBRA_BOOTSTRAP.md` y el índice/estado canónico de CONTEXT antes de mover prioridades o declarar decisiones.
+2. Localizar los puntos de entrada reales de AGENTE-CHISMOSO, AGENTE-KREA e INSTALADOR; revisar README/manifest de los repos restantes no cubiertos aún.
+3. Resolver la discrepancia documental de CHAT-X.
+4. Construir mapa de dependencias con contratos y consumidores/proveedores; no inferir una integración operativa solo porque un README la mencione.
+5. Completar matriz de CI/estado reciente sin ejecutar pruebas ni campañas.
