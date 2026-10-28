@@ -25,11 +25,13 @@ La publicación no está automatizada: el código abre la página de la platafor
 
 ### P0 — Credenciales de proxy expuestas en código (corrección propuesta, no cerrada)
 
-La rama de seguridad elimina la configuración de proxy con credenciales precargadas y cambia las respuestas de `GET /api/proxies` y `POST /api/proxies` para no exponer `pass` ni `raw`. También elimina CORS abierto y rechaza orígenes HTTP distintos de la propia interfaz local.
+La rama de seguridad elimina la configuración de proxy con credenciales precargadas y cambia las respuestas de `GET /api/proxies` y `POST /api/proxies` para no exponer `pass` ni `raw`. También elimina CORS abierto y rechaza orígenes HTTP distintos de la propia interfaz local. En la revisión posterior se añadió validación del ID de perfil antes de guardarlo o usarlo como ruta de sesión, y serialización segura de valores al generar el código JavaScript de la extensión de proxy.
 
-PR: [#1](https://github.com/ALBRA8/BROWSER-FACTORY/pull/1), borrador abierto, no fusionado. La rama está tres commits por delante de `main` en la consulta del 2026-10-28. No hay ejecuciones de GitHub Actions asociadas al commit revisado y no se ejecutaron pruebas de runtime.
+PR: [#1](https://github.com/ALBRA8/BROWSER-FACTORY/pull/1), borrador abierto, no fusionado. Se añadieron `test/security-regressions.test.mjs` y `.github/workflows/node-checks.yml`. GitHub Actions ejecutó los chequeos de sintaxis de servidor/frontend y las pruebas de regresión estática; el workflow `Node checks` terminó en **success** en el commit `5c0b3c11260d4f2c8ae06350dd500de360838bd3`.
 
-**Pendiente de cierre:** rotar/revocar la credencial en el proveedor, revisar el historial de Git, validar la interfaz de alta de proxies y ejecutar pruebas antes de fusionar. Quitar una credencial del último archivo no la elimina de commits históricos.
+Una revisión limitada de los commits accesibles detectó patrones compatibles con credenciales en el diff del commit inicial `042aa3b021f34dda52d0917811e57718d9292587`; los valores no se reproducen en este informe. Esto no equivale a un análisis exhaustivo de todos los refs, forks o copias.
+
+**Pendiente de cierre:** rotar/revocar la credencial en el proveedor, evaluar limpieza coordinada del historial, validar el flujo de alta/edición de proxies en el equipo real y probar Chrome/proxies reales. Los tests actuales son sintácticos y de regresión estática: no demuestran que la app arranque en el PC, que Chrome acepte la extensión o que los proxies funcionen.
 
 ### P1 — La API local modifica estado y no tiene autenticación propia
 
