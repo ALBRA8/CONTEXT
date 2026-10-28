@@ -1,3 +1,16 @@
+## [0.6.17] - 2026-10-27 — Reconocimiento general del ecosistema ALBRA
+
+### Added / Updated
+- `04_PROJECTS/ALBRA_ECOSYSTEM_RECONNAISSANCE_2026-10-27.md`: mapa inicial del ecosistema, responsabilidades observadas, reglas de evidencia, limitaciones y secuencia recomendada de auditoría.
+
+### Evidence / Limits
+- Consultados el bootstrap, estado actual, índice de conocimiento, registro de agentes y matriz de auditorías de CONTEXT; leídos README de una selección de repositorios clave, incluidos CRM-ALBRA, AGENTE-GENERAL, AGENTE-LEADS, CONTADOR-PUBLICO, COMUNITI-MANAGER, DESPACHO-JURIDICO, ERP-ADMON, PANEL-DE-CONTROL y los dos WHATSPOWER.
+- Revisión documental/estática focalizada; no se ejecutaron pruebas, builds, pentests ni verificaciones de despliegue.
+- No se modificaron repositorios de producto ni se realizaron acciones externas.
+- Se mantiene explícita la diferencia entre estado documentado, evidencia de pruebas y funcionamiento real en producción.
+
+---
+
 ## [0.6.16] - 2026-10-26 — Auditoría estática de DESPACHO-JURIDICO
 
 ### Added / Updated
