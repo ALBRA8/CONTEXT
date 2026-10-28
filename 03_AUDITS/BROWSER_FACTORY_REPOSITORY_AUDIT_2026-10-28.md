@@ -81,7 +81,7 @@ Los handlers acumulan el cuerpo HTTP en memoria sin límite explícito y aceptan
 ## Orden de trabajo recomendado
 
 1. Rotar credenciales expuestas y revisar el historial de Git.
-2. Revisar el PR #1; completar validación local antes de fusionar.
+2. Verificar los chequeos CI posteriores al merge y completar validación local antes de dar seguridad por cerrada.
 3. Completar límites de tamaño de cuerpo y validación estricta de protocolo/host/puerto; ya se añadió validación del ID de perfil y serialización segura del código de extensión.
 4. Proteger datos locales: migración y plantilla de perfiles, sin borrar datos del propietario.
 5. Probar el lanzamiento de Chrome y proxies, incluyendo compatibilidad de la extensión.
@@ -90,4 +90,4 @@ Los handlers acumulan el cuerpo HTTP en memoria sin límite explícito y aceptan
 
 ## Conclusión
 
-Browser Factory no es solo una idea: hay una aplicación real en el repositorio. El código demuestra gestión local de perfiles, sesiones de Chrome, proxies y un registro manual de publicaciones. No demuestra publicación automática, integración con otros sistemas ni validación de producción. La corrección de seguridad está en una rama y PR abierto. Los chequeos automatizados estáticos pasan, pero la rotación de credenciales, la revisión del historial y las pruebas de runtime siguen pendientes; por ahora no debe declararse cerrada.
+Browser Factory no es solo una idea: hay una aplicación real en el repositorio. El código demuestra gestión local de perfiles, sesiones de Chrome, proxies y un registro manual de publicaciones. No demuestra publicación automática, integración con otros sistemas ni validación de producción. Los cambios de seguridad y pruebas quedaron integrados en `main` mediante el PR [#1](https://github.com/ALBRA8/BROWSER-FACTORY/pull/1), commit `98ebac48be8e07a7497949a09f75aeea12c01e1a`. GitHub Actions pasó en la versión anterior de las pruebas estáticas; no se confirmó una ejecución CI para el commit de merge ni para la prueba de humo HTTP añadida al final. Siguen pendientes la rotación/revocación de credenciales, evaluar limpieza coordinada del historial y las pruebas de runtime con Chrome/proxies reales.
