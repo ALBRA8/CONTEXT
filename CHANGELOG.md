@@ -406,3 +406,15 @@ Los cambios relevantes de ALBRA-CONTEXT se registran aquí en orden cronológico
 - El comando de baseline, el estado Prisma, la integridad SQLite y la salud de los servicios se registran como resultados del informe del propietario/Antigravity; no se reprodujeron independientemente en este cambio documental.
 - No se certifica despliegue externo al 100 %. `ALLOW_REAL_DISPATCH=false` y `isAutoReply=0` permanecen reportados como vigentes; no se autorizaron nuevos despachos reales.
 - Solo se modificó `ALBRA8/CONTEXT`; no se modificó el repositorio CRM-ALBRA.
+
+## [0.6.20] - 2026-10-28 — WHATSPOWER: autorización y webhooks; WHATSPOWER-ULTRA: guard de despacho
+
+### Added / Updated
+- 03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md y 00_MASTER_CONTEXT/CURRENT_STATE.md registran una tercera pasada de lectura estática sobre handlers HTTP, webhook de pagos, HMAC inbound y adaptadores de despacho.
+- WHATSPOWER: se documentan rutas sin auth local visible y el webhook de pagos que acepta transactionId/status sin validación local de firma del proveedor.
+- WHATSPOWER-ULTRA: se documenta ausencia de auth local visible en rutas críticas y una diferencia entre la salvaguarda ALLOW_REAL_DISPATCH declarada en README y los guards observados en el dispatcher/adaptador Meta Cloud.
+
+### Safety / Evidence
+- La evaluación es estática y no prueba exposición pública; middleware externo y segmentación de red siguen sin verificar.
+- No se ejecutaron tests, builds, lint, requests ni despliegues. No se activaron campañas, no se enviaron mensajes y no se modificó código de producto.
+- Solo se actualiza ALBRA8/CONTEXT.
