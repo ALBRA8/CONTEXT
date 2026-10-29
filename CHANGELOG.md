@@ -1,3 +1,18 @@
+
+
+## [0.6.18] - 2026-10-28 — Revisión estática focalizada de seguridad y contratos
+
+### Added / Updated
+- Addendum de hallazgos en `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md`.
+- `00_MASTER_CONTEXT/CURRENT_STATE.md` actualizado con prioridades de autorización, credenciales, E2E y contratos.
+
+### Evidence / Limits
+- Inspección de fuentes/documentación de WHATSPOWER, WHATSPOWER-ULTRA, AGENTE-KREA, BROWSER-FACTORY, DESPACHO-JURIDICO y CHAT-X.
+- WHATSPOWER/ULTRA: posibles brechas de auth observadas en handlers visibles; no se confirmó exposición externa ni se descartaron capas de protección fuera del archivo.
+- KREA: `test:e2e` es un placeholder; `db:push` incluye `--accept-data-loss`.
+- Browser Factory: rotación/revocación de credenciales históricas y validación real Chrome/proxy siguen pendientes en la evidencia consultada.
+- No se ejecutaron tests, builds, lint, pentests ni despliegues. No se activaron campañas ni se enviaron mensajes. No se modificaron repositorios de producto.
+- Estado: auditoría técnica independiente parcial; las declaraciones de commits/README no se elevan a resultados verificados.
 ## [0.6.17] - 2026-10-27 — Reconocimiento general del ecosistema ALBRA
 
 ### Added / Updated
