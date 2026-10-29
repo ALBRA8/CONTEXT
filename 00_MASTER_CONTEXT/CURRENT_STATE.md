@@ -317,3 +317,17 @@ Se registró la iniciativa del propietario para desarrollar capacidades de Conta
 - **Community Manager:** iniciativa declarada; no se identificó aún ficha o repositorio específico ni se verificó implementación.
 - Fronteras propuestas: Contador no sustituye un sistema contable fuente; Jurídico conserva trazabilidad de fuentes y aprobación humana; Community Manager se enfoca en marca/comunidad/reputación y no duplica CRM, prospección ni el motor de campañas.
 - Esta actualización afecta solo CONTEXT. No se modificaron repositorios de producto ni se ejecutaron pruebas, integraciones o acciones externas.
+
+
+## 7. Revisión estática focalizada — 2026-10-28
+
+La matriz `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md` contiene el addendum de revisión estática focalizada. Nuevos puntos a retener:
+
+- WHATSPOWER: los handlers visibles de flujos no muestran auth local; revisar middleware/perímetro, autorización y replay/HMAC. No se ha confirmado exposición pública.
+- WHATSPOWER-ULTRA: los handlers visibles de campañas no muestran auth local por ruta; el gate de `INTERNAL_API_SECRET` no prueba cobertura de toda la API.
+- AGENTE-KREA: `test:e2e` es un placeholder que termina con código 0, no un E2E; `db:push` usa `--accept-data-loss`.
+- BROWSER-FACTORY: rotación/revocación de credenciales históricas y validación real Chrome/proxy continúan pendientes según el commit/documentación consultados.
+- CHAT-X: su papel como plataforma de seis módulos e integraciones es declarado por el commit; contratos y runtime no están verificados independientemente.
+- DESPACHO-JURIDICO: los números de pruebas y el cambio reciente de AuthContext se registran como declaraciones del repositorio, no como pruebas ejecutadas en esta pasada.
+
+Límites: no se ejecutaron tests, builds, lint ni pentests; no se activaron campañas ni se enviaron mensajes; no se modificaron repositorios de producto. Estado global de auditoría: **INVENTARIO DOCUMENTAL REVISADO / AUDITORÍA TÉCNICA INDEPENDIENTE PARCIAL**.
