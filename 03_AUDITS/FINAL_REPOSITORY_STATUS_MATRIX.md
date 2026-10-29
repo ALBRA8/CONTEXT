@@ -56,3 +56,33 @@ La tabla superior es el snapshot histórico de Wave 4. No usarla como HEAD actua
 ## Browser Factory — evidencia y límite
 
 El propietario declara que Browser Factory ya está implementada en su PC. Estado: **IMPLEMENTACIÓN LOCAL REPORTADA POR EL PROPIETARIO; NO INSPECCIONADA INDEPENDIENTEMENTE**. No hay aquí ruta local, hash, diff ni salida de tests que permita certificar contenido o integración. El nombre del producto ALBRA es Browser Factory; Dolphin Anty es solo referencia funcional documentada.
+
+
+---
+
+# ADDENDUM — REVISIÓN ESTÁTICA FOCALIZADA 2026-10-28
+
+Alcance: lectura de fuentes públicas actuales, scripts y documentación. **No se ejecutaron tests, builds, lint, pentests ni despliegues; no se enviaron mensajes ni se activaron campañas; no se modificó ningún repositorio de producto.** Los hallazgos de seguridad son estáticos y no demuestran por sí solos exposición desde Internet.
+
+## Hallazgos nuevos y evidencia
+
+| Repositorio | Evidencia consultada | Hallazgo | Riesgo / siguiente verificación | Estado |
+|---|---|---|---|---|
+| WHATSPOWER | `src/server.ts`, blob `125fed320640f28cf325e16c9f564ded0027e0d0`; HEAD consultado `f4f7fc9f18d92ab1c1a86e57ee58cadb18105546` | En los handlers visibles de `GET/POST /api/flows` no se observa comprobación de autenticación/autorización. El verificador HMAC rechaza si falta secreto/firma, pero compara con `===` y no incorpora timestamp en la función observada. | Confirmar si hay middleware/proxy de protección fuera de este handler; exigir auth y autorización por acción, revisar replay/ventana temporal y comparación de firma en tiempo constante. No inferir exposición pública sin conocer el despliegue. | PARTIAL — hallazgo estático |
+| WHATSPOWER-ULTRA | `src/server.ts`, lectura de handlers REST | En los handlers visibles de campañas (`GET/POST /api/campaigns`, detalle, step, pause, resume y cancel) no se aprecia una verificación de identidad/autorización en cada ruta. Existe además un gate `INTERNAL_API_SECRET` fail-closed documentado en el commit `e6ef56d6e0f4fc379078447f347dcef74bc711d7`, pero ese gate no acredita automáticamente protección de toda la API HTTP. | Trazar middleware, listener/bind, reverse proxy y consumidores; cubrir todas las rutas mutables y de lectura con autorización. Mantener bloqueado el despacho real hasta revisión explícita. | PARTIAL — hallazgo estático |
+| AGENTE-KREA | `package.json`, blob `0fffe6db6d7728738aa262a4a3a9d53f63c80f66` | El script `test:e2e` solo imprime que debe ejecutarse manualmente y termina con código 0; no realiza E2E. `db:push` incluye `--accept-data-loss`. | No contar `test:e2e` como evidencia E2E. Añadir una protección operacional/documentada antes de cualquier uso de `db:push` en datos persistentes; no ejecutar este comando durante la auditoría. | VERIFIED — inspección del manifiesto |
+| BROWSER-FACTORY | `README.md`, blob `08da8fdb7b1f81f576e28d13ed73f2b20da9c948`; HEAD consultado `98ebac48be8e07a7497949a09f75aeea12c01e1a` | El README describe sesiones/cookies persistidas localmente y perfiles aislados; el commit de hardening declara pendientes la rotación/revocación de credenciales históricas y la validación real con Chrome/proxy. | Tratar datos de sesión como secretos; confirmar permisos/ubicación/cifrado de perfiles y completar rotación/revocación y validación manual autorizada antes de declarar cierre. | VERIFIED DOCUMENTATION; operación NOT_VERIFIED |
+| DESPACHO-JURIDICO | README actual y búsqueda de commits | README declara corpus V1.2 con 125 artículos y suite de 1072 tests; el commit consultado más reciente en la búsqueda declara un cambio de propagación de AuthContext en transporte stdio y 1253 passed/5 skipped. Son declaraciones del repositorio, no ejecución independiente de esta auditoría. | Revisar el diff del commit y confirmar el estado del workflow CI y la procedencia/hash de fuentes del corpus. No certificar CI ni corpus por el mensaje del commit. | PARTIAL — declaraciones documentales |
+| CHAT-X | Commit `fa2fffccdfd0c9bc247638dddd0885baff140cf1` | El commit presenta CHAT-X como plataforma central de seis módulos y declara contratos/sondas para CRM, WhatsPower, ULTRA, YouTube, NEX-SCOPE y LEADS. | Tratar integraciones como declaradas hasta verificar contrato por contrato, endpoints, autenticación y evidencia de ejecución. La ficha de Estudio de Avatares es un submódulo, no la definición completa del producto actual. | VERIFIED DOCUMENTATION; runtime NOT_VERIFIED |
+
+## Priorización operativa
+
+1. **P0 — autorización:** confirmar y cerrar la cobertura de autenticación/autorización de WHATSPOWER y WHATSPOWER-ULTRA, incluyendo rutas de administración, locks/supresión y acciones mutables; validar el perímetro de red antes de afirmar exposición.
+2. **P0 — credenciales:** Browser Factory: rotación/revocación de credenciales históricas y validación real Chrome/proxy pendientes; no registrar ni copiar secretos en CONTEXT.
+3. **P1 — evidencia de calidad:** reemplazar el falso positivo documental de `AGENTE-KREA:test:e2e` por un E2E real en una futura ejecución autorizada; revisar el riesgo de `db:push --accept-data-loss`.
+4. **P1 — contratos:** verificar las integraciones declaradas por CHAT-X contra los repositorios fuente, sin modificar estos repositorios.
+5. **P1 — legal:** revisar el cambio reciente de propagación de AuthContext de DESPACHO-JURIDICO y obtener evidencia independiente de CI/provenance.
+
+## Límite de esta pasada
+
+La inspección amplía la evidencia estática, pero **no cierra la auditoría técnica independiente del ecosistema**. No se realizaron pruebas activas ni se confirmó la exposición de endpoints en un despliegue. Las cifras de tests/builds que aparecen en mensajes o README siguen siendo declaraciones del repositorio salvo verificación independiente.
