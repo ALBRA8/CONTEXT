@@ -86,3 +86,29 @@ Alcance: lectura de fuentes públicas actuales, scripts y documentación. **No s
 ## Límite de esta pasada
 
 La inspección amplía la evidencia estática, pero **no cierra la auditoría técnica independiente del ecosistema**. No se realizaron pruebas activas ni se confirmó la exposición de endpoints en un despliegue. Las cifras de tests/builds que aparecen en mensajes o README siguen siendo declaraciones del repositorio salvo verificación independiente.
+
+
+---
+
+# ADDENDUM — CONTRATOS, DIFERENCIAS DOCUMENTALES Y LÍMITES DE DESPLIEGUE 2026-10-28
+
+Esta pasada amplía la revisión estática de documentación de integración y arquitectura. No se inspeccionaron todas las rutas de cada repositorio ni se verificó runtime.
+
+| Repositorio | Evidencia fuente | Hallazgo | Consecuencia | Estado |
+|---|---|---|---|---|
+| CHAT-X | `README.md` blob `64db95fc76d456fa725b64ff8ebb300afd44e303` frente a commit `fa2fffccdfd0c9bc247638dddd0885baff140cf1` | El README todavía presenta CHAT-X como Estudio de Modelos Virtuales; el commit más reciente consultado lo presenta como plataforma central de seis módulos. `docs/FICHA_Estudio_v1.md` sigue siendo la especificación del submódulo Estudio y declara CRM para fase 2. | Hay divergencia documental de identidad/alcance entre README y HEAD. Actualizar el README solo después de confirmar con el propietario el alcance vigente; no asumir que CRM ya está integrado por el hecho de que exista la ficha del Estudio. | VERIFIED — discrepancia documental |
+| COMUNITI-MANAGER | `README.md` blob `801a857ab71762397763c1c0c455fc9e2d4e8677`; `docs/architecture/INTEGRATIONS.md` blob `209f21134d07289c67c8e6d3e215f78b5cbf47f9` | La documentación enumera contratos y variables para CRM, LEADS, WHATSPOWER-ULTRA, KREA, YouTube y NEX-SCOPE, pero también especifica que AGENTE-GENERAL no se despliega por defecto y que el arnés puede operar con su motor propio. | No describir todas las integraciones como activas. Verificar estado del conector, credenciales, contrato y evidencia por servicio antes de considerar una conexión operativa. La documentación por sí sola no acredita mensajes, campañas o publicación reales. | VERIFIED DOCUMENTATION; conectores runtime NOT_VERIFIED |
+| CRM-ALBRA | `docs/HARNESS.md` blob `392e6d159626f2cd065c2aa424a68e5ce723bc30` | El documento afirma explícitamente que esta fase del chaleco no incluye integración con un host concreto. Esto limita las declaraciones de integración de COMUNITI-MANAGER o CHAT-X: contrato disponible no equivale a integración desplegada. | Verificar consumidores reales y llamadas autenticadas; mantener separadas “API/contrato disponible” y “host integrado”. | VERIFIED DOCUMENTATION |
+| AGENTE-GENERAL | `docs/CERTIFICATION.md` blob `aad7321069e3ee8028b9dd8961d103e6cbdf98ff` | La certificación canónica fija su última verificación en 2026-10-14, sobre código anterior; explícitamente declara `CODE GATES PASS — PRODUCTION NOT VERIFIED`, y deja dashboard externo, reproducibilidad de dependencias y aceptación real de seguridad/HITL pendientes. El HEAD consultado posterior no debe heredar automáticamente esa certificación. | Mantener el HEAD posterior como NOT_READY_TO_FREEZE hasta obtener evidencia CI/auditoría sobre ese commit y cerrar dashboard/seguridad/HITL. No ejecutar clean-room ni pruebas en esta pasada. | VERIFIED DOCUMENTATION; HEAD actual NOT_VERIFIED |
+| INSTALADOR | `docs/ARCHITECTURE.md` blob `5b9b17f4de32e7d03f6bda89d61f84af0d656a85`; `docs/CONTRACTS.md` blob `71cfab7de9d6a11c57f8b45cd32b52ea818259bc` | La arquitectura etiqueta `local-dev` como implementado y `windows-local`/ `selfhosted-vps` como especificados, no implementados en esa evidencia. Los contratos describen operaciones, firmas, secretos y health, pero no prueban que todos los adaptadores de producción funcionen. | No afirmar instalación Windows/VPS lista por el solo hecho de que los contratos estén definidos. La validación Windows, VPS y firma/CA continúa como gate operacional. | VERIFIED DOCUMENTATION |
+| DESPACHO-JURIDICO | `README.md` blob `71ca8145ec98d2d041dd05e27ada54c524ddc772` | README anuncia corpus V1.2 de 125 artículos y 1072 tests, mientras la búsqueda de commits presenta una suite posterior de 1253 passed/5 skipped. Son instantáneas/versiones distintas y no deben combinarse como una única certificación actual. | Anclar cada cifra a commit y workflow concretos; verificar la procedencia de corpus por hash y el estado CI sobre el HEAD vigente antes de cerrar P0. | PARTIAL — cifras declaradas, no reejecutadas |
+
+## Ajuste de interpretación del ecosistema
+
+- **Contrato publicado ≠ integración operativa.**
+- **Conector con credenciales configurables ≠ conector autenticado y saludable.**
+- **Pruebas reportadas por un commit/README ≠ prueba independiente del HEAD actual.**
+- **Adaptador especificado ≠ adaptador implementado.**
+- Las divergencias de documentación se registran como deuda de consistencia; no se corrigen automáticamente sin confirmar la intención del producto.
+
+No se ejecutaron pruebas, builds, lint ni despliegues; no se enviaron mensajes ni se activaron campañas; no se modificaron repositorios de producto.
