@@ -1,3 +1,16 @@
+## [0.6.19] - 2026-10-28 — Consistencia de contratos e implementación
+
+### Added / Updated
+- Segundo addendum en la matriz de auditoría: diferencias README/HEAD de CHAT-X, límites de integración de COMUNITI-MANAGER y CRM, certificación histórica de AGENTE-GENERAL y adaptadores especificados de INSTALADOR.
+- `CURRENT_STATE.md` refuerza que contrato disponible, conector declarado, adaptador especificado y tests reportados no prueban por sí solos runtime/producción.
+
+### Evidence / Limits
+- Lectura de README, ficha del Estudio, integración COMUNITI-MANAGER, contrato de host CRM, certificación de AGENTE-GENERAL y arquitectura/contratos de INSTALADOR.
+- No se ejecutaron tests, builds, lint, despliegues ni acciones externas; no se modificaron repositorios de producto.
+- Las divergencias se registran, no se resuelven automáticamente sin confirmación de alcance del propietario.
+
+---
+
 
 
 ## [0.6.18] - 2026-10-28 — Revisión estática focalizada de seguridad y contratos
