@@ -112,3 +112,22 @@ Esta pasada amplía la revisión estática de documentación de integración y a
 - Las divergencias de documentación se registran como deuda de consistencia; no se corrigen automáticamente sin confirmar la intención del producto.
 
 No se ejecutaron pruebas, builds, lint ni despliegues; no se enviaron mensajes ni se activaron campañas; no se modificaron repositorios de producto.
+
+## Addendum de auditoría estática — cobertura de autorización y despacho (2026-10-28)
+
+### WHATSPOWER — src/server.ts y src/payments/payment-gateway.ts
+- Evidencia revisada: src/server.ts blob 125fed320640f28cf325e16c9f564ded0027e0d0; payment-gateway.ts blob 96339be78f92100edf3223076bfb5ee988b7c9b5; .env.example blob f82da6d04350266402d05f69de66a16ecabdcfb7.
+- En el servidor HTTP mostrado no se observa middleware global de autenticación. Las rutas de flujos, simulación, agentes/equipo, canned responses, growth links, trigger de cambio de etapa y creación de enlaces de pago no muestran controles locales de autorización en sus handlers. Las consultas internas GET de locks/supresión y la liberación de lock tampoco muestran un control local equivalente; las operaciones POST/DELETE de supresión sí comparan INTERNAL_API_SECRET.
+- POST /api/payments/webhook consume transactionId y status y llama a handlePaymentWebhook sin validar en ese handler una firma del proveedor o un secreto. El manager permite actualizar el estado y, para APPROVED, etiqueta el contacto CLIENTE_PAGADO. Esto es un riesgo estático de falsificación de estado de pago si la ruta resulta accesible sin una capa externa protectora.
+- En /api/inbound, el timestamp es opcional y el chequeo HMAC solo se exige cuando llega una firma o cuando NODE_ENV=production. Si falta timestamp, no hay control temporal local; la comparación de firma usa === en vez de una comparación de tiempo constante. El comportamiento exacto depende del entorno y de cualquier proxy/middleware exterior.
+- Prioridad propuesta: P0 confirmar aislamiento de red/middleware y cerrar autenticación de endpoints de administración e integración; validar firma, timestamp obligatorio/replay e idempotencia del webhook de pagos. No exponer el servidor a redes no confiables hasta verificar estas barreras.
+
+### WHATSPOWER-ULTRA — src/server.ts y adaptadores de despacho
+- Evidencia revisada: src/server.ts blob 60bb74fcc25a2b86095e5f78d0f95966469ec4a9; meta-cloud-dispatcher.ts blob a25cb363f40e6b4107335ec2c0c4ccec07610dfb; dispatcher.ts blob 48211c56542509f35d76649d5945497115d5b0fa; README blob c485425205deae8798d1bd7600a9f52add86ff43.
+- En el createServer inspeccionado no se observa middleware global de autenticación; handlers para crear/listar/controlar campañas, ingesta webhook de leads y endpoints de neuromarketing no muestran autorización local. Esto incluye POST /api/campaigns/:id/step (el matcher actual usa url.pathname.includes('/step')).
+- README documenta ALLOW_REAL_DISPATCH=false como salvaguarda, pero esa variable no se consulta en los archivos de servidor/dispatcher inspeccionados. El dispatcher HTTP bloquea por defecto únicamente cuando allowRealDispatch es falso y endpointUrl.includes(':3002'); una URL alternativa no coincide con esa condición. Además, el adaptador Meta Cloud pasa a modo real cuando hay META_ACCESS_TOKEN y META_MOCK_MODE no es true, sin una comprobación visible de ALLOW_REAL_DISPATCH dentro del adaptador.
+- Riesgo P0: autenticación/autorización HTTP y un único guard de despacho real, central y fail-closed, que cubra tanto daemon como Meta Cloud y no dependa de la forma textual de la URL. No crear ni ejecutar campañas durante la verificación.
+
+### Alcance y límites
+- Hallazgos derivados de lectura estática del contenido de los blobs citados; no prueban que el servicio esté publicado, accesible desde Internet o explotable en el despliegue actual. Un reverse proxy, gateway o control de red podría aportar protección externa, pero no fue verificado.
+- No se ejecutaron pruebas, builds, lint, requests HTTP ni despliegues. No se enviaron mensajes, no se activaron campañas y no se modificó código de producto. Solo se actualiza ALBRA8/CONTEXT.
