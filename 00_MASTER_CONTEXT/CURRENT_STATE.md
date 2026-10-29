@@ -345,3 +345,15 @@ La matriz registra nuevas diferencias documentales y límites de integración:
 - DESPACHO-JURIDICO: cifras de pruebas de README y de commits posteriores corresponden a instantáneas diferentes; deben anclarse a commit/workflow y no fusionarse como una sola certificación.
 
 Regla de lectura reforzada: **contrato publicado ≠ integración operativa; adaptador especificado ≠ implementado; tests declarados ≠ verificación independiente del HEAD actual**.
+
+## 9. Tercera pasada estática — autorización HTTP y guardas de despacho (2026-10-28)
+
+Se inspeccionaron los handlers completos de WHATSPOWER/src/server.ts y WHATSPOWER-ULTRA/src/server.ts, junto con los adaptadores de pagos y despacho:
+
+- WHATSPOWER: no se observó middleware global de auth en el servidor inspeccionado. Varias rutas de administración/integración no muestran auth local; POST /api/payments/webhook aplica el estado recibido sin verificar localmente firma/secreto del proveedor y puede marcar el contacto CLIENTE_PAGADO cuando el estado es APPROVED. En inbound, timestamp opcional y política HMAC dependiente de firma/entorno dejan controles por confirmar.
+- WHATSPOWER-ULTRA: no se observó auth global/local en handlers de campañas, control de pasos, webhook de leads y endpoints AI. ALLOW_REAL_DISPATCH=false está documentado, pero no se lee en los archivos revisados; el guard HTTP solo bloquea por defecto cuando la URL contiene :3002 y el adaptador Meta Cloud puede operar en real con token y mock desactivado.
+- Prioridad actual: P0 verificar barreras de red/proxy y corregir autenticación de rutas administrativas/webhooks; centralizar guard de despacho real para todos los adaptadores antes de autorizar producción.
+
+Evidencia: WHATSPOWER/src/server.ts blob 125fed320640f28cf325e16c9f564ded0027e0d0; WHATSPOWER/src/payments/payment-gateway.ts blob 96339be78f92100edf3223076bfb5ee988b7c9b5; WHATSPOWER-ULTRA/src/server.ts blob 60bb74fcc25a2b86095e5f78d0f95966469ec4a9; WHATSPOWER-ULTRA/src/adapters/meta-cloud-dispatcher.ts blob a25cb363f40e6b4107335ec2c0c4ccec07610dfb; WHATSPOWER-ULTRA/src/adapters/dispatcher.ts blob 48211c56542509f35d76649d5945497115d5b0fa.
+
+Límite: hallazgo estático, no confirmación de exposición pública ni de explotación. No se ejecutaron tests/builds/requests, no se tocaron campañas ni se enviaron mensajes, y no se modificaron repositorios de producto.
