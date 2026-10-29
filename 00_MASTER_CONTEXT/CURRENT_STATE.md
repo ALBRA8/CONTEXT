@@ -331,3 +331,17 @@ La matriz `03_AUDITS/FINAL_REPOSITORY_STATUS_MATRIX.md` contiene el addendum de 
 - DESPACHO-JURIDICO: los números de pruebas y el cambio reciente de AuthContext se registran como declaraciones del repositorio, no como pruebas ejecutadas en esta pasada.
 
 Límites: no se ejecutaron tests, builds, lint ni pentests; no se activaron campañas ni se enviaron mensajes; no se modificaron repositorios de producto. Estado global de auditoría: **INVENTARIO DOCUMENTAL REVISADO / AUDITORÍA TÉCNICA INDEPENDIENTE PARCIAL**.
+
+
+## 8. Segunda pasada estática — contratos y despliegue (2026-10-28)
+
+La matriz registra nuevas diferencias documentales y límites de integración:
+
+- CHAT-X: README conserva la identidad “Estudio de Modelos Virtuales”, mientras el commit más reciente consultado lo describe como plataforma central de seis módulos. La ficha de Estudio es un submódulo y deja CRM para fase 2.
+- COMUNITI-MANAGER enumera conectores, pero sus contratos documentales no prueban runtime; su integración con AGENTE-GENERAL no está desplegada por defecto según `docs/architecture/INTEGRATIONS.md`.
+- CRM-ALBRA `docs/HARNESS.md` declara que la fase actual no incluye un host concreto; contrato disponible no equivale a host integrado.
+- AGENTE-GENERAL: su certificación canónica documenta verificación del 2026-10-14 y `PRODUCTION NOT VERIFIED`; no debe extenderse al HEAD posterior sin evidencia CI/auditoría de ese commit.
+- INSTALADOR: la documentación distingue `local-dev` implementado de adaptadores Windows/VPS especificados.
+- DESPACHO-JURIDICO: cifras de pruebas de README y de commits posteriores corresponden a instantáneas diferentes; deben anclarse a commit/workflow y no fusionarse como una sola certificación.
+
+Regla de lectura reforzada: **contrato publicado ≠ integración operativa; adaptador especificado ≠ implementado; tests declarados ≠ verificación independiente del HEAD actual**.
