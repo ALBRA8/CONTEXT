@@ -226,3 +226,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 ## EEC Ops V1 — auditoría contra HEADs actuales (2026-11-12)
 
 - [ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md](../03_AUDITS/ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md) — inspección estática de INSTALADOR `dcf33e7` y PANEL-DE-CONTROL `48bced1`. Confirma DTO real de `GET /api/runs/{id}`, estados LifecycleRun, defecto de `resolvedAt`, falta de actualización de ManagedOperation durante polling inspeccionado, idempotencia/nonce y riesgos de autenticación de lectura. Sin tests ni ejecución runtime.
+
+
+## Integración INSTALADOR ↔ PANEL — alcance y aceptación (2026-11-12)
+
+- [ALBRA_INSTALLER_PANEL_INTEGRATION_SCOPE_AND_ACCEPTANCE_V1.md](../04_PROJECTS/ALBRA_INSTALLER_PANEL_INTEGRATION_SCOPE_AND_ACCEPTANCE_V1.md) — fija que la etapa inmediata es integrar funcionalmente INSTALADOR y PANEL mediante EEC; excluye CHISMOSO, catálogo general de agentes, VPS y fusión física de repositorios. Define responsabilidades, solicitud/respuesta, seguimiento de runs, ciclo de vida persistente, seguridad, idempotencia y pruebas de aceptación. Estado: PROPOSED / DESIGN ONLY; no es implementación ni certificación.
