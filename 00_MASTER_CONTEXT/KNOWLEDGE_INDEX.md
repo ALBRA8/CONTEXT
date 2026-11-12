@@ -215,3 +215,9 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 
 ## Contrato EEC Ops V1
 - `04_PROJECTS/ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md` — forma canónica observada de solicitud/respuesta entre PANEL e INSTALADOR, separación del descriptor de producto, correcciones publicadas en PANEL y gaps aún abiertos. Estado: propuesta técnica parcial; código pendiente de pruebas independientes.
+
+
+## Contrato EEC Ops V1 — ciclo de vida y errores
+
+- [ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md](../04_PROJECTS/ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md) — reconciliación de la forma canónica de solicitud/respuesta PANEL ↔ INSTALADOR y discrepancias observadas.
+- [ALBRA_EEC_OPS_LIFECYCLE_AND_ERROR_SEMANTICS_V1.md](../04_PROJECTS/ALBRA_EEC_OPS_LIFECYCLE_AND_ERROR_SEMANTICS_V1.md) — diseño propuesto para estados ManagedOperation, seguimiento de run, semántica HTTP/business, idempotencia y anti-replay. No implementado ni probado.
