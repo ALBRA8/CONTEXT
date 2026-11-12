@@ -254,3 +254,12 @@ Fixtures compartidos PANEL/INSTALADOR:
 ## 10. Estado final de este addendum
 
 Este documento cierra una propuesta de diseño, no la implementación. El bug potencial de `resolvedAt` señalado en la reconciliación previa permanece abierto hasta inspeccionar y corregir el código bajo autorización. No se afirma que exista actualmente el endpoint de run propuesto, ni que idempotencia o anti-replay sean durables. Los cambios publicados en PANEL siguen sin tests/build independientes ejecutados en esta sesión.
+
+
+## Addendum de evidencia — HEADs consultados el 2026-11-12
+
+La auditoría estática posterior [ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md](../03_AUDITS/ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md) encontró que el INSTALADOR ya implementa `GET /api/runs/{id}` y devuelve un `LifecycleRunDTO` directo (`id`, `status`, `steps`, `error`, `startedAt`, `finishedAt`). Por tanto, el envelope `{ result: { run: ... } }` de la sección 3 de este documento queda como **ejemplo de diseño no adoptado**, no como contrato implementado. El PANEL debe consumir el DTO real y mapear sus estados conservando `remoteStatus`.
+
+Estados reales del run: `RUNNING`, `SUCCESS`, `WARNING`, `FAILURE`, `ROLLED_BACK`; no hay `CANCELLED` demostrado. La auditoría también confirma el defecto de `resolvedAt` prematuro, la ausencia de actualización del ManagedOperation durante el polling inspeccionado, idempotencia por requestId no demostrada, nonce solo en memoria, falta de límite para issuedAt futuro y UNINSTALL con respuesta condicionalmente síncrona en despliegues contenedorizados.
+
+La política HTTP observada en `POST /api/ops` sí usa HTTP 200 para rechazos de negocio (`accepted:false`) y 401 para autenticación inválida. Ver el informe de auditoría para rutas, blobs y límites de evidencia.
