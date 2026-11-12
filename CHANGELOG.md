@@ -1,3 +1,17 @@
+## [0.6.20] - 2026-11-12 — Reconciliación EEC Ops V1
+
+### Added / Updated
+- `04_PROJECTS/ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md`: contrato canónico de solicitud/respuesta, separación entre operaciones EEC y descriptor de producto, discrepancias detectadas y criterios de aceptación.
+- Se documentan cambios publicados en PANEL-DE-CONTROL para consumir `result.*`, exponer STATUS/RESTORE y añadir pruebas de validación del sobre.
+
+### Evidence / Limits
+- Inspección de fuentes de INSTALADOR `main` y PANEL-DE-CONTROL `main`; commits del PANEL registrados en el informe.
+- Los cambios de código se publicaron, pero no se ejecutaron tests, typecheck, lint ni build en esta sesión. No clasificarlos como verificados.
+- Se detectan pendientes sobre `resolvedAt` para operaciones asíncronas, persistencia anti-replay, validación temporal, idempotencia y esquema de seguimiento de run.
+- Este registro es técnico/propuesto; no constituye aprobación normativa del propietario.
+
+---
+
 ## [0.6.19] - 2026-10-28 — Consistencia de contratos e implementación
 
 ### Added / Updated
