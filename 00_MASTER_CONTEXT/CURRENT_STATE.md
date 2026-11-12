@@ -357,3 +357,14 @@ Se inspeccionaron los handlers completos de WHATSPOWER/src/server.ts y WHATSPOWE
 Evidencia: WHATSPOWER/src/server.ts blob 125fed320640f28cf325e16c9f564ded0027e0d0; WHATSPOWER/src/payments/payment-gateway.ts blob 96339be78f92100edf3223076bfb5ee988b7c9b5; WHATSPOWER-ULTRA/src/server.ts blob 60bb74fcc25a2b86095e5f78d0f95966469ec4a9; WHATSPOWER-ULTRA/src/adapters/meta-cloud-dispatcher.ts blob a25cb363f40e6b4107335ec2c0c4ccec07610dfb; WHATSPOWER-ULTRA/src/adapters/dispatcher.ts blob 48211c56542509f35d76649d5945497115d5b0fa.
 
 Límite: hallazgo estático, no confirmación de exposición pública ni de explotación. No se ejecutaron tests/builds/requests, no se tocaron campañas ni se enviaron mensajes, y no se modificaron repositorios de producto.
+
+
+## 15. EEC Ops V1 — revisión de compatibilidad contra HEADs actuales (2026-11-12)
+
+Se añadió la auditoría estática [ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md](../03_AUDITS/ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md), consultando:
+- INSTALADOR `main` @ `dcf33e734ceb94e13437c96ea504e36c9a67e7a3`.
+- PANEL-DE-CONTROL `main` @ `48bced164e64e85b1fe9f1f929384784e86e1689`.
+
+Hallazgos: el endpoint real `GET /api/runs/{id}` existe y devuelve `LifecycleRunDTO` directo (id/status/steps/error/startedAt/finishedAt); el DTO no es el envelope de seguimiento ilustrativo del addendum de diseño. Se confirma estáticamente el defecto de `resolvedAt` prematuro en PANEL y que el proxy de polling inspeccionado no actualiza ManagedOperation. En INSTALADOR, el nonce anti-replay es un Map en memoria por instancia, no se observa validación de issuedAt futuro y la ruta de UNINSTALL contenedorizado devuelve respuesta sin runId pese a estar declarada async. Los GET de runs no muestran autenticación local; exposición real depende de firewall/reverse proxy/topología no inspeccionados.
+
+**Estado:** VERIFIED DOCUMENTATION / STATIC CODE REVIEW / NOT RUNTIME-TESTED. No se ejecutaron pruebas, typecheck, lint, build, curl ni Docker. No se modificaron PANEL-DE-CONTROL ni INSTALADOR. La implementación y seguridad operativa siguen pendientes de autorización y verificación.
