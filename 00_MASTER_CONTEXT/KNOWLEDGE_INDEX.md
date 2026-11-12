@@ -211,3 +211,7 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 - [Plan de agentes de soporte empresarial](../04_PROJECTS/ALBRA_BUSINESS_SUPPORT_AGENTS_PLAN_2026-10-27.md) — registra las iniciativas de Contador, Despacho Jurídico y Community Manager, sus fronteras con CRM/marketing y sus controles propuestos.
 - Estado: iniciativa del propietario; Contador y Community Manager no tienen repositorio identificado en el inventario consultado. No afirmar implementación, integración ni pruebas.
 - Despacho Jurídico mantiene la auditoría del 2026-10-26 como referencia de limitaciones y bloqueos pendientes.
+
+
+## Contrato EEC Ops V1
+- `04_PROJECTS/ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md` — forma canónica observada de solicitud/respuesta entre PANEL e INSTALADOR, separación del descriptor de producto, correcciones publicadas en PANEL y gaps aún abiertos. Estado: propuesta técnica parcial; código pendiente de pruebas independientes.
