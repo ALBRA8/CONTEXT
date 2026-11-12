@@ -1,3 +1,16 @@
+## [0.6.23] - 2026-11-12 — Alcance inmediato INSTALADOR ↔ PANEL
+
+### Added / Updated
+- `04_PROJECTS/ALBRA_INSTALLER_PANEL_INTEGRATION_SCOPE_AND_ACCEPTANCE_V1.md`: fija la integración funcional INSTALADOR ↔ PANEL mediante EEC como único alcance inmediato; excluye CHISMOSO, catálogo de agentes, VPS y fusión física de repositorios.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizado para localizar la especificación.
+
+### Evidence / Limits
+- Documento PROPOSED / DESIGN ONLY, basado en la instrucción de alcance del propietario y en la auditoría estática EEC del 2026-11-12.
+- Solo se modificó ALBRA8/CONTEXT. No se modificaron INSTALADOR ni PANEL; no se ejecutaron tests, builds, Docker ni E2E.
+- La especificación no equivale a implementación, aprobación de todos los detalles técnicos ni certificación operativa.
+
+---
+
 ## [0.6.22] - 2026-11-12 — EEC Ops: auditoría de compatibilidad contra HEADs
 
 ### Added / Updated
