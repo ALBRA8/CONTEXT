@@ -368,3 +368,14 @@ Se añadió la auditoría estática [ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_
 Hallazgos: el endpoint real `GET /api/runs/{id}` existe y devuelve `LifecycleRunDTO` directo (id/status/steps/error/startedAt/finishedAt); el DTO no es el envelope de seguimiento ilustrativo del addendum de diseño. Se confirma estáticamente el defecto de `resolvedAt` prematuro en PANEL y que el proxy de polling inspeccionado no actualiza ManagedOperation. En INSTALADOR, el nonce anti-replay es un Map en memoria por instancia, no se observa validación de issuedAt futuro y la ruta de UNINSTALL contenedorizado devuelve respuesta sin runId pese a estar declarada async. Los GET de runs no muestran autenticación local; exposición real depende de firewall/reverse proxy/topología no inspeccionados.
 
 **Estado:** VERIFIED DOCUMENTATION / STATIC CODE REVIEW / NOT RUNTIME-TESTED. No se ejecutaron pruebas, typecheck, lint, build, curl ni Docker. No se modificaron PANEL-DE-CONTROL ni INSTALADOR. La implementación y seguridad operativa siguen pendientes de autorización y verificación.
+
+
+## 16. EEC — alcance inmediato INSTALADOR ↔ PANEL (2026-11-12)
+
+Se añadió [ALBRA_INSTALLER_PANEL_INTEGRATION_SCOPE_AND_ACCEPTANCE_V1.md](../04_PROJECTS/ALBRA_INSTALLER_PANEL_INTEGRATION_SCOPE_AND_ACCEPTANCE_V1.md) para fijar el alcance solicitado: integrar funcionalmente INSTALADOR y PANEL mediante EEC. “Integrar” no significa fusionar físicamente los repositorios.
+
+- Incluye: contrato de solicitudes/respuestas, seguimiento de `runId`, persistencia del ciclo de vida en PANEL, autenticación, idempotencia, anti-replay y pruebas de aceptación.
+- Excluye de esta etapa: CHISMOSO, catálogo general de agentes, VPS/infraestructura real y publicación de imágenes.
+- Estado: **PROPOSED / DESIGN ONLY**. La especificación no es implementación ni certificación.
+- Por el Bootstrap, solo se modificó CONTEXT. INSTALADOR y PANEL permanecen como fuentes de solo lectura en este flujo.
+- Siguiente hito: autorización específica para implementar en ambos repositorios, seguida de pruebas contractuales y de integración.
