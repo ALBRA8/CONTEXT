@@ -221,3 +221,8 @@ Contrato de controles y aceptación: `00_MASTER_CONTEXT/AGENTE_GENERAL_SECURITY_
 
 - [ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md](../04_PROJECTS/ALBRA_EEC_OPS_CONTRACT_V1_RECONCILIATION.md) — reconciliación de la forma canónica de solicitud/respuesta PANEL ↔ INSTALADOR y discrepancias observadas.
 - [ALBRA_EEC_OPS_LIFECYCLE_AND_ERROR_SEMANTICS_V1.md](../04_PROJECTS/ALBRA_EEC_OPS_LIFECYCLE_AND_ERROR_SEMANTICS_V1.md) — diseño propuesto para estados ManagedOperation, seguimiento de run, semántica HTTP/business, idempotencia y anti-replay. No implementado ni probado.
+
+
+## EEC Ops V1 — auditoría contra HEADs actuales (2026-11-12)
+
+- [ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md](../03_AUDITS/ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md) — inspección estática de INSTALADOR `dcf33e7` y PANEL-DE-CONTROL `48bced1`. Confirma DTO real de `GET /api/runs/{id}`, estados LifecycleRun, defecto de `resolvedAt`, falta de actualización de ManagedOperation durante polling inspeccionado, idempotencia/nonce y riesgos de autenticación de lectura. Sin tests ni ejecución runtime.
