@@ -1,3 +1,17 @@
+## [0.6.22] - 2026-11-12 — EEC Ops: auditoría de compatibilidad contra HEADs
+
+### Added / Updated
+- `03_AUDITS/ALBRA_EEC_CURRENT_HEAD_COMPATIBILITY_AUDIT_2026-11-12.md`: inspección estática de INSTALADOR `dcf33e7` y PANEL `48bced1`; DTO real de runs, estados, seguridad de lectura, defectos de persistencia, idempotencia, nonce y validación temporal.
+- Actualizado `ALBRA_EEC_OPS_LIFECYCLE_AND_ERROR_SEMANTICS_V1.md` para distinguir el DTO real del ejemplo de diseño anterior.
+- Actualizados `CURRENT_STATE.md` y `KNOWLEDGE_INDEX.md`.
+
+### Evidence / Limits
+- Solo lectura de código y documentación; no se ejecutaron tests, typecheck, lint, build, curl, Docker ni E2E.
+- No se escribieron repositorios de producto. No se verificó exposición de red del INSTALADOR.
+- Los hallazgos son estáticos y no equivalen a aprobación normativa ni certificación de producción.
+
+---
+
 ## [0.6.21] - 2026-11-12 — EEC Ops V1: ciclo de vida y errores
 
 ### Added / Updated
