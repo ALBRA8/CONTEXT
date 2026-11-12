@@ -1,3 +1,16 @@
+## [0.6.21] - 2026-11-12 — EEC Ops V1: ciclo de vida y errores
+
+### Added / Updated
+- `04_PROJECTS/ALBRA_EEC_OPS_LIFECYCLE_AND_ERROR_SEMANTICS_V1.md`: propuesta de máquina de estados ManagedOperation, separación acceptedAt/finishedAt/resolvedAt, contrato sugerido de seguimiento por runId, semántica HTTP frente a rechazos de negocio, idempotencia persistente y anti-replay.
+- `00_MASTER_CONTEXT/KNOWLEDGE_INDEX.md` actualizado para localizar la reconciliación EEC y el addendum de ciclo de vida.
+
+### Evidence / Limits
+- Documento de diseño PROPOSED / DESIGN-ONLY; no implica implementación ni aprobación normativa.
+- No se modificaron PANEL-DE-CONTROL ni INSTALADOR. No se ejecutaron pruebas, typecheck, lint, build ni E2E.
+- El endpoint de run, enums de estado y códigos HTTP propuestos requieren confirmación contra los HEAD reales antes de implementar.
+
+---
+
 ## [0.6.20] - 2026-11-12 — Reconciliación EEC Ops V1
 
 ### Added / Updated
